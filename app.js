@@ -5,7 +5,7 @@ const template = document.getElementById("card-template");
 const counter = document.querySelector(".counter");
 
 const BEHIND = 2; // how many upcoming games peek out behind the front card
-const LEAVE_MS = 650;
+const LEAVE_MS = 1000;
 
 let index = 0;
 let cards = []; // cards[0] is the front card
