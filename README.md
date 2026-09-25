@@ -22,7 +22,7 @@ To refresh the list on your own computer instead, run `BGG_TOKEN=your-token node
 | --- | --- |
 | `index.html` | The page, including the golden rank tag |
 | `styles.css` | Colors and layout |
-| `assets/background-horses.webp` | The background image (`background.jpg` is the earlier garden, kept for comparison) |
+| `assets/background-horses.webp` | The background image |
 | `app.js` | The slideshow |
 | `data/games.js` | The 100 games |
 | `scripts/fetch-games.mjs` | Downloads fresh data from BoardGameGeek |
