@@ -240,10 +240,64 @@ h1 {
   white-space: nowrap;
 }
 .rating { font-size: 28px; font-weight: 600; margin-bottom: 6px !important; }
-.players { font-size: 19px; font-weight: 500; }
+/* player avatars, adapted from Watermelon UI "Avatar 19" (MIT) */
+.players {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  outline: none;
+  cursor: default;
+}
+.avatars { display: flex; }
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--card);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  transition: margin .25s ease, transform .25s ease;
+}
+.avatar + .avatar { margin-left: -8px; }
+.avatar svg { width: 17px; height: 17px; fill: currentColor; }
+.avatar.more { background: #ece6da; color: var(--ink); }
+.players:hover .avatar + .avatar,
+.players:focus-visible .avatar + .avatar { margin-left: -3px; }
+.players:hover .avatar,
+.players:focus-visible .avatar { transform: translateY(-1px); }
+
+.players-tip {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 10px);
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(4px, -50%);
+  transition: opacity .18s ease, transform .18s ease;
+  pointer-events: none;
+}
+.players-tip::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border: 5px solid transparent;
+  border-left-color: var(--ink);
+}
+.players:hover .players-tip,
+.players:focus .players-tip { opacity: 1; transform: translate(0, -50%); }
 
 .star { width: 28px; height: 28px; fill: url(#starGold); }
-.meeple { width: 24px; height: 24px; fill: #b8574a; }
 
 .counter {
   margin: 64px 0 0;
@@ -284,7 +338,9 @@ h1 {
   .rank { width: 64px; height: 96px; top: -24px; left: 16px; }
   .info { flex-direction: column; align-items: flex-start; gap: 16px; padding: 18px 10px 8px; }
   .stats { text-align: left; }
-  .stats p { justify-content: flex-start; }
+  .stats p, .players { justify-content: flex-start; }
+  .players-tip { right: auto; left: calc(100% + 10px); transform: translate(-4px, -50%); }
+  .players-tip::after { left: auto; right: 100%; border-left-color: transparent; border-right-color: var(--ink); }
   .rating { font-size: 24px; }
   .description { font-size: 18px; }
   .counter { margin-top: 28px; }

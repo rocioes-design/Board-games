@@ -12,6 +12,38 @@ let cards = []; // cards[0] is the front card
 
 const wrap = (i) => (i + games.length) % games.length;
 
+// classic player-piece colours, softened to suit the page
+const PLAYER_COLORS = ["#b8574a", "#3f6f9a", "#5b8a4e", "#d19a32", "#7d5a8c"];
+const MAX_AVATARS = 4;
+
+// "3-4" shows four meeples; big counts like "10+" show three and a "+7" bubble
+function fillPlayers(el, best) {
+  if (!best) {
+    el.hidden = true;
+    return;
+  }
+  const label = `Best: ${best} ${best === "1" ? "player" : "players"}`;
+  el.setAttribute("aria-label", label);
+  el.querySelector(".players-tip").textContent = label;
+
+  const count = Math.max(...String(best).match(/\d+/g).map(Number));
+  const shown = count > MAX_AVATARS ? MAX_AVATARS - 1 : count;
+  const avatars = el.querySelector(".avatars");
+  for (let k = 0; k < shown; k++) {
+    const a = document.createElement("span");
+    a.className = "avatar";
+    a.style.background = PLAYER_COLORS[k % PLAYER_COLORS.length];
+    a.innerHTML = '<svg viewBox="0 0 24 24"><use href="#meeple"/></svg>';
+    avatars.appendChild(a);
+  }
+  if (count > shown) {
+    const more = document.createElement("span");
+    more.className = "avatar more";
+    more.textContent = `+${count - shown}`;
+    avatars.appendChild(more);
+  }
+}
+
 function makeCard(i) {
   const g = games[wrap(i)];
   const card = template.content.firstElementChild.cloneNode(true);
@@ -24,7 +56,7 @@ function makeCard(i) {
   q(".year").textContent = g.year || "";
   q(".description").textContent = g.description;
   q(".rating-value").textContent = Number(g.rating).toFixed(2);
-  q(".players-value").textContent = g.bestPlayers ? `Best: ${g.bestPlayers} players` : "";
+  fillPlayers(q(".players"), g.bestPlayers);
 
   const img = q(".art img");
   const placeholder = q(".placeholder");
