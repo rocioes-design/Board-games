@@ -12,11 +12,11 @@ let cards = []; // cards[0] is the front card
 
 const wrap = (i) => (i + games.length) % games.length;
 
-// classic player-piece colours, softened to suit the page
-const PLAYER_COLORS = ["#b8574a", "#3f6f9a", "#5b8a4e", "#d19a32", "#7d5a8c"];
+// player portraits in assets/players (player-1.png … player-4.png)
+const PLAYER_IMAGES = 4;
 const MAX_AVATARS = 4;
 
-// "3-4" shows four meeples; big counts like "10+" show three and a "+7" bubble
+// "3-4" shows four players; big counts like "10+" show three and a "+7" bubble
 function fillPlayers(el, best) {
   if (!best) {
     el.hidden = true;
@@ -30,10 +30,10 @@ function fillPlayers(el, best) {
   const shown = count > MAX_AVATARS ? MAX_AVATARS - 1 : count;
   const avatars = el.querySelector(".avatars");
   for (let k = 0; k < shown; k++) {
-    const a = document.createElement("span");
+    const a = document.createElement("img");
     a.className = "avatar";
-    a.style.background = PLAYER_COLORS[k % PLAYER_COLORS.length];
-    a.innerHTML = '<svg viewBox="0 0 24 24"><use href="#meeple"/></svg>';
+    a.src = `assets/players/player-${(k % PLAYER_IMAGES) + 1}.png`;
+    a.alt = "";
     avatars.appendChild(a);
   }
   if (count > shown) {

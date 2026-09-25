@@ -256,18 +256,21 @@ h1 {
   height: 32px;
   border-radius: 50%;
   box-shadow: 0 0 0 2px var(--card);
+  background: #f3f1ee;
+  object-fit: cover;
   color: #fff;
   font-size: 12px;
   font-weight: 600;
-  transition: margin .25s ease, transform .25s ease;
+  transition: transform .25s ease;
 }
 .avatar + .avatar { margin-left: -8px; }
-.avatar svg { width: 17px; height: 17px; fill: currentColor; }
 .avatar.more { background: #ece6da; color: var(--ink); }
-.players:hover .avatar + .avatar,
-.players:focus-visible .avatar + .avatar { margin-left: -3px; }
+/* on hover each player hops up in turn */
 .players:hover .avatar,
-.players:focus-visible .avatar { transform: translateY(-1px); }
+.players:focus-visible .avatar { transform: translateY(-2px); }
+.players .avatar:nth-child(2) { transition-delay: .03s; }
+.players .avatar:nth-child(3) { transition-delay: .06s; }
+.players .avatar:nth-child(4) { transition-delay: .09s; }
 
 .players-tip {
   position: absolute;
