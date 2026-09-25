@@ -1,0 +1,402 @@
+<!doctype html>
+<!--
+  Medieval valley background, rendered with a ray-marching shader:
+  terrain from layered noise, pine forests, a castle on a cliff, a lake,
+  low golden-hour sun, soft shadows, fog and clouds.
+  render.mjs opens this page in a headless browser and saves assets/landscape.jpg.
+-->
+<html>
+<body style="margin:0;background:#000">
+<canvas id="c"></canvas>
+<script id="fs" type="x-shader/x-fragment">#version 300 es
+precision highp float;
+uniform vec2 uRes;
+out vec4 outColor;
+
+const vec3 SUN = normalize(vec3(0.52, 0.2, 0.83));
+const float WATER = 0.0;
+
+// ---------- noise ----------
+float hash(vec2 p) { p = fract(p * vec2(123.34, 456.21)); p += dot(p, p + 45.32); return fract(p.x * p.y); }
+float noise(vec2 p) {
+  vec2 i = floor(p), f = fract(p);
+  vec2 u = f * f * (3.0 - 2.0 * f);
+  return mix(mix(hash(i), hash(i + vec2(1, 0)), u.x), mix(hash(i + vec2(0, 1)), hash(i + vec2(1, 1)), u.x), u.y);
+}
+const mat2 ROT = mat2(0.8, -0.6, 0.6, 0.8);
+float fbm(vec2 p, int oct) {
+  float a = 0.5, s = 0.0;
+  for (int i = 0; i < 9; i++) { if (i >= oct) break; s += a * noise(p); p = ROT * p * 2.02; a *= 0.5; }
+  return s;
+}
+// sharp alpine ridges
+float ridged(vec2 p, int oct) {
+  float a = 0.5, s = 0.0, w = 1.0;
+  for (int i = 0; i < 9; i++) {
+    if (i >= oct) break;
+    float n = 1.0 - abs(noise(p) * 2.0 - 1.0);
+    n = n * n * w;
+    w = clamp(n * 1.6, 0.0, 1.0);
+    s += a * n; p = ROT * p * 2.03; a *= 0.5;
+  }
+  return s;
+}
+
+// ---------- scene layout ----------
+const vec2 CLIFF = vec2(-205.0, 330.0);
+const vec2 LAKE = vec2(118.0, 150.0);
+
+float pathDist(vec2 p) { // winding dirt road from the foreground toward the cliff
+  float x = mix(10.0, CLIFF.x + 60.0, smoothstep(30.0, 230.0, p.y)) + 14.0 * sin(p.y / 38.0);
+  return abs(p.x - x);
+}
+
+float ground(vec2 p, int oct) {
+  // gentle valley floor
+  float h = 3.0 + 7.0 * fbm(p * 0.008, oct > 4 ? 4 : oct) + 0.00002 * p.x * p.x;
+  // mountains rising in the distance
+  float far = smoothstep(380.0, 1150.0, p.y);
+  float m = ridged(p * 0.0024 + vec2(3.1, 7.4), oct);
+  h += far * (60.0 + 430.0 * m * m) * (0.75 + 0.25 * sin(p.x * 0.0021 + 1.3));
+  // rolling forested hills in the middle distance
+  h += smoothstep(200.0, 480.0, p.y) * (1.0 - far) * 45.0 * fbm(p * 0.006 + 4.0, 5);
+  // rocky cliff with a flat top for the castle
+  float d = length((p - CLIFF) * vec2(1.0, 0.85));
+  float rock = fbm(p * 0.06, oct);
+  float edge = 44.0 + 18.0 * (rock - 0.5) + 10.0 * fbm(p * 0.02, 3);
+  float cliff = smoothstep(edge + 22.0, edge - 2.0, d);
+  h += 78.0 * pow(cliff, 0.6) + 26.0 * ridged(p * 0.03, 5) * cliff * (1.0 - smoothstep(30.0, 44.0, edge - d));
+  // lake basin
+  float l = length((p - LAKE) * vec2(0.62, 1.2)) + 18.0 * fbm(p * 0.02, 3);
+  h = mix(h, -5.0, smoothstep(118.0, 70.0, l));
+  // flatten the road
+  h -= 0.8 * smoothstep(5.0, 1.5, pathDist(p));
+  return h;
+}
+
+float forestMask(vec2 p, float h) {
+  float m = smoothstep(0.44, 0.56, fbm(p * 0.009 + 11.0, 4));
+  m *= smoothstep(1.0, 4.0, h) * smoothstep(210.0, 140.0, h);            // not in water, not on peaks
+  m *= smoothstep(28.0, 60.0, length(p - vec2(0.0, 0.0)) - 0.0);         // keep the foreground open
+  m *= smoothstep(8.0, 20.0, pathDist(p));
+  m = max(m, smoothstep(-40.0, -80.0, p.x) * smoothstep(20.0, 40.0, p.y) * smoothstep(230.0, 190.0, p.y) * smoothstep(0.3, 0.45, fbm(p * 0.03, 3)));
+  m = max(m, smoothstep(150.0, 175.0, p.x - 0.35 * p.y) * smoothstep(10.0, 30.0, p.y) * smoothstep(0.3, 0.45, fbm(p * 0.03 + 5.0, 3)) * step(1.0, h));
+  m *= 1.0 - smoothstep(72.0, 56.0, length((p - CLIFF) * vec2(1.0, 0.85))); // castle plateau stays clear
+  m = max(m, smoothstep(40.0, 20.0, abs(p.x - 132.0)) * smoothstep(250.0, 262.0, p.y) * smoothstep(330.0, 300.0, p.y) * step(2.0, h));
+  return m;
+}
+
+// pines as cones scattered on a grid
+float trees(vec2 p, float h, out float id) {
+  float m = forestMask(p, h);
+  id = 0.0;
+  if (m < 0.01) return 0.0;
+  float cell = 4.2;
+  vec2 c = floor(p / cell);
+  float best = 0.0;
+  for (int j = -1; j <= 1; j++) for (int i = -1; i <= 1; i++) {
+    vec2 g = c + vec2(i, j);
+    float r = hash(g);
+    if (r > 0.1 + 0.85 * m) continue;
+    vec2 center = (g + 0.2 + 0.6 * vec2(hash(g + 3.1), hash(g + 7.7))) * cell;
+    float th = 8.0 + 10.0 * hash(g + 1.7);
+    float d = length(p - center);
+    float cone = th * (1.0 - d / (th * 0.24));
+    if (cone > best) { best = cone; id = r; }
+  }
+  return best;
+}
+
+float height(vec2 p, int oct) {
+  float g = ground(p, oct);
+  float id;
+  return g + trees(p, g, id);
+}
+
+// ---------- castle (signed distance) ----------
+float sdBox(vec3 p, vec3 b) { vec3 q = abs(p) - b; return length(max(q, 0.0)) + min(max(q.x, max(q.y, q.z)), 0.0); }
+float sdCyl(vec3 p, float r, float h) { vec2 d = abs(vec2(length(p.xz), p.y)) - vec2(r, h); return min(max(d.x, d.y), 0.0) + length(max(d, 0.0)); }
+float sdCone(vec3 p, float r, float h) { // base at y=0, tip at y=h
+  float k = h / sqrt(h * h + r * r);
+  return max((length(p.xz) - r * (1.0 - p.y / h)) * k, max(-p.y, p.y - h));
+}
+float crenel(vec3 p, float top) { // notches along wall tops
+  return max(p.y - top, -max(sdBox(vec3(mod(p.x, 2.4) - 1.2, p.y - top + 0.6, p.z), vec3(0.55, 0.7, 50.0)), sdBox(vec3(p.x, p.y - top + 0.6, mod(p.z, 2.4) - 1.2), vec3(50.0, 0.7, 0.55))));
+}
+
+vec3 CASTLE_ORIGIN = vec3(-205.0, 84.0, 330.0);
+float tower(vec3 p, vec2 at, float r, float h, float roof, inout float mat) {
+  vec3 q = p - vec3(at.x, 0.0, at.y);
+  float body = sdCyl(q - vec3(0.0, h * 0.5 - 6.0, 0.0), r, h * 0.5 + 6.0);
+  float cap = sdCone(q - vec3(0.0, h, 0.0), r * 1.25, roof);
+  if (cap < body) mat = 2.0;
+  return min(body, cap);
+}
+float castle(vec3 p, out float mat) {
+  mat = 1.0;
+  const float S = 1.3;
+  vec3 q = (p - CASTLE_ORIGIN) / S;
+  float bound = sdBox(q - vec3(0.0, 25.0, 0.0), vec3(40.0, 40.0, 36.0));
+  if (bound > 2.0) return bound * S;
+  float roofMat = 1.0;
+  // curtain wall ring
+  float wall = abs(sdBox(q - vec3(0.0, 4.0, 0.0), vec3(26.0, 10.0, 22.0))) - 1.2;
+  wall = max(wall, crenel(q, 14.0));
+  float d = wall;
+  float m;
+  // keep and great hall
+  float keep = sdBox(q - vec3(-4.0, 10.0, 4.0), vec3(8.0, 20.0, 8.0));
+  keep = max(keep, crenel(q, 30.0));
+  d = min(d, keep);
+  float hall = sdBox(q - vec3(10.0, 6.0, 8.0), vec3(10.0, 10.0, 6.0));
+  float hallRoof = max(sdBox(q - vec3(10.0, 16.0, 8.0), vec3(10.5, 6.0, 6.5)), (abs(q.z - 8.0) + (q.y - 16.0)) * 0.7 - 4.5);
+  if (hallRoof < d && hallRoof < hall) mat = 2.0;
+  d = min(d, min(hall, hallRoof));
+  // towers
+  m = 1.0; float t;
+  t = tower(q, vec2(-26.0, -22.0), 4.2, 22.0, 11.0, m); if (t < d) { d = t; mat = m; } m = 1.0;
+  t = tower(q, vec2(26.0, -22.0), 4.2, 22.0, 11.0, m); if (t < d) { d = t; mat = m; } m = 1.0;
+  t = tower(q, vec2(-26.0, 22.0), 4.2, 20.0, 10.0, m); if (t < d) { d = t; mat = m; } m = 1.0;
+  t = tower(q, vec2(26.0, 22.0), 4.2, 24.0, 12.0, m); if (t < d) { d = t; mat = m; } m = 1.0;
+  t = tower(q, vec2(4.0, -4.0), 3.6, 40.0, 16.0, m); if (t < d) { d = t; mat = m; } m = 1.0;
+  t = tower(q, vec2(-12.0, 12.0), 3.0, 34.0, 12.0, m); if (t < d) { d = t; mat = m; } m = 1.0;
+  t = tower(q, vec2(0.0, -22.0), 5.0, 18.0, 9.0, m); if (t < d) { d = t; mat = m; }
+  return d * S;
+}
+
+// village cottages by the lake
+float cottages(vec3 p, out float mat) {
+  mat = 3.0;
+  float d = 1e9;
+  for (int i = 0; i < 4; i++) {
+    float fi = float(i);
+    vec2 at = vec2(58.0 + 15.0 * fi + 6.0 * sin(fi * 2.3), 84.0 + 12.0 * fi + 7.0 * cos(fi * 1.7));
+    float gy = ground(at, 4);
+    vec3 q = p - vec3(at.x, gy, at.y);
+    float a = 0.5 + fi;
+    q.xz = mat2(cos(a), -sin(a), sin(a), cos(a)) * q.xz;
+    float body = sdBox(q - vec3(0.0, 1.8, 0.0), vec3(3.6, 2.2, 2.4));
+    float roof = max(sdBox(q - vec3(0.0, 4.6, 0.0), vec3(4.0, 2.6, 3.0)), (abs(q.z) + (q.y - 4.2)) * 0.7 - 1.6);
+    if (roof < d && roof < body) mat = 4.0; else if (body < d) mat = 3.0;
+    d = min(d, min(body, roof));
+  }
+  return d;
+}
+
+// ---------- ray marching ----------
+struct Hit { float t; float mat; vec3 p; };
+
+Hit march(vec3 ro, vec3 rd, float tmax) {
+  Hit h; h.t = -1.0; h.mat = 0.0;
+  float t = 0.5;
+  for (int i = 0; i < 420; i++) {
+    vec3 p = ro + rd * t;
+    if (p.y > 700.0 && rd.y > 0.0) break;
+    float cm, km;
+    float dc = castle(p, cm);
+    float dk = cottages(p, km);
+    float gh = height(p.xz, t < 400.0 ? 7 : 6);
+    float dt = (p.y - gh);
+    if (dc < 0.02 * t * 0.02 + 0.01) { h.t = t; h.mat = 10.0 + cm; h.p = p; return h; }
+    if (dk < 0.01) { h.t = t; h.mat = 10.0 + km; h.p = p; return h; }
+    if (dt < 0.0015 * t) { h.t = t; h.mat = 1.0; h.p = p; return h; }
+    float step = min(min(dc, dk), dt * 0.42);
+    t += max(step, 0.004 * t + 0.02);
+    if (t > tmax) break;
+  }
+  return h;
+}
+
+float softShadow(vec3 ro, vec3 rd) {
+  float res = 1.0, t = 0.8;
+  for (int i = 0; i < 70; i++) {
+    vec3 p = ro + rd * t;
+    float cm;
+    float d = min(p.y - height(p.xz, 5), castle(p, cm));
+    res = min(res, 12.0 * d / t);
+    if (res < 0.001 || p.y > 520.0) break;
+    t += clamp(d * 0.6, 0.5, 40.0);
+  }
+  return clamp(res, 0.0, 1.0);
+}
+
+vec3 terrainNormal(vec2 p, float t) {
+  float e = 0.02 + 0.0015 * t;
+  return normalize(vec3(height(p - vec2(e, 0), 9) - height(p + vec2(e, 0), 9), 2.0 * e, height(p - vec2(0, e), 9) - height(p + vec2(0, e), 9)));
+}
+vec3 sdfNormal(vec3 p) {
+  vec2 e = vec2(0.02, 0.0); float m;
+  float c = min(castle(p, m), cottages(p, m));
+  return normalize(vec3(min(castle(p + e.xyy, m), cottages(p + e.xyy, m)) - c,
+                        min(castle(p + e.yxy, m), cottages(p + e.yxy, m)) - c,
+                        min(castle(p + e.yyx, m), cottages(p + e.yyx, m)) - c));
+}
+
+// ---------- sky ----------
+vec3 sky(vec3 rd) {
+  float y = max(rd.y, 0.0);
+  vec3 col = mix(vec3(1.0, 0.8, 0.55), vec3(0.3, 0.48, 0.74), pow(y, 0.45));
+  col = mix(col, vec3(0.16, 0.3, 0.56), smoothstep(0.12, 0.6, y));
+  float s = max(dot(rd, SUN), 0.0);
+  col += vec3(1.0, 0.7, 0.4) * 0.45 * pow(s, 6.0) + vec3(1.0, 0.85, 0.6) * 0.6 * pow(s, 60.0) + vec3(1.0, 0.95, 0.85) * 8.0 * pow(s, 2200.0);
+  // clouds on a high plane
+  if (rd.y > 0.0) {
+    vec2 uv = rd.xz / rd.y * 900.0;
+    float c = fbm(uv * 0.0011 + vec2(2.0, 5.0), 7);
+    float cl = smoothstep(0.56, 0.86, c);
+    vec3 cloudCol = mix(vec3(0.72, 0.68, 0.72), vec3(1.05, 0.86, 0.66), pow(s, 3.0) + 0.3);
+    cloudCol = mix(cloudCol, vec3(0.55, 0.52, 0.58), smoothstep(0.62, 0.95, c) * 0.6);
+    col = mix(col, cloudCol, cl * smoothstep(0.0, 0.12, rd.y) * 0.85);
+  }
+  return col;
+}
+
+vec3 fog(vec3 col, vec3 ro, vec3 rd, float t) {
+  float s = max(dot(rd, SUN), 0.0);
+  vec3 fogCol = mix(vec3(0.5, 0.6, 0.74), vec3(1.0, 0.78, 0.5), pow(s, 4.0));
+  float amount = (1.0 - exp(-t * 0.00038)) * 0.85;
+  // valley mist that pools low
+  float mist = (1.0 - exp(-t * 0.0025)) * exp(-max(ro.y + rd.y * t, 0.0) * 0.06) * 0.22;
+  return mix(col, fogCol, clamp(amount + mist, 0.0, 1.0));
+}
+
+vec3 shadeTerrain(vec3 p, vec3 rd, float t) {
+  vec3 n = terrainNormal(p.xz, t);
+  float g = ground(p.xz, 7);
+  float id;
+  float tr = trees(p.xz, g, id);
+  float slope = n.y;
+  float var = fbm(p.xz * 0.05, 4);
+  // base materials
+  vec3 grass = mix(vec3(0.16, 0.22, 0.07), vec3(0.36, 0.36, 0.12), var);
+  grass = mix(grass, vec3(0.1, 0.16, 0.06), fbm(p.xz * 0.01, 4) * 0.8);
+  grass = mix(grass, vec3(0.5, 0.44, 0.2), smoothstep(0.55, 0.8, fbm(p.xz * 0.02 + 3.0, 5)) * 0.6);
+  grass *= 0.75 + 0.5 * fbm(p.xz * 0.6, 3);
+  vec3 rock = mix(vec3(0.3, 0.27, 0.23), vec3(0.5, 0.45, 0.38), fbm(p.xz * 0.3 + p.y * 0.2, 5));
+  vec3 col = mix(rock, grass, smoothstep(0.62, 0.82, slope + 0.1 * (var - 0.5)));
+  float snow = smoothstep(175.0, 225.0, p.y + 60.0 * var) * smoothstep(0.35, 0.6, slope);
+  col = mix(col, vec3(0.92, 0.93, 0.97), snow);
+  col = mix(col, vec3(0.42, 0.34, 0.23) * (0.8 + 0.4 * var), smoothstep(3.5, 1.0, pathDist(p.xz)) * step(1.0, g));
+  col = mix(col, vec3(0.32, 0.3, 0.2), smoothstep(1.2, -1.5, g)); // wet shore
+  if (tr > 0.3) {
+    col = mix(vec3(0.05, 0.09, 0.04), vec3(0.1, 0.13, 0.05), id * 1.5 + var * 0.4);
+    col *= 0.7 + 0.5 * smoothstep(0.0, 1.0, (p.y - g) / 18.0);
+  }
+  // lighting
+  float dif = clamp(dot(n, SUN), 0.0, 1.0);
+  float sh = dif > 0.0 ? softShadow(p + n * 0.3, SUN) : 0.0;
+  float amb = 0.5 + 0.5 * n.y;
+  float back = clamp(dot(n, normalize(vec3(-SUN.x, 0.0, -SUN.z))), 0.0, 1.0);
+  vec3 light = vec3(2.6, 1.85, 1.1) * dif * sh + vec3(0.32, 0.42, 0.58) * amb * 0.55 + vec3(0.35, 0.25, 0.15) * back * 0.18;
+  col *= light;
+  col += snow * pow(clamp(dot(reflect(rd, n), SUN), 0.0, 1.0), 20.0) * 0.4 * sh;
+  return col;
+}
+
+vec3 shadeSdf(vec3 p, vec3 rd, float mat) {
+  vec3 n = sdfNormal(p);
+  vec3 col;
+  float var = fbm(p.xz * 0.8 + p.y * 0.7, 4);
+  if (mat == 11.0) col = mix(vec3(0.42, 0.38, 0.33), vec3(0.6, 0.55, 0.47), var);               // stone
+  else if (mat == 12.0) col = mix(vec3(0.11, 0.13, 0.16), vec3(0.19, 0.2, 0.22), var);           // slate roofs
+  else if (mat == 13.0) col = mix(vec3(0.62, 0.55, 0.42), vec3(0.72, 0.64, 0.5), var);           // plaster
+  else col = mix(vec3(0.33, 0.24, 0.13), vec3(0.45, 0.35, 0.2), var);                             // thatch
+  if (mat == 13.0) { // timber framing
+    vec3 q = fract(p * 0.55);
+    col = mix(col, vec3(0.2, 0.13, 0.08), step(0.86, max(q.x, q.z)) * 0.9);
+  }
+  float dif = clamp(dot(n, SUN), 0.0, 1.0);
+  float sh = dif > 0.0 ? softShadow(p + n * 0.25, SUN) : 0.0;
+  float amb = 0.55 + 0.45 * n.y;
+  col *= vec3(2.6, 1.85, 1.1) * dif * sh + vec3(0.32, 0.42, 0.58) * amb * 0.6;
+  // glowing windows on the shaded side
+  if (mat == 11.0) {
+    vec2 w = vec2(fract(p.y * 0.22), fract((p.x + p.z) * 0.35));
+    float win = step(0.72, w.x) * step(0.8, w.y) * step(0.55, hash(floor(vec2(p.y * 0.22, (p.x + p.z) * 0.35))));
+    col = mix(col, vec3(1.6, 0.9, 0.35), win * (1.0 - dif) * 0.9);
+  }
+  return col;
+}
+
+vec3 render(vec3 ro, vec3 rd) {
+  Hit h = march(ro, rd, 3200.0);
+  // water surface
+  float tw = rd.y < 0.0 ? (WATER - ro.y) / rd.y : -1.0;
+  bool water = tw > 0.0 && (h.t < 0.0 || tw < h.t);
+  if (water) {
+    vec3 p = ro + rd * tw;
+    vec2 ripple = vec2(fbm(p.xz * vec2(0.08, 0.5), 4), fbm(p.xz * vec2(0.08, 0.5) + 9.0, 4)) - 0.5;
+    vec3 n = normalize(vec3(ripple.x * 0.12, 1.0, ripple.y * 0.35));
+    vec3 rr = reflect(rd, n);
+    Hit r = march(p + vec3(0, 0.05, 0), rr, 1600.0);
+    vec3 refl = r.t < 0.0 ? sky(rr) : fog(r.mat >= 10.0 ? shadeSdf(r.p, rr, r.mat) : shadeTerrain(r.p, rr, r.t), p, rr, r.t);
+    float fres = 0.25 + 0.75 * pow(1.0 - max(-rd.y, 0.0), 5.0);
+    vec3 col = mix(vec3(0.05, 0.08, 0.08), refl, fres);
+    col += vec3(1.0, 0.8, 0.5) * pow(max(dot(rr, SUN), 0.0), 180.0) * 3.0;
+    return fog(col, ro, rd, tw);
+  }
+  if (h.t < 0.0) return sky(rd);
+  vec3 col = h.mat >= 10.0 ? shadeSdf(h.p, rd, h.mat) : shadeTerrain(h.p, rd, h.t);
+  return fog(col, ro, rd, h.t);
+}
+
+void main() {
+  vec2 uv = (gl_FragCoord.xy - 0.5 * uRes) / uRes.y;
+  vec3 ro = vec3(0.0, 24.0, -30.0);
+  vec3 ta = vec3(8.0, 44.0, 300.0);
+  vec3 fw = normalize(ta - ro);
+  vec3 rt = normalize(cross(vec3(0, 1, 0), fw));
+  vec3 up = cross(fw, rt);
+  vec3 rd = normalize(uv.x * rt + uv.y * up + 1.05 * fw);
+  vec3 col = render(ro, rd);
+  // tone mapping and grade
+  col = col * 0.95;
+  col = (col * (2.51 * col + 0.03)) / (col * (2.43 * col + 0.59) + 0.14);
+  col = pow(clamp(col, 0.0, 1.0), vec3(0.4545));
+  col = mix(col, col * col * (3.0 - 2.0 * col), 0.35);
+  float luma = dot(col, vec3(0.299, 0.587, 0.114));
+  col = mix(vec3(luma), col, 1.18);                       // a touch more colour
+  col *= mix(vec3(0.96, 0.99, 1.04), vec3(1.05, 1.0, 0.92), smoothstep(0.2, 0.8, luma)); // cool shadows, warm highlights
+  vec2 q = gl_FragCoord.xy / uRes;
+  col *= 0.55 + 0.45 * pow(16.0 * q.x * q.y * (1.0 - q.x) * (1.0 - q.y), 0.18);
+  col += (hash(gl_FragCoord.xy) - 0.5) * 0.025;
+  outColor = vec4(col, 1.0);
+}
+</script>
+<script>
+  // Set up the shader once; window.renderTile(x, y, w, h) draws one tile at a time
+  const W = +(new URLSearchParams(location.search).get("w") || 1600);
+  const H = Math.round(W * 9 / 16);
+  const canvas = document.getElementById("c");
+  canvas.width = W; canvas.height = H;
+  const gl = canvas.getContext("webgl2", { preserveDrawingBuffer: true });
+  const vs = `#version 300 es
+  in vec2 p; void main() { gl_Position = vec4(p, 0.0, 1.0); }`;
+  function compile(type, src) {
+    const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
+    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(s));
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, compile(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, compile(gl.FRAGMENT_SHADER, document.getElementById("fs").textContent));
+  gl.linkProgram(prog);
+  if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(prog));
+  gl.useProgram(prog);
+  gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+  gl.enableVertexAttribArray(0);
+  gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+  gl.uniform2f(gl.getUniformLocation(prog, "uRes"), W, H);
+  gl.viewport(0, 0, W, H);
+  gl.enable(gl.SCISSOR_TEST);
+  window.size = { W, H };
+  window.renderTile = (x, y, w, h) => {
+    gl.scissor(x, y, w, h);
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+    gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, new Uint8Array(4)); // wait for the GPU
+  };
+  window.ready = true;
+</script>
+</body>
+</html>

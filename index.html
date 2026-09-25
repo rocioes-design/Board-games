@@ -11,107 +11,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Medieval landscape at golden hour -->
-  <svg class="landscape" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-    <defs>
-      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#8fb3c9"/>
-        <stop offset=".45" stop-color="#d9cfb4"/>
-        <stop offset=".7" stop-color="#f1d49a"/>
-      </linearGradient>
-      <radialGradient id="sun" cx="1180" cy="430" r="260" gradientUnits="userSpaceOnUse">
-        <stop offset="0" stop-color="#fff6d8" stop-opacity=".95"/>
-        <stop offset=".25" stop-color="#ffe7a8" stop-opacity=".55"/>
-        <stop offset="1" stop-color="#ffe7a8" stop-opacity="0"/>
-      </radialGradient>
-      <linearGradient id="haze" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#f4e3bd" stop-opacity="0"/>
-        <stop offset="1" stop-color="#f4e3bd" stop-opacity=".55"/>
-      </linearGradient>
-    </defs>
-
-    <rect width="1600" height="900" fill="url(#sky)"/>
-    <circle cx="1180" cy="430" r="260" fill="url(#sun)"/>
-    <circle cx="1180" cy="430" r="46" fill="#fff4d2"/>
-
-    <!-- clouds -->
-    <g fill="#fdf6e6" opacity=".6">
-      <ellipse cx="260" cy="150" rx="150" ry="22"/>
-      <ellipse cx="330" cy="135" rx="90" ry="20"/>
-      <ellipse cx="1330" cy="210" rx="170" ry="18"/>
-      <ellipse cx="820" cy="95" rx="120" ry="14"/>
-    </g>
-
-    <!-- distant mountains -->
-    <path fill="#a9b7bd" d="M0 470 L120 380 L210 430 L330 320 L450 420 L560 360 L700 450 L820 390 L960 460 L1080 370 L1200 440 L1330 350 L1460 430 L1600 380 V900 H0Z"/>
-    <path fill="#a9b7bd" opacity=".5" d="M330 320 L360 345 L345 350Z M1330 350 L1360 372 L1340 376Z"/>
-    <rect y="340" width="1600" height="200" fill="url(#haze)"/>
-
-    <!-- far hills -->
-    <path fill="#9aa98a" d="M0 540 C180 480 340 500 520 520 S860 470 1040 505 1380 470 1600 500 V900 H0Z"/>
-
-    <!-- castle on the hill -->
-    <g transform="translate(-190 104) scale(.8)">
-    <g fill="#6f7a6c">
-      <path d="M300 520 C380 440 560 430 660 520Z"/>
-      <rect x="400" y="405" width="150" height="80"/>
-      <rect x="380" y="360" width="38" height="125"/>
-      <rect x="532" y="370" width="36" height="115"/>
-      <rect x="455" y="330" width="40" height="155"/>
-      <path d="M376 362 L399 322 L422 362Z M528 372 L550 334 L572 372Z M451 332 L475 282 L499 332Z"/>
-      <path d="M400 405 h12 v-10 h14 v10 h14 v-10 h14 v10 h14 v-10 h14 v10 h14 v-10 h14 v10 h14 v-10 h14 v10 h12 v4 h-150Z"/>
-      <rect x="474" y="258" width="2" height="26"/>
-      <path d="M476 258 l18 5 -18 5Z" fill="#b8574a"/>
-    </g>
-    <g fill="#f3d28c" opacity=".85">
-      <rect x="394" y="390" width="6" height="10" rx="3"/>
-      <rect x="470" y="360" width="6" height="10" rx="3"/>
-      <rect x="546" y="400" width="6" height="10" rx="3"/>
-    </g>
-    </g>
-
-    <!-- middle hills with fields -->
-    <path fill="#7f9a62" d="M0 610 C220 560 420 575 640 600 S1080 560 1300 580 1500 570 1600 575 V900 H0Z"/>
-    <g stroke="#8fa96d" stroke-width="7" opacity=".7">
-      <path d="M900 596 L1180 580 M910 614 L1200 598 M920 632 L1220 616"/>
-    </g>
-    <path fill="#c9ad6a" opacity=".55" d="M1240 585 C1320 575 1420 575 1500 582 L1490 620 C1400 612 1320 612 1250 622Z"/>
-
-    <!-- windmill -->
-    <g transform="translate(1390 520)">
-      <path fill="#6d6152" d="M-14 70 L-9 10 L9 10 L14 70Z"/>
-      <path fill="#5b4f43" d="M-12 10 L0 -4 L12 10Z"/>
-      <g stroke="#5b4f43" stroke-width="4" stroke-linecap="round">
-        <path d="M0 4 L-38 -34 M0 4 L38 -34 M0 4 L-38 42 M0 4 L38 42"/>
-      </g>
-    </g>
-
-    <!-- near hills -->
-    <path fill="#627f49" d="M0 700 C260 640 520 660 760 690 S1200 650 1600 680 V900 H0Z"/>
-
-    <!-- winding path -->
-    <path fill="#d8c08c" opacity=".8" d="M760 900 C800 820 700 780 760 740 S860 700 840 690 L852 690 C880 705 800 730 790 760 S860 840 850 900Z"/>
-
-    <!-- forest -->
-    <g fill="#3f5b36">
-      <path d="M40 720 l22 -70 22 70Z M80 730 l26 -90 26 90Z M125 725 l20 -64 20 64Z M160 735 l24 -80 24 80Z M205 728 l18 -60 18 60Z"/>
-      <path d="M1370 720 l20 -66 20 66Z M1410 728 l26 -88 26 88Z M1455 722 l20 -62 20 62Z M1490 732 l24 -84 24 84Z M1530 724 l22 -70 22 70Z"/>
-    </g>
-    <g fill="#35502e">
-      <path d="M0 800 l30 -110 30 110Z M1540 810 l30 -120 30 120Z"/>
-    </g>
-
-    <!-- village cottages -->
-    <g transform="translate(980 640)">
-      <rect x="0" y="16" width="34" height="22" fill="#e6d6b4"/>
-      <path d="M-4 18 L17 0 L38 18Z" fill="#9c5b3f"/>
-      <rect x="46" y="22" width="28" height="18" fill="#e6d6b4"/>
-      <path d="M42 24 L60 8 L78 24Z" fill="#8a4f37"/>
-    </g>
-
-    <!-- foreground -->
-    <path fill="#4c6a3a" d="M0 800 C300 760 600 790 900 800 S1400 770 1600 790 V900 H0Z"/>
-  </svg>
+  <div class="landscape" aria-hidden="true"></div>
 
   <main class="stage" aria-roledescription="carousel" aria-label="Top 100 board games">
     <button class="nav prev" type="button" aria-label="Previous game">
@@ -119,7 +19,91 @@
     </button>
 
     <article class="card" aria-live="polite">
-      <span class="rank" aria-label="Rank"></span>
+      <!-- ranking number made of clear glass -->
+      <div class="rank">
+        <div class="rank-refraction"></div>
+        <svg class="rank-glass" width="280" height="170" viewBox="0 0 280 170" aria-hidden="true">
+          <defs>
+            <clipPath id="rankClip"><text class="rank-text" x="18" y="132"></text></clipPath>
+            <linearGradient id="glassBody" x1="0" y1="0" x2=".35" y2="1">
+              <stop offset="0" stop-color="#ffffff" stop-opacity=".7"/>
+              <stop offset=".45" stop-color="#d6e6f2" stop-opacity=".04"/>
+              <stop offset=".75" stop-color="#8fb0cc" stop-opacity=".16"/>
+              <stop offset="1" stop-color="#ffffff" stop-opacity=".4"/>
+            </linearGradient>
+            <filter id="glass" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
+              <!-- dark glass edge: the outline minus a shrunken copy -->
+              <feMorphology in="SourceAlpha" operator="erode" radius="4" result="inner"/>
+              <feGaussianBlur in="inner" stdDeviation="2.2" result="innerSoft"/>
+              <feComposite in="SourceAlpha" in2="innerSoft" operator="out" result="rim"/>
+              <feFlood flood-color="#1b2c3f" flood-opacity=".95"/>
+              <feComposite in2="rim" operator="in" result="darkRim"/>
+              <!-- prism fringe: tinted copies of the edge, nudged apart -->
+              <feFlood flood-color="#ff3d9e" flood-opacity=".75"/>
+              <feComposite in2="rim" operator="in"/>
+              <feOffset dx="-2.5" dy="-1.5" result="magenta"/>
+              <feFlood flood-color="#2fe3ff" flood-opacity=".8"/>
+              <feComposite in2="rim" operator="in"/>
+              <feOffset dx="2.5" dy="2" result="cyan"/>
+              <feFlood flood-color="#ffe95c" flood-opacity=".6"/>
+              <feComposite in2="rim" operator="in"/>
+              <feOffset dx="0" dy="2.5" result="yellow"/>
+              <!-- rounded bevel lit from the top left -->
+              <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="bump"/>
+              <feSpecularLighting in="bump" surfaceScale="10" specularConstant="3" specularExponent="30" lighting-color="#ffffff" result="spec">
+                <fePointLight x="-20" y="-90" z="140"/>
+              </feSpecularLighting>
+              <feComponentTransfer in="spec"><feFuncA type="table" tableValues="0 0 .5 1 1"/></feComponentTransfer>
+              <feComposite in2="SourceAlpha" operator="in" result="shine"/>
+              <!-- thin bright line just inside the edge, where light bends through the glass -->
+              <feMorphology in="SourceAlpha" operator="erode" radius="5" result="inner2"/>
+              <feMorphology in="inner2" operator="dilate" radius="1" result="inner3"/>
+              <feComposite in="inner3" in2="inner2" operator="out"/>
+              <feGaussianBlur stdDeviation=".6"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .95 0" result="innerLine"/>
+              <!-- thickness: darker glass along the lower right inside edges -->
+              <feComponentTransfer in="SourceAlpha"><feFuncA type="table" tableValues="1 0"/></feComponentTransfer>
+              <feOffset dx="-6" dy="-7"/>
+              <feGaussianBlur stdDeviation="3.5"/>
+              <feComposite in2="SourceAlpha" operator="in"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 .1  0 0 0 0 .18  0 0 0 0 .28  0 0 0 .6 0" result="depth"/>
+              <feOffset in="inner" dx="3" dy="4" result="innerShift"/>
+              <feComposite in="inner" in2="innerShift" operator="out"/>
+              <feGaussianBlur stdDeviation=".7"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1.4 0" result="glint"/>
+              <feMerge>
+                <feMergeNode in="SourceGraphic"/>
+                <feMergeNode in="depth"/>
+                <feMergeNode in="magenta"/>
+                <feMergeNode in="cyan"/>
+                <feMergeNode in="yellow"/>
+                <feMergeNode in="darkRim"/>
+                <feMergeNode in="innerLine"/>
+                <feMergeNode in="shine"/>
+                <feMergeNode in="glint"/>
+              </feMerge>
+            </filter>
+            <linearGradient id="glassStreak" x1="0" y1="0" x2="1" y2="1">
+              <stop offset=".3" stop-color="#fff" stop-opacity="0"/>
+              <stop offset=".34" stop-color="#fff" stop-opacity=".75"/>
+              <stop offset=".39" stop-color="#fff" stop-opacity=".25"/>
+              <stop offset=".42" stop-color="#fff" stop-opacity="0"/>
+              <stop offset=".6" stop-color="#fff" stop-opacity="0"/>
+              <stop offset=".62" stop-color="#fff" stop-opacity=".45"/>
+              <stop offset=".65" stop-color="#fff" stop-opacity="0"/>
+            </linearGradient>
+            <filter id="glassShadow" x="-20%" y="-20%" width="140%" height="160%">
+              <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
+              <feOffset dx="8" dy="14"/>
+              <feComponentTransfer><feFuncA type="linear" slope=".28"/></feComponentTransfer>
+            </filter>
+          </defs>
+          <text class="rank-text" x="18" y="132" filter="url(#glassShadow)"></text>
+          <text class="rank-text" x="18" y="132" fill="url(#glassBody)" filter="url(#glass)"></text>
+          <text class="rank-text" x="18" y="132" fill="url(#glassStreak)"></text>
+        </svg>
+        <span class="visually-hidden rank-label"></span>
+      </div>
       <div class="art">
         <img alt="">
         <div class="placeholder"><span></span></div>

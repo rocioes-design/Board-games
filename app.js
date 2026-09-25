@@ -2,7 +2,8 @@ const games = (window.BOARD_GAMES?.games || []).slice(0, 100);
 
 const card = document.querySelector(".card");
 const el = {
-  rank: card.querySelector(".rank"),
+  rankText: card.querySelectorAll(".rank-text"),
+  rankLabel: card.querySelector(".rank-label"),
   img: card.querySelector(".art img"),
   placeholder: card.querySelector(".placeholder"),
   name: card.querySelector(".name"),
@@ -29,8 +30,8 @@ el.img.addEventListener("load", () => {
 
 function render() {
   const g = games[index];
-  el.rank.textContent = g.rank;
-  el.rank.dataset.rank = g.rank;
+  el.rankText.forEach((t) => (t.textContent = g.rank));
+  el.rankLabel.textContent = `Rank ${g.rank}`;
   el.name.textContent = g.name;
   el.year.textContent = g.year || "";
   el.description.textContent = g.description;
