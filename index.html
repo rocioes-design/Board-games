@@ -19,88 +19,32 @@
     </button>
 
     <article class="card" aria-live="polite">
-      <!-- ranking number made of clear glass -->
+      <!-- ranking number on a golden label -->
       <div class="rank">
-        <div class="rank-refraction"></div>
-        <svg class="rank-glass" width="280" height="170" viewBox="0 0 280 170" aria-hidden="true">
+        <svg class="rank-tag" viewBox="0 0 100 150" aria-hidden="true">
           <defs>
-            <clipPath id="rankClip"><text class="rank-text" x="18" y="132"></text></clipPath>
-            <linearGradient id="glassBody" x1="0" y1="0" x2=".35" y2="1">
-              <stop offset="0" stop-color="#ffffff" stop-opacity=".7"/>
-              <stop offset=".45" stop-color="#d6e6f2" stop-opacity=".04"/>
-              <stop offset=".75" stop-color="#8fb0cc" stop-opacity=".16"/>
-              <stop offset="1" stop-color="#ffffff" stop-opacity=".4"/>
+            <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#e6c98d"/>
+              <stop offset=".45" stop-color="#cfa760"/>
+              <stop offset=".7" stop-color="#dcbb7a"/>
+              <stop offset="1" stop-color="#b98f4a"/>
             </linearGradient>
-            <filter id="glass" x="-10%" y="-10%" width="120%" height="120%" color-interpolation-filters="sRGB">
-              <!-- dark glass edge: the outline minus a shrunken copy -->
-              <feMorphology in="SourceAlpha" operator="erode" radius="4" result="inner"/>
-              <feGaussianBlur in="inner" stdDeviation="2.2" result="innerSoft"/>
-              <feComposite in="SourceAlpha" in2="innerSoft" operator="out" result="rim"/>
-              <feFlood flood-color="#1b2c3f" flood-opacity=".95"/>
-              <feComposite in2="rim" operator="in" result="darkRim"/>
-              <!-- prism fringe: tinted copies of the edge, nudged apart -->
-              <feFlood flood-color="#ff3d9e" flood-opacity=".75"/>
-              <feComposite in2="rim" operator="in"/>
-              <feOffset dx="-2.5" dy="-1.5" result="magenta"/>
-              <feFlood flood-color="#2fe3ff" flood-opacity=".8"/>
-              <feComposite in2="rim" operator="in"/>
-              <feOffset dx="2.5" dy="2" result="cyan"/>
-              <feFlood flood-color="#ffe95c" flood-opacity=".6"/>
-              <feComposite in2="rim" operator="in"/>
-              <feOffset dx="0" dy="2.5" result="yellow"/>
-              <!-- rounded bevel lit from the top left -->
-              <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="bump"/>
-              <feSpecularLighting in="bump" surfaceScale="10" specularConstant="3" specularExponent="30" lighting-color="#ffffff" result="spec">
-                <fePointLight x="-20" y="-90" z="140"/>
-              </feSpecularLighting>
-              <feComponentTransfer in="spec"><feFuncA type="table" tableValues="0 0 .5 1 1"/></feComponentTransfer>
-              <feComposite in2="SourceAlpha" operator="in" result="shine"/>
-              <!-- thin bright line just inside the edge, where light bends through the glass -->
-              <feMorphology in="SourceAlpha" operator="erode" radius="5" result="inner2"/>
-              <feMorphology in="inner2" operator="dilate" radius="1" result="inner3"/>
-              <feComposite in="inner3" in2="inner2" operator="out"/>
-              <feGaussianBlur stdDeviation=".6"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .95 0" result="innerLine"/>
-              <!-- thickness: darker glass along the lower right inside edges -->
-              <feComponentTransfer in="SourceAlpha"><feFuncA type="table" tableValues="1 0"/></feComponentTransfer>
-              <feOffset dx="-6" dy="-7"/>
-              <feGaussianBlur stdDeviation="3.5"/>
-              <feComposite in2="SourceAlpha" operator="in"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 .1  0 0 0 0 .18  0 0 0 0 .28  0 0 0 .6 0" result="depth"/>
-              <feOffset in="inner" dx="3" dy="4" result="innerShift"/>
-              <feComposite in="inner" in2="innerShift" operator="out"/>
-              <feGaussianBlur stdDeviation=".7"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1.4 0" result="glint"/>
-              <feMerge>
-                <feMergeNode in="SourceGraphic"/>
-                <feMergeNode in="depth"/>
-                <feMergeNode in="magenta"/>
-                <feMergeNode in="cyan"/>
-                <feMergeNode in="yellow"/>
-                <feMergeNode in="darkRim"/>
-                <feMergeNode in="innerLine"/>
-                <feMergeNode in="shine"/>
-                <feMergeNode in="glint"/>
-              </feMerge>
-            </filter>
-            <linearGradient id="glassStreak" x1="0" y1="0" x2="1" y2="1">
-              <stop offset=".3" stop-color="#fff" stop-opacity="0"/>
-              <stop offset=".34" stop-color="#fff" stop-opacity=".75"/>
-              <stop offset=".39" stop-color="#fff" stop-opacity=".25"/>
-              <stop offset=".42" stop-color="#fff" stop-opacity="0"/>
-              <stop offset=".6" stop-color="#fff" stop-opacity="0"/>
-              <stop offset=".62" stop-color="#fff" stop-opacity=".45"/>
-              <stop offset=".65" stop-color="#fff" stop-opacity="0"/>
-            </linearGradient>
-            <filter id="glassShadow" x="-20%" y="-20%" width="140%" height="160%">
-              <feGaussianBlur in="SourceAlpha" stdDeviation="6"/>
-              <feOffset dx="8" dy="14"/>
-              <feComponentTransfer><feFuncA type="linear" slope=".28"/></feComponentTransfer>
+            <!-- faint paper grain -->
+            <filter id="paper" x="0" y="0" width="100%" height="100%">
+              <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4" result="n"/>
+              <feColorMatrix in="n" type="matrix" values="0 0 0 0 .35  0 0 0 0 .25  0 0 0 0 .12  0 0 0 .22 0" result="grain"/>
+              <feComposite in="grain" in2="SourceGraphic" operator="in" result="g"/>
+              <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="g"/></feMerge>
             </filter>
           </defs>
-          <text class="rank-text" x="18" y="132" filter="url(#glassShadow)"></text>
-          <text class="rank-text" x="18" y="132" fill="url(#glassBody)" filter="url(#glass)"></text>
-          <text class="rank-text" x="18" y="132" fill="url(#glassStreak)"></text>
+          <rect x="1" y="1" width="98" height="148" rx="49" fill="url(#gold)" filter="url(#paper)"/>
+          <rect x="6" y="6" width="88" height="138" rx="44" fill="none" stroke="#3f2d17" stroke-width="1.8"/>
+          <rect x="9.5" y="9.5" width="81" height="131" rx="40.5" fill="none" stroke="#3f2d17" stroke-width=".7"/>
+          <path d="M50 19 l3 3 -3 3 -3 -3z M50 125 l3 3 -3 3 -3 -3z" fill="#3f2d17"/>
+          <text class="rank-caption" x="50" y="50">RANK</text>
+          <path d="M34 106 h32" stroke="#3f2d17" stroke-width=".8"/>
+          <path d="M50 103 l3 3 -3 3 -3 -3z" fill="#3f2d17"/>
+          <text class="rank-text" x="50" y="92"></text>
         </svg>
         <span class="visually-hidden rank-label"></span>
       </div>

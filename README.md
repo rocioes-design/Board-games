@@ -1,6 +1,6 @@
 # Top 100 Board Games
 
-A slideshow of the 100 highest-ranked games on [BoardGameGeek](https://boardgamegeek.com/browse/boardgame), set against an original medieval valley.
+A slideshow of the 100 highest-ranked games on [BoardGameGeek](https://boardgamegeek.com/browse/boardgame), set in a classical garden.
 
 **To view it:** open `index.html` in a browser. Use the arrows, your keyboard's ← → keys, or swipe on a phone.
 
@@ -20,10 +20,9 @@ To refresh the list on your own computer instead, run `BGG_TOKEN=your-token node
 
 | File | What it does |
 | --- | --- |
-| `index.html` | The page, including the glass rank number |
+| `index.html` | The page, including the golden rank label |
 | `styles.css` | Colors and layout |
-| `assets/landscape.jpg` | The background image |
-| `scripts/landscape/` | The 3D scene that renders the background (`node scripts/landscape/render.mjs`, needs Playwright) |
+| `assets/background.jpg` | The background image |
 | `app.js` | The slideshow |
 | `data/games.js` | The 100 games |
 | `scripts/fetch-games.mjs` | Downloads fresh data from BoardGameGeek |

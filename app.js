@@ -30,7 +30,10 @@ el.img.addEventListener("load", () => {
 
 function render() {
   const g = games[index];
-  el.rankText.forEach((t) => (t.textContent = g.rank));
+  el.rankText.forEach((t) => {
+    t.textContent = g.rank;
+    t.classList.toggle("long", String(g.rank).length > 2);
+  });
   el.rankLabel.textContent = `Rank ${g.rank}`;
   el.name.textContent = g.name;
   el.year.textContent = g.year || "";
