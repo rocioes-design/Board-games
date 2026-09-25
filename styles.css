@@ -180,19 +180,11 @@ body {
 .rank-text {
   font-family: "Cinzel", Georgia, serif;
   font-weight: 600;
-  font-size: 42px;
+  font-size: 58px;
   fill: #3a2912;
   text-anchor: middle;
 }
-.rank-text.long { font-size: 32px; }
-.rank-caption {
-  font-family: "Cinzel", Georgia, serif;
-  font-weight: 600;
-  font-size: 9px;
-  letter-spacing: 3px;
-  fill: #3a2912;
-  text-anchor: middle;
-}
+.rank-text.long { font-size: 38px; }
 
 .visually-hidden {
   position: absolute;

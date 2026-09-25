@@ -20,7 +20,7 @@ To refresh the list on your own computer instead, run `BGG_TOKEN=your-token node
 
 | File | What it does |
 | --- | --- |
-| `index.html` | The page, including the golden rank label |
+| `index.html` | The page, including the golden rank tag |
 | `styles.css` | Colors and layout |
 | `assets/background.jpg` | The background image |
 | `app.js` | The slideshow |
