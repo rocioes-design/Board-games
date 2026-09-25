@@ -6,7 +6,7 @@ A slideshow of the 100 highest-ranked games on [BoardGameGeek](https://boardgame
 
 ## Where the data comes from
 
-The games are stored in `data/games.js`. The file in the repository is a **starter list**. It has no box art, and its ratings and rankings are approximate. To replace it with live data from BoardGameGeek:
+The games are stored in `data/games.js`. The ranks, years and ratings come from BoardGameGeek's daily rank file (25 Sep 2026). The images aren't there yet, and the descriptions and best player counts were written by hand. To replace it with live data from BoardGameGeek:
 
 1. Get a free BGG API token. Sign in to BoardGameGeek, go to <https://boardgamegeek.com/applications>, and register an application. BGG requires a token for its [XML API](https://boardgamegeek.com/using_the_xml_api).
 2. In this GitHub repository, go to **Settings → Secrets and variables → Actions → New repository secret**. Name it `BGG_TOKEN` and paste in the token.

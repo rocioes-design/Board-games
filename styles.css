@@ -203,6 +203,13 @@ h1 {
   color: #5a4630;
 }
 
+.credit {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: #7a6448;
+}
+.credit a { color: inherit; }
+
 /* ---------- small screens ---------- */
 
 @media (max-width: 760px) {
