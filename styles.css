@@ -1,7 +1,7 @@
 :root {
   --ink: #1d3450;
   --muted: #6b7280;
-  --card: #e7e2d7;
+  --card: #ffffff;
   --gold: #f5b90a;
 }
 
@@ -167,8 +167,8 @@ body {
 
 h1 {
   margin: 0 0 10px;
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 500;
   line-height: 1.3;
 }
 .year { color: var(--muted); font-weight: 400; margin-left: 10px; }
@@ -176,7 +176,7 @@ h1 {
 .description {
   margin: 0;
   font-style: italic;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.45;
   color: #1f2937;
 }
@@ -190,10 +190,10 @@ h1 {
   gap: 8px;
   white-space: nowrap;
 }
-.rating { font-size: 28px; font-weight: 500; margin-bottom: 6px !important; }
+.rating { font-size: 28px; font-weight: 600; margin-bottom: 6px !important; }
 .players { font-size: 19px; font-weight: 500; }
 
-.star { width: 28px; height: 28px; fill: var(--gold); }
+.star { width: 28px; height: 28px; fill: url(#starGold); }
 .meeple { width: 24px; height: 24px; fill: #b8574a; }
 
 .counter {
