@@ -1,0 +1,219 @@
+:root {
+  --ink: #1d3450;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --gold: #f5b90a;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; margin: 0; }
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--ink);
+  background: #d9cfb4;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 72px 16px 32px;
+}
+
+.landscape {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* ---------- slideshow ---------- */
+
+.stage {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 1300px;
+  justify-content: center;
+}
+
+.nav {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 0;
+  background: rgba(255, 255, 255, .85);
+  box-shadow: 0 4px 14px rgba(40, 40, 20, .18);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform .15s ease, background .15s ease;
+}
+.nav:hover { background: #fff; transform: scale(1.06); }
+.nav:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.nav svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: var(--ink);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  background: var(--card);
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: 0 24px 60px rgba(35, 45, 25, .28), 0 4px 10px rgba(35, 45, 25, .12);
+  transition: opacity .25s ease, transform .25s ease;
+}
+.card.leaving { opacity: 0; transform: translateX(var(--shift, 0)); }
+
+.art {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #efe6d2;
+}
+.art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.art img[hidden] { display: none; }
+
+/* shown until real artwork arrives from BoardGameGeek */
+.placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at center, rgba(255, 250, 235, .9), rgba(226, 208, 168, .9) 70%, rgba(190, 162, 112, .95)),
+    #e8d9b5;
+}
+.placeholder[hidden] { display: none; }
+.placeholder span {
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(24px, 4.2vw, 52px);
+  letter-spacing: .12em;
+  color: #3b3024;
+  line-height: 1.2;
+  max-width: 14ch;
+}
+
+/* ---------- ranking number: glossy push‑pin plastic ---------- */
+
+.rank {
+  position: absolute;
+  top: -58px;
+  left: 30px;
+  z-index: 2;
+  font-family: "Fredoka", "Arial Rounded MT Bold", sans-serif;
+  font-weight: 700;
+  font-size: 128px;
+  line-height: 1;
+  letter-spacing: -.02em;
+  color: transparent;
+  background:
+    radial-gradient(circle at 32% 22%, #ff9b8f 0%, #f0443a 22%, #c81e1e 52%, #7e0f12 88%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  filter:
+    drop-shadow(0 2px 0 #6a0b0e)
+    drop-shadow(0 10px 8px rgba(40, 10, 5, .35))
+    drop-shadow(0 22px 22px rgba(40, 10, 5, .2));
+  pointer-events: none;
+}
+/* specular highlight on top of the plastic */
+.rank::after {
+  content: attr(data-rank);
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  background: linear-gradient(170deg, rgba(255, 255, 255, .85) 0%, rgba(255, 255, 255, .25) 26%, rgba(255, 255, 255, 0) 42%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* ---------- details ---------- */
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  padding: 22px 20px 12px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+.year { color: var(--muted); font-weight: 400; margin-left: 10px; }
+
+.description {
+  margin: 0;
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.45;
+  color: #1f2937;
+}
+
+.stats { flex: none; text-align: right; }
+.stats p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  white-space: nowrap;
+}
+.rating { font-size: 28px; font-weight: 500; margin-bottom: 6px !important; }
+.players { font-size: 19px; font-weight: 500; }
+
+.star { width: 28px; height: 28px; fill: var(--gold); }
+.meeple { width: 24px; height: 24px; fill: #b8574a; }
+
+.counter {
+  margin: 28px 0 0;
+  font-size: 14px;
+  letter-spacing: .08em;
+  color: rgba(255, 255, 255, .92);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, .35);
+}
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 760px) {
+  body { padding-top: 64px; }
+  .stage { flex-wrap: wrap; gap: 20px; }
+  .card { order: -1; border-radius: 22px; padding: 8px; }
+  .art { border-radius: 16px; }
+  .rank { font-size: 84px; top: -40px; left: 18px; }
+  .info { flex-direction: column; align-items: flex-start; gap: 16px; padding: 18px 10px 8px; }
+  .stats { text-align: left; }
+  .stats p { justify-content: flex-start; }
+  .rating { font-size: 24px; }
+  .description { font-size: 15px; }
+  .counter { margin-top: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card, .nav { transition: none; }
+}
