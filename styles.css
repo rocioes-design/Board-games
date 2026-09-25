@@ -10,7 +10,7 @@
 html, body { height: 100%; margin: 0; }
 
 body {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "Instrument Sans", system-ui, sans-serif;
   color: var(--ink);
   background: #efe3d2;
   overflow-x: hidden;
@@ -175,8 +175,9 @@ h1 {
 
 .description {
   margin: 0;
+  font-family: "Instrument Serif", Georgia, serif;
   font-style: italic;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.45;
   color: #1f2937;
 }
@@ -234,7 +235,7 @@ h1 {
   .stats { text-align: left; }
   .stats p { justify-content: flex-start; }
   .rating { font-size: 24px; }
-  .description { font-size: 15px; }
+  .description { font-size: 18px; }
   .counter { margin-top: 16px; }
   .credit { position: static; margin-top: 14px; padding: 8px 18px; font-size: 14px; }
 }
