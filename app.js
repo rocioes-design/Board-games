@@ -12,8 +12,13 @@ let cards = []; // cards[0] is the front card
 
 const wrap = (i) => (i + games.length) % games.length;
 
-// player portraits in assets/players (player-1.png … player-4.png)
-const PLAYER_IMAGES = 4;
+// player portraits from Watermelon UI, with local copies in assets/players as a fallback
+const PLAYERS = [
+  { name: "Mark", src: "https://assets.watermelon.sh/wm_ben.png" },
+  { name: "Olivia", src: "https://assets.watermelon.sh/wm_olivia.png" },
+  { name: "Josh", src: "https://assets.watermelon.sh/wm_josh.png" },
+  { name: "Emma", src: "https://assets.watermelon.sh/wm_emma.png" },
+];
 const MAX_AVATARS = 4;
 
 // "3-4" shows four players; big counts like "10+" show three and a "+7" bubble
@@ -30,10 +35,12 @@ function fillPlayers(el, best) {
   const shown = count > MAX_AVATARS ? MAX_AVATARS - 1 : count;
   const avatars = el.querySelector(".avatars");
   for (let k = 0; k < shown; k++) {
+    const player = PLAYERS[k % PLAYERS.length];
     const a = document.createElement("img");
     a.className = "avatar";
-    a.src = `assets/players/player-${(k % PLAYER_IMAGES) + 1}.png`;
     a.alt = "";
+    a.addEventListener("error", () => (a.src = `assets/players/player-${(k % PLAYERS.length) + 1}.png`), { once: true });
+    a.src = player.src;
     avatars.appendChild(a);
   }
   if (count > shown) {

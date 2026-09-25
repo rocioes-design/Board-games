@@ -240,7 +240,7 @@ h1 {
   white-space: nowrap;
 }
 .rating { font-size: 28px; font-weight: 600; margin-bottom: 6px !important; }
-/* player avatars, adapted from Watermelon UI "Avatar 19" (MIT) */
+/* player avatars, adapted from Watermelon UI "Avatar 16" and "Avatar 19" (MIT) */
 .players {
   position: relative;
   display: flex;
@@ -261,16 +261,17 @@ h1 {
   color: #fff;
   font-size: 12px;
   font-weight: 600;
-  transition: transform .25s ease;
+  transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
 }
 .avatar + .avatar { margin-left: -8px; }
 .avatar.more { background: #ece6da; color: var(--ink); }
-/* on hover each player hops up in turn */
-.players:hover .avatar,
-.players:focus-visible .avatar { transform: translateY(-2px); }
-.players .avatar:nth-child(2) { transition-delay: .03s; }
-.players .avatar:nth-child(3) { transition-delay: .06s; }
-.players .avatar:nth-child(4) { transition-delay: .09s; }
+/* hovering a player lifts it above its neighbours, as in Watermelon UI "Avatar 16" */
+.avatar { position: relative; }
+.avatar:hover {
+  z-index: 1;
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 2px var(--card), 0 10px 15px -3px rgba(0, 0, 0, .12), 0 4px 6px -4px rgba(0, 0, 0, .1);
+}
 
 .players-tip {
   position: absolute;
