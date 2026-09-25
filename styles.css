@@ -12,7 +12,7 @@ html, body { height: 100%; margin: 0; }
 body {
   font-family: "Instrument Sans", system-ui, sans-serif;
   color: var(--ink);
-  background: #efe3d2;
+  background: #5f8f6a;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
@@ -26,7 +26,7 @@ body {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: #efe3d2 url("assets/background.jpg") center / cover no-repeat;
+  background: #5f8f6a url("assets/background-horses.webp") left center / cover no-repeat;
 }
 
 /* ---------- slideshow ---------- */
@@ -292,7 +292,8 @@ h1 {
   margin: 64px 0 0;
   font-size: 14px;
   letter-spacing: .08em;
-  color: #5a4630;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .35);
 }
 
 .credit {

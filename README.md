@@ -1,6 +1,6 @@
 # Top 100 Board Games
 
-A slideshow of the 100 highest-ranked games on [BoardGameGeek](https://boardgamegeek.com/browse/boardgame), set in a classical garden.
+A slideshow of the 100 highest-ranked games on [BoardGameGeek](https://boardgamegeek.com/browse/boardgame), set against a painted landscape of white horses on open plains.
 
 **To view it:** open `index.html` in a browser. Use the arrows, your keyboard's ← → keys, or swipe on a phone.
 
@@ -22,7 +22,7 @@ To refresh the list on your own computer instead, run `BGG_TOKEN=your-token node
 | --- | --- |
 | `index.html` | The page, including the golden rank tag |
 | `styles.css` | Colors and layout |
-| `assets/background.jpg` | The background image |
+| `assets/background-horses.webp` | The background image (`background.jpg` is the earlier garden, kept for comparison) |
 | `app.js` | The slideshow |
 | `data/games.js` | The 100 games |
 | `scripts/fetch-games.mjs` | Downloads fresh data from BoardGameGeek |
