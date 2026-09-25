@@ -1,71 +1,86 @@
 const games = (window.BOARD_GAMES?.games || []).slice(0, 100);
 
-const card = document.querySelector(".card");
-const el = {
-  rankText: card.querySelectorAll(".rank-text"),
-  rankLabel: card.querySelector(".rank-label"),
-  img: card.querySelector(".art img"),
-  placeholder: card.querySelector(".placeholder"),
-  name: card.querySelector(".name"),
-  year: card.querySelector(".year"),
-  description: card.querySelector(".description"),
-  rating: card.querySelector(".rating-value"),
-  players: card.querySelector(".players-value"),
-  counter: document.querySelector(".counter"),
-};
+const deck = document.querySelector(".deck");
+const template = document.getElementById("card-template");
+const counter = document.querySelector(".counter");
+
+const BEHIND = 2; // how many upcoming games peek out behind the front card
+const LEAVE_MS = 650;
 
 let index = 0;
+let cards = []; // cards[0] is the front card
 
-function showPlaceholder(name) {
-  el.img.hidden = true;
-  el.placeholder.hidden = false;
-  el.placeholder.firstElementChild.textContent = name;
+const wrap = (i) => (i + games.length) % games.length;
+
+function makeCard(i) {
+  const g = games[wrap(i)];
+  const card = template.content.firstElementChild.cloneNode(true);
+  const q = (s) => card.querySelector(s);
+
+  q(".rank-text").textContent = g.rank;
+  q(".rank-text").classList.toggle("long", String(g.rank).length > 2);
+  q(".rank-label").textContent = `Rank ${g.rank}`;
+  q(".name").textContent = g.name;
+  q(".year").textContent = g.year || "";
+  q(".description").textContent = g.description;
+  q(".rating-value").textContent = Number(g.rating).toFixed(2);
+  q(".players-value").textContent = g.bestPlayers ? `Best: ${g.bestPlayers} players` : "";
+
+  const img = q(".art img");
+  const placeholder = q(".placeholder");
+  placeholder.firstElementChild.textContent = g.name;
+  img.alt = `${g.name} box art`;
+  img.hidden = true;
+  if (g.image) {
+    img.addEventListener("load", () => {
+      img.hidden = false;
+      placeholder.hidden = true;
+    });
+    img.src = g.image;
+  }
+  return card;
 }
 
-el.img.addEventListener("error", () => showPlaceholder(games[index].name));
-el.img.addEventListener("load", () => {
-  el.img.hidden = false;
-  el.placeholder.hidden = true;
-});
-
-function render() {
-  const g = games[index];
-  el.rankText.forEach((t) => {
-    t.textContent = g.rank;
-    t.classList.toggle("long", String(g.rank).length > 2);
+// give every card its place in the fan; CSS animates the moves
+function layout() {
+  cards.forEach((card, pos) => {
+    card.dataset.pos = pos;
+    const front = pos === 0;
+    card.inert = !front;
+    card.setAttribute("aria-hidden", String(!front));
   });
-  el.rankLabel.textContent = `Rank ${g.rank}`;
-  el.name.textContent = g.name;
-  el.year.textContent = g.year || "";
-  el.description.textContent = g.description;
-  el.rating.textContent = Number(g.rating).toFixed(2);
-  el.players.textContent = g.bestPlayers ? `Best: ${g.bestPlayers} players` : "";
-  el.img.alt = `${g.name} box art`;
-  if (g.image) {
-    el.img.src = g.image;
-  } else {
-    el.img.removeAttribute("src");
-    showPlaceholder(g.name);
-  }
-  el.counter.textContent = `${index + 1} / ${games.length}`;
+  counter.textContent = `${index + 1} / ${games.length}`;
+}
 
-  // warm up the neighbours so paging feels instant
-  [1, -1].forEach((d) => {
-    const n = games[(index + d + games.length) % games.length];
-    if (n.image) new Image().src = n.image;
-  });
+function add(card, pos) {
+  card.dataset.pos = pos;
+  deck.appendChild(card);
+  card.getBoundingClientRect(); // start the animation from this position
+}
+
+function discard(card, pos) {
+  card.dataset.pos = pos;
+  card.inert = true;
+  setTimeout(() => card.remove(), LEAVE_MS);
 }
 
 function go(step) {
   if (!games.length) return;
-  card.style.setProperty("--shift", `${-step * 24}px`);
-  card.classList.add("leaving");
-  setTimeout(() => {
-    index = (index + step + games.length) % games.length;
-    render();
-    card.style.setProperty("--shift", `${step * 24}px`);
-    requestAnimationFrame(() => card.classList.remove("leaving"));
-  }, 180);
+  index = wrap(index + step);
+  if (step > 0) {
+    // toss the front card away, pull a new one in at the back
+    discard(cards.shift(), "out");
+    const card = makeCard(index + BEHIND);
+    add(card, BEHIND + 1);
+    cards.push(card);
+  } else {
+    // bring the previous card back in on top, drop the last one
+    discard(cards.pop(), BEHIND + 1);
+    const card = makeCard(index);
+    add(card, "out");
+    cards.unshift(card);
+  }
+  layout();
 }
 
 document.querySelector(".prev").addEventListener("click", () => go(-1));
@@ -76,12 +91,19 @@ document.addEventListener("keydown", (e) => {
 });
 
 let touchX = null;
-card.addEventListener("touchstart", (e) => (touchX = e.touches[0].clientX), { passive: true });
-card.addEventListener("touchend", (e) => {
+deck.addEventListener("touchstart", (e) => (touchX = e.touches[0].clientX), { passive: true });
+deck.addEventListener("touchend", (e) => {
   if (touchX === null) return;
   const dx = e.changedTouches[0].clientX - touchX;
   if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1);
   touchX = null;
 });
 
-if (games.length) render();
+if (games.length) {
+  for (let k = 0; k <= BEHIND; k++) {
+    const card = makeCard(k);
+    deck.appendChild(card);
+    cards.push(card);
+  }
+  layout();
+}

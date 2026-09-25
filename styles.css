@@ -65,17 +65,62 @@ body {
   stroke-linejoin: round;
 }
 
-.card {
+/* ---------- the deck ---------- */
+
+.deck {
   position: relative;
   width: 100%;
   max-width: 960px;
+}
+
+.card {
+  position: absolute;
+  inset: 0;
+  width: 100%;
   background: var(--card);
   border-radius: 30px;
   padding: 10px;
   box-shadow: 0 24px 50px rgba(80, 55, 25, .25), 0 4px 10px rgba(80, 55, 25, .12);
-  transition: opacity .25s ease, transform .25s ease;
+  transform-origin: 20% 100%;
+  transition:
+    transform .6s cubic-bezier(.22, .8, .24, 1),
+    opacity .6s ease,
+    filter .6s ease,
+    box-shadow .6s ease;
 }
-.card.leaving { opacity: 0; transform: translateX(var(--shift, 0)); }
+/* the front card sets the deck's height */
+.card[data-pos="0"] { position: relative; z-index: 4; }
+/* the next games, fanned out to the right */
+.card[data-pos="1"] {
+  z-index: 3;
+  transform: translate(20px, 8px) rotate(2.2deg) scale(.985);
+  filter: brightness(.97);
+  box-shadow: 0 12px 30px rgba(80, 55, 25, .18);
+}
+.card[data-pos="2"] {
+  z-index: 2;
+  transform: translate(38px, 16px) rotate(4.4deg) scale(.97);
+  filter: brightness(.94);
+  box-shadow: 0 10px 24px rgba(80, 55, 25, .14);
+}
+/* waiting at the very back, or leaving from there */
+.card[data-pos="3"] {
+  z-index: 1;
+  transform: translate(52px, 22px) rotate(6deg) scale(.955);
+  opacity: 0;
+}
+/* tossed off to the left (or arriving from there) */
+.card[data-pos="out"] {
+  z-index: 5;
+  transform: translate(-75%, 40px) rotate(-12deg);
+  opacity: 0;
+}
+.card[data-pos="out"] { transition-duration: .6s, .4s, .6s, .6s; }
+/* only the front card shows its tag and text; the rest show just their edges and art */
+.card .rank,
+.card .info { transition: opacity .35s ease; }
+.card:not([data-pos="0"]) .rank,
+.card:not([data-pos="0"]) .info { opacity: 0; }
 
 .art {
   position: relative;
@@ -198,7 +243,7 @@ h1 {
 .meeple { width: 24px; height: 24px; fill: #b8574a; }
 
 .counter {
-  margin: 28px 0 0;
+  margin: 64px 0 0;
   font-size: 14px;
   letter-spacing: .08em;
   color: #5a4630;
@@ -228,7 +273,10 @@ h1 {
 @media (max-width: 760px) {
   body { padding-top: 64px; }
   .stage { flex-wrap: wrap; gap: 20px; }
-  .card { order: -1; border-radius: 22px; padding: 8px; }
+  .deck { order: -1; }
+  .card { border-radius: 22px; padding: 8px; }
+  .card[data-pos="1"] { transform: translate(8px, 6px) rotate(1.5deg) scale(.985); }
+  .card[data-pos="2"] { transform: translate(15px, 12px) rotate(3deg) scale(.97); }
   .art { border-radius: 16px; }
   .rank { width: 64px; height: 96px; top: -24px; left: 16px; }
   .info { flex-direction: column; align-items: flex-start; gap: 16px; padding: 18px 10px 8px; }
@@ -236,10 +284,10 @@ h1 {
   .stats p { justify-content: flex-start; }
   .rating { font-size: 24px; }
   .description { font-size: 18px; }
-  .counter { margin-top: 16px; }
+  .counter { margin-top: 28px; }
   .credit { position: static; margin-top: 14px; padding: 8px 18px; font-size: 14px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .card, .nav { transition: none; }
+  .card, .nav, .card .rank, .card .info { transition: none; }
 }
