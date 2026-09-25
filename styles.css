@@ -167,11 +167,11 @@ body {
 
 h1 {
   margin: 0 0 10px;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
   line-height: 1.3;
 }
-.year { color: var(--muted); font-weight: 400; margin-left: 10px; }
+.year { color: var(--muted); font-weight: 400; font-size: 18px; margin-left: 10px; }
 
 .description {
   margin: 0;
