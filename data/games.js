@@ -1,14 +1,14 @@
 window.BOARD_GAMES = {
-  "source": "boardgamegeek rank file",
-  "updated": "2026-09-25",
+  "source": "boardgamegeek",
+  "updated": "2026-09-29",
   "games": [
     {
       "rank": 1,
       "id": 224517,
       "name": "Brass: Birmingham",
       "year": 2018,
-      "image": "",
-      "description": "Build networks, grow industries, and navigate the world of the Industrial Revolution.",
+      "image": "https://cf.geekdo-images.com/x3zxjr-Vw5iU4yDPg70Jgw__original/img/FpyxH41Y6_ROoePAilPNEhXnzO8=/0x0/filters:format(jpeg)/pic3490053.jpg",
+      "description": "Brass: Birmingham is an economic strategy game sequel to Martin Wallace's 2007 masterpiece, Brass.",
       "rating": 8.56,
       "bestPlayers": "3-4"
     },
@@ -17,8 +17,8 @@ window.BOARD_GAMES = {
       "id": 342942,
       "name": "Ark Nova",
       "year": 2021,
-      "image": "",
-      "description": "Plan and build a modern, scientifically managed zoo to support conservation projects.",
+      "image": "https://cf.geekdo-images.com/SoU8p28Sk1s8MSvoM4N8pQ__original/img/g4S18szTdrXCdIwVKzMKrZrYAcM=/0x0/filters:format(jpeg)/pic6293412.jpg",
+      "description": "In Ark Nova, you will plan and design a modern, scientifically managed zoo.",
       "rating": 8.54,
       "bestPlayers": "2"
     },
@@ -27,8 +27,8 @@ window.BOARD_GAMES = {
       "id": 161936,
       "name": "Pandemic Legacy: Season 1",
       "year": 2015,
-      "image": "",
-      "description": "Mutating diseases are spreading around the world – can your team save humanity?",
+      "image": "https://cf.geekdo-images.com/-Qer2BBPG7qGGDu6KcVDIw__original/img/PlzAH7swN1nsFxOXbfUvE3TkE5w=/0x0/filters:format(png)/pic2452831.png",
+      "description": "Pandemic Legacy is a co-operative campaign game, with an overarching story arc played through 12-24 sessions, depending on how well your group does at the game.",
       "rating": 8.5,
       "bestPlayers": "4"
     },
@@ -37,8 +37,8 @@ window.BOARD_GAMES = {
       "id": 174430,
       "name": "Gloomhaven",
       "year": 2017,
-      "image": "",
-      "description": "Vanquish monsters with strategic cardplay and fulfil your quest to leave your legacy.",
+      "image": "https://cf.geekdo-images.com/sZYp_3BTDGjh2unaZfZmuA__original/img/7d-lj5Gd1e8PFnD97LYFah2c45M=/0x0/filters:format(jpeg)/pic2437871.jpg",
+      "description": "Gloomhaven is a game of Euro-inspired tactical combat in a persistent world of shifting motives.",
       "rating": 8.53,
       "bestPlayers": "3"
     },
@@ -47,8 +47,8 @@ window.BOARD_GAMES = {
       "id": 397598,
       "name": "Dune: Imperium – Uprising",
       "year": 2023,
-      "image": "",
-      "description": "Invoke eternal alliances and summon sandworms to shape the fate of Arrakis.",
+      "image": "https://cf.geekdo-images.com/UVUkjMV_Q2paVUIUP30Vvw__original/img/BoUtCkd1NRO0bR1R5EwL51xIuXA=/0x0/filters:format(jpeg)/pic7664424.jpg",
+      "description": "In Dune: Imperium Uprising, you want to continue to balance military might with political intrigue, wielding new tools in pursuit of victory.",
       "rating": 8.7,
       "bestPlayers": "4"
     },
@@ -57,18 +57,18 @@ window.BOARD_GAMES = {
       "id": 316554,
       "name": "Dune: Imperium",
       "year": 2020,
-      "image": "",
-      "description": "Influence, intrigue, and combat in the universe of Dune.",
+      "image": "https://cf.geekdo-images.com/PhjygpWSo-0labGrPBMyyg__original/img/mZzaBAEEJpMlHWWmC0R6Su0OibQ=/0x0/filters:format(jpeg)/pic5666597.jpg",
+      "description": "Dune: Imperium is a game that uses deck building to add a hidden information angle to traditional worker placement.",
       "rating": 8.41,
-      "bestPlayers": "4"
+      "bestPlayers": "3-4"
     },
     {
       "rank": 7,
       "id": 233078,
       "name": "Twilight Imperium: Fourth Edition",
       "year": 2017,
-      "image": "",
-      "description": "Build an intergalactic empire through trade, research, conquest and grand politics.",
+      "image": "https://cf.geekdo-images.com/_Ppn5lssO5OaildSE-FgFA__original/img/kVpZ0Maa_LeQGWxOqsYKP3N4KUY=/0x0/filters:format(jpeg)/pic3727516.jpg",
+      "description": "Twilight Imperium (Fourth Edition) is a game of galactic conquest in which three to six players each take on the role of one of seventeen factions vying for galactic domination…",
       "rating": 8.56,
       "bestPlayers": "6"
     },
@@ -77,8 +77,8 @@ window.BOARD_GAMES = {
       "id": 115746,
       "name": "War of the Ring: Second Edition",
       "year": 2011,
-      "image": "",
-      "description": "The Fellowship and the Free Peoples clash with Sauron over the fate of Middle-earth.",
+      "image": "https://cf.geekdo-images.com/ImPgGag98W6gpV1KV812aA__original/img/38jB7fN07DwlrGKYAf-J0vsNdgs=/0x0/filters:format(jpeg)/pic1215633.jpg",
+      "description": "In War of the Ring, one player takes control of the Free Peoples (FP) while the other player controls Shadow Armies (SA).",
       "rating": 8.55,
       "bestPlayers": "2"
     },
@@ -87,8 +87,8 @@ window.BOARD_GAMES = {
       "id": 167791,
       "name": "Terraforming Mars",
       "year": 2016,
-      "image": "",
-      "description": "Compete with rival CEOs to make Mars habitable and build your corporate empire.",
+      "image": "https://cf.geekdo-images.com/wg9oOLcsKvDesSUdZQ4rxw__original/img/thIqWDnH9utKuoKVEUqveDixprI=/0x0/filters:format(jpeg)/pic3536616.jpg",
+      "description": "In the 2400s, mankind begins to terraform the planet Mars. Giant corporations, sponsored by the World Government on Earth, initiate huge projects to raise the temperature, the…",
       "rating": 8.33,
       "bestPlayers": "3"
     },
@@ -97,8 +97,8 @@ window.BOARD_GAMES = {
       "id": 187645,
       "name": "Star Wars: Rebellion",
       "year": 2016,
-      "image": "",
-      "description": "Strike from your hidden base or scour the galaxy as the Galactic Empire.",
+      "image": "https://cf.geekdo-images.com/7SrPNGBKg9IIsP4UQpOi8g__original/img/GKueTbkCk2Ramf6ai8mDj-BP6cI=/0x0/filters:format(jpeg)/pic4325841.jpg",
+      "description": "Star Wars: Rebellion is a board game of epic conflict between the Galactic Empire and Rebel Alliance for two to four players.",
       "rating": 8.42,
       "bestPlayers": "2"
     },
@@ -107,8 +107,8 @@ window.BOARD_GAMES = {
       "id": 162886,
       "name": "Spirit Island",
       "year": 2017,
-      "image": "",
-      "description": "Island spirits join forces using elemental powers to defend their home from invaders.",
+      "image": "https://cf.geekdo-images.com/kjCm4ZvPjIZxS-mYgSPy1g__original/img/9uLd9C3XAvInLCLhAoXqKVk56zs=/0x0/filters:format(jpeg)/pic7013651.jpg",
+      "description": "In the most distant reaches of the world, magic still exists, embodied by spirits of the land, of the sky, and of every natural thing.",
       "rating": 8.34,
       "bestPlayers": "2"
     },
@@ -117,8 +117,8 @@ window.BOARD_GAMES = {
       "id": 291457,
       "name": "Gloomhaven: Jaws of the Lion",
       "year": 2020,
-      "image": "",
-      "description": "Vanquish monsters with strategic cardplay in a streamlined, easy-to-learn Gloomhaven.",
+      "image": "https://cf.geekdo-images.com/_HhIdavYW-hid20Iq3hhmg__original/img/PBzsLRqNKQKJxGnzpb7o3qLWPQM=/0x0/filters:format(jpeg)/pic5055631.jpg",
+      "description": "Gloomhaven: Jaws of the Lion is a standalone game that takes place before the events of Gloomhaven.",
       "rating": 8.35,
       "bestPlayers": "2"
     },
@@ -127,18 +127,18 @@ window.BOARD_GAMES = {
       "id": 220308,
       "name": "Gaia Project",
       "year": 2017,
-      "image": "",
-      "description": "Expand, research, upgrade, and settle the galaxy with one of fourteen alien species.",
+      "image": "https://cf.geekdo-images.com/hGWFm3hbMlCDsfCsauOQ4g__original/img/tjlflQtUPFiTpLpwk1NCVCS29Ic=/0x0/filters:format(png)/pic5375625.png",
+      "description": "Expand, research, upgrade, and settle the galaxy with one of 14 factions.",
       "rating": 8.35,
-      "bestPlayers": "3"
+      "bestPlayers": "3-4"
     },
     {
       "rank": 14,
       "id": 418059,
       "name": "SETI: Search for Extraterrestrial Intelligence",
       "year": 2024,
-      "image": "",
-      "description": "Explore the solar system with probes and telescopes in the search for alien life.",
+      "image": "https://cf.geekdo-images.com/_BUXOVRDU9g_eRwgpR5ZZw__original/img/28ob2JiASW8iX8XoVzp5Y25-h24=/0x0/filters:format(jpeg)/pic8160466.jpg",
+      "description": "In SETI: Search for Extraterrestrial Intelligence, you lead a scientific institution tasked with searching for traces of life beyond planet Earth.",
       "rating": 8.41,
       "bestPlayers": "3"
     },
@@ -147,8 +147,8 @@ window.BOARD_GAMES = {
       "id": 338960,
       "name": "Slay the Spire: The Board Game",
       "year": 2024,
-      "image": "",
-      "description": "Climb the Spire together in this cooperative deck-building adventure.",
+      "image": "https://cf.geekdo-images.com/PQzVclEoOQ_wr4e1V86kxA__original/img/KXOf1hP1cIJQLabKhZulWP-e9wI=/0x0/filters:format(png)/pic8157856.png",
+      "description": "Slay the Spire: The Board Game is a co-operative deck-building, dungeon-crawling adventure.",
       "rating": 8.61,
       "bestPlayers": "2"
     },
@@ -157,8 +157,8 @@ window.BOARD_GAMES = {
       "id": 12333,
       "name": "Twilight Struggle",
       "year": 2005,
-      "image": "",
-      "description": "Relive the Cold War rivalry between the United States and the Soviet Union.",
+      "image": "https://cf.geekdo-images.com/pNCiUUphnoeWOYfsWq0kng__original/img/Iae47UtAd_RXVd5tJ3YzbDHOv4E=/0x0/filters:format(jpeg)/pic3530661.jpg",
+      "description": "Now the trumpet summons us again, not as a call to bear arms, though arms we need; not as a call to battle, though embattled we are – but a call to bear the burden of a long…",
       "rating": 8.23,
       "bestPlayers": "2"
     },
@@ -167,8 +167,8 @@ window.BOARD_GAMES = {
       "id": 84876,
       "name": "The Castles of Burgundy",
       "year": 2011,
-      "image": "",
-      "description": "Plan and build your estate in 15th-century Burgundy through trade and husbandry.",
+      "image": "https://cf.geekdo-images.com/sH2YTQ10dHj1ibfS-KKtGA__original/img/L_gsMsuhbAe0kyq1QLAmyeKOeSs=/0x0/filters:format(jpeg)/pic8745814.jpg",
+      "description": "The game is set in the Burgundy region of High Medieval France.",
       "rating": 8.16,
       "bestPlayers": "2"
     },
@@ -177,8 +177,8 @@ window.BOARD_GAMES = {
       "id": 182028,
       "name": "Through the Ages: A New Story of Civilization",
       "year": 2015,
-      "image": "",
-      "description": "Guide your civilization from antiquity to the modern age through careful cardplay.",
+      "image": "https://cf.geekdo-images.com/fVwPntkJKgaEo0rIC0RwpA__original/img/1jawNpljTXwnT4km_2CjGwoUPR8=/0x0/filters:format(jpeg)/pic2663291.jpg",
+      "description": "Through the Ages: A New Story of Civilization is the new edition of Through the Ages: A Story of Civilization, with many changes small and large to the game's cards over its…",
       "rating": 8.24,
       "bestPlayers": "3"
     },
@@ -187,8 +187,8 @@ window.BOARD_GAMES = {
       "id": 421006,
       "name": "The Lord of the Rings: Duel for Middle-earth",
       "year": 2024,
-      "image": "",
-      "description": "Lead the Fellowship or Sauron in a two-player duel for Middle-earth.",
+      "image": "https://cf.geekdo-images.com/EybxJlUc9rz7F7HVFLqsdw__original/img/Ts4M5eOW38r2oTvJmkx0uwNodv4=/0x0/filters:format(jpeg)/pic8378939.jpg",
+      "description": "A dark rumour rises from Mordor. The Eye turns to Middle-earth.",
       "rating": 8.35,
       "bestPlayers": "2"
     },
@@ -197,8 +197,8 @@ window.BOARD_GAMES = {
       "id": 295770,
       "name": "Frosthaven",
       "year": 2022,
-      "image": "",
-      "description": "Adventure in the frozen north and build up your outpost in this sequel to Gloomhaven.",
+      "image": "https://cf.geekdo-images.com/cwUgf-f-qwri8UHBUnifuQ__original/img/Tk7wFDJuaU8RPjNkmyC3AWYOPpU=/0x0/filters:format(png)/pic5092291.png",
+      "description": "Frosthaven is the story of a small outpost far to the north of the capital city of White Oak.",
       "rating": 8.72,
       "bestPlayers": "3"
     },
@@ -207,8 +207,8 @@ window.BOARD_GAMES = {
       "id": 193738,
       "name": "Great Western Trail",
       "year": 2016,
-      "image": "",
-      "description": "Drive your cattle across the plains to Kansas City and ship them by rail.",
+      "image": "https://cf.geekdo-images.com/u1l0gH7sb_vnvDvoO_QHqA__original/img/2zv_XMQoPFWk9Dn0oS4JY1IeFzw=/0x0/filters:format(jpeg)/pic4887376.jpg",
+      "description": "America in the 19th century: You are a rancher and repeatedly herd your cattle from Texas to Kansas City, where you send them off by train.",
       "rating": 8.14,
       "bestPlayers": "3"
     },
@@ -217,28 +217,28 @@ window.BOARD_GAMES = {
       "id": 28720,
       "name": "Brass: Lancashire",
       "year": 2007,
-      "image": "",
-      "description": "Develop industries and trade routes in the cotton country of northwest England.",
+      "image": "https://cf.geekdo-images.com/tHVtPzu82mBpeQbbZkV6EA__original/img/3ffdJj5Pz6HQrg09Kh8ecTen-TY=/0x0/filters:format(jpeg)/pic3469216.jpg",
+      "description": "Brass: Lancashire — first published as Brass — is an economic strategy game that tells the story of competing cotton entrepreneurs in Lancashire during the industrial revolution.",
       "rating": 8.2,
-      "bestPlayers": "3-4"
+      "bestPlayers": "4"
     },
     {
       "rank": 23,
       "id": 246900,
       "name": "Eclipse: Second Dawn for the Galaxy",
       "year": 2020,
-      "image": "",
-      "description": "Build an interstellar civilization by exploring, researching and battling rival species.",
+      "image": "https://cf.geekdo-images.com/Oh3kHw6lweg6ru71Q16h2Q__original/img/yW7d4RNfU1ndISCaPlfGYUyxnRU=/0x0/filters:format(jpeg)/pic5235277.jpg",
+      "description": "A game of Eclipse places you in control of a vast interstellar civilization, competing for success with its rivals.",
       "rating": 8.38,
-      "bestPlayers": "4"
+      "bestPlayers": "4, 6"
     },
     {
       "rank": 24,
       "id": 173346,
       "name": "7 Wonders Duel",
       "year": 2015,
-      "image": "",
-      "description": "Science? Military? What will you draft to win this head-to-head version of 7 Wonders?",
+      "image": "https://cf.geekdo-images.com/zdagMskTF7wJBPjX74XsRw__original/img/Ju836WNSaW7Mab9Vjq2TJ_FqhWQ=/0x0/filters:format(jpeg)/pic2576399.jpg",
+      "description": "In many ways 7 Wonders Duel resembles its parent game 7 Wonders.",
       "rating": 8.07,
       "bestPlayers": "2"
     },
@@ -247,28 +247,28 @@ window.BOARD_GAMES = {
       "id": 167355,
       "name": "Nemesis",
       "year": 2018,
-      "image": "",
-      "description": "Survive an alien-infested spaceship while pursuing your own secret goals.",
+      "image": "https://cf.geekdo-images.com/4KSmlm59w0GwLIlgDnJDAQ__original/img/f0VmAKrPrMRQOUcOJHekRvuysDE=/0x0/filters:format(png)/pic8211747.png",
+      "description": "Playing Nemesis will take you into the heart of sci-fi survival horror in all its terror.",
       "rating": 8.24,
-      "bestPlayers": "4"
+      "bestPlayers": "4-5"
     },
     {
       "rank": 26,
       "id": 177736,
       "name": "A Feast for Odin",
       "year": 2016,
-      "image": "",
-      "description": "Raid and trade for goods to fill your Viking homeland and feast in style.",
+      "image": "https://cf.geekdo-images.com/s9oGMCo1fcfV4Dk3EnqLZw__original/img/N1X-0JB1GapFVhl98nP4tNFXMcM=/0x0/filters:format(png)/pic3146943.png",
+      "description": "A Feast for Odin is a saga in the form of a board game. You are reliving the cultural achievements, mercantile expeditions, and pillages of those tribes we know as Viking today…",
       "rating": 8.16,
-      "bestPlayers": "2"
+      "bestPlayers": "3"
     },
     {
       "rank": 27,
       "id": 169786,
       "name": "Scythe",
       "year": 2016,
-      "image": "",
-      "description": "Five factions vie for control of a war-torn, mech-filled 1920s Eastern Europa.",
+      "image": "https://cf.geekdo-images.com/7k_nOxpO9OGIjhLq2BUZdA__original/img/HlDb9F365w0tSP8uD1vf1pfniQE=/0x0/filters:format(jpeg)/pic3163924.jpg",
+      "description": "It is a time of unrest in 1920s Europa. The ashes from the first great war still darken the snow.",
       "rating": 8.09,
       "bestPlayers": "4"
     },
@@ -277,8 +277,8 @@ window.BOARD_GAMES = {
       "id": 266507,
       "name": "Clank! Legacy: Acquisitions Incorporated",
       "year": 2019,
-      "image": "",
-      "description": "Deck-building dungeon delving that grows and changes with every adventure.",
+      "image": "https://cf.geekdo-images.com/hc2NDafu5c24iLJh_IZmyg__original/img/1Fpyz7j7rTvMPRiDdPjn0Vf0m2k=/0x0/filters:format(png)/pic4885780.png",
+      "description": "Clank! Legacy: Acquisitions Incorporated extends the deck-building fun of Clank!",
       "rating": 8.48,
       "bestPlayers": "4"
     },
@@ -287,8 +287,8 @@ window.BOARD_GAMES = {
       "id": 124361,
       "name": "Concordia",
       "year": 2013,
-      "image": "",
-      "description": "Build a network of trading posts across the Roman Empire using clever cardplay.",
+      "image": "https://cf.geekdo-images.com/CzwSm8i7tkLz6cBnrILZBg__original/img/BhJ3sB3uk-eSdR1iW4EP3cu0Wi0=/0x0/filters:format(jpeg)/pic3453267.jpg",
+      "description": "Two thousand years ago, the Roman Empire ruled the lands around the Mediterranean Sea.",
       "rating": 8.07,
       "bestPlayers": "4"
     },
@@ -297,8 +297,8 @@ window.BOARD_GAMES = {
       "id": 312484,
       "name": "Lost Ruins of Arnak",
       "year": 2020,
-      "image": "",
-      "description": "Explore a mysterious island to uncover lost artifacts and ancient temples.",
+      "image": "https://cf.geekdo-images.com/6GqH14TJJhza86BX5HCLEQ__original/img/CXqwimJPonWy1oyXEMgPN_ZVmUI=/0x0/filters:format(jpeg)/pic5674958.jpg",
+      "description": "On an uninhabited island in uncharted seas, explorers have found traces of a great civilization.",
       "rating": 8.08,
       "bestPlayers": "3"
     },
@@ -307,8 +307,8 @@ window.BOARD_GAMES = {
       "id": 341169,
       "name": "Great Western Trail: Second Edition",
       "year": 2021,
-      "image": "",
-      "description": "Drive your cattle to Kansas City in this refreshed edition of the modern classic.",
+      "image": "https://cf.geekdo-images.com/gDn7AhrDlmfCLSz9ZqoNFQ__original/img/yecB1xO32nnjBAyskVOTq9LBuLo=/0x0/filters:format(jpeg)/pic5988511.jpg",
+      "description": "America in the 19th century: You are a rancher and repeatedly herd your cattle from Texas to Kansas City, where you send them off by train.",
       "rating": 8.26,
       "bestPlayers": "3"
     },
@@ -317,8 +317,8 @@ window.BOARD_GAMES = {
       "id": 373106,
       "name": "Sky Team",
       "year": 2023,
-      "image": "",
-      "description": "Two pilots cooperate silently to land their passenger plane safely.",
+      "image": "https://cf.geekdo-images.com/uXMeQzNenHb3zK7Hoa6b2w__original/img/mWOQnkpyYBorh_Y1-0Y2o-ew17k=/0x0/filters:format(jpeg)/pic7398904.jpg",
+      "description": "Sky Team is a co-operative game, exclusively for two players, in which you play a pilot and co-pilot at the controls of an airliner.",
       "rating": 8.11,
       "bestPlayers": "2"
     },
@@ -327,8 +327,8 @@ window.BOARD_GAMES = {
       "id": 205637,
       "name": "Arkham Horror: The Card Game",
       "year": 2016,
-      "image": "",
-      "description": "Investigate cosmic horrors with a customizable deck in a narrative campaign.",
+      "image": "https://cf.geekdo-images.com/B5F5ulz0UivNgrI9Ky0euA__original/img/guEKCewM_2e5ugltSN3dTSwdZJI=/0x0/filters:format(jpeg)/pic3122349.jpg",
+      "description": "Something evil stirs in Arkham, and only you can stop it. Blurring the traditional lines between role-playing and card game experiences, Arkham Horror: The Card Game is a…",
       "rating": 8.12,
       "bestPlayers": "2"
     },
@@ -337,8 +337,8 @@ window.BOARD_GAMES = {
       "id": 237182,
       "name": "Root",
       "year": 2018,
-      "image": "",
-      "description": "Decide the fate of the forest as woodland factions fight for control.",
+      "image": "https://cf.geekdo-images.com/JUAUWaVUzeBgzirhZNmHHw__original/img/E0s2LvtFA1L5YKk-_44D4u2VD2s=/0x0/filters:format(jpeg)/pic4254509.jpg",
+      "description": "Root is a game of adventure and war in which 2 to 4 (1 to 6 with the 'Riverfolk' expansion, 2-6 with the 'Underworld', or 'Marauder' expansions) players battle for control of a…",
       "rating": 8.07,
       "bestPlayers": "4"
     },
@@ -347,8 +347,8 @@ window.BOARD_GAMES = {
       "id": 164928,
       "name": "Orléans",
       "year": 2014,
-      "image": "",
-      "description": "Build your influence in medieval France by drawing followers from your bag.",
+      "image": "https://cf.geekdo-images.com/nagl1li6kYt9elV9jbfVQw__original/img/Qn6vlBaTUaHNFsqohIUjd0EA4z0=/0x0/filters:format(jpeg)/pic6228507.jpg",
+      "description": "During the medieval goings-on around Orl&eacute;ans, you must assemble a following of farmers, merchants, knights, monks, etc.",
       "rating": 8.05,
       "bestPlayers": "4"
     },
@@ -357,8 +357,8 @@ window.BOARD_GAMES = {
       "id": 120677,
       "name": "Terra Mystica",
       "year": 2012,
-      "image": "",
-      "description": "Shape the land to your people's needs and expand across a magical landscape.",
+      "image": "https://cf.geekdo-images.com/bre12I1YiXkZr7elvriz4A__original/img/_dZS7fVfdc4DhJPbqnDpwTT4uF0=/0x0/filters:format(jpeg)/pic5375624.jpg",
+      "description": "In the land of Terra Mystica dwell 14 different peoples in seven landscapes, and each group is bound to its own home environment, so to develop and grow, they must terraform…",
       "rating": 8.03,
       "bestPlayers": "4"
     },
@@ -367,8 +367,8 @@ window.BOARD_GAMES = {
       "id": 192135,
       "name": "Too Many Bones",
       "year": 2017,
-      "image": "",
-      "description": "Dice-builder RPG where gearlocs battle through Daelore's baddies and tyrants.",
+      "image": "https://cf.geekdo-images.com/wKwRk0wYBcrtLAfgn4PCdg__original/img/Wpp0vzsVe4HxXGUqiZ1hDvwAHZU=/0x0/filters:format(png)/pic6624445.png",
+      "description": "Too Many Bones comes loaded for bear by breaking into a new genre: the dice-builder RPG.",
       "rating": 8.28,
       "bestPlayers": "2"
     },
@@ -377,8 +377,8 @@ window.BOARD_GAMES = {
       "id": 266192,
       "name": "Wingspan",
       "year": 2019,
-      "image": "",
-      "description": "Attract a beautiful and diverse collection of birds to your wildlife reserves.",
+      "image": "https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__original/img/cI782Zis9cT66j2MjSHKJGnFPNw=/0x0/filters:format(jpeg)/pic4458123.jpg",
+      "description": "Wingspan is&nbsp;a competitive, medium-weight, card-driven, engine-building board game from Stonemaier Games.",
       "rating": 7.99,
       "bestPlayers": "3"
     },
@@ -387,18 +387,18 @@ window.BOARD_GAMES = {
       "id": 96848,
       "name": "Mage Knight Board Game",
       "year": 2011,
-      "image": "",
-      "description": "Lead a powerful Mage Knight to explore, conquer and grow in the Atlantean Empire.",
+      "image": "https://cf.geekdo-images.com/DUO2hz9AlLOH8p9ED-lCWg__original/img/PDDH38Vf9NEB_4ODURxcJKNBfVQ=/0x0/filters:format(jpeg)/pic1083380.jpg",
+      "description": "In Mage Knight Board Game you become one of four powerful Mage Knights who explore and subdue an important peninsula of the Atlantean Empire.",
       "rating": 8.08,
-      "bestPlayers": "1"
+      "bestPlayers": "1-2"
     },
     {
       "rank": 40,
       "id": 251247,
       "name": "Barrage",
       "year": 2019,
-      "image": "",
-      "description": "Build dams and powerhouses to harness water in an alternate 1930s.",
+      "image": "https://cf.geekdo-images.com/jEPmWvvYpqkWrKOzqIHFsg__original/img/rkHKwkUqpQC7PAGG7n2gbrcQiUY=/0x0/filters:format(png)/pic4336469.png",
+      "description": "In the dystopic 1930s, the industrial revolution pushed the exploitation of fossil-based resources to the limit, and now the only thing powerful enough to quench the thirst for…",
       "rating": 8.13,
       "bestPlayers": "4"
     },
@@ -407,8 +407,8 @@ window.BOARD_GAMES = {
       "id": 321608,
       "name": "Hegemony: Lead Your Class to Victory",
       "year": 2023,
-      "image": "",
-      "description": "Lead a social class and shape the policies of a modern nation.",
+      "image": "https://cf.geekdo-images.com/DCLgJlrvB-EqL6A3WgQLMQ__original/img/vGpYcxjDBCOVcI0BcWOevspTQMQ=/0x0/filters:format(jpeg)/pic5715770.jpg",
+      "description": "Extended edition includes Crisis & Control expansion. The Nation is in disarray and a war is waging between the classes.",
       "rating": 8.35,
       "bestPlayers": "4"
     },
@@ -417,8 +417,8 @@ window.BOARD_GAMES = {
       "id": 284378,
       "name": "Kanban EV",
       "year": 2020,
-      "image": "",
-      "description": "Manage an electric-car factory and impress the demanding supervisor, Sandra.",
+      "image": "https://cf.geekdo-images.com/L2Wn-zUqkcHgqvwvY212Ig__original/img/Htra4hvxjBlejtNEIUns_B3CNNc=/0x0/filters:format(jpeg)/pic4924232.jpg",
+      "description": "Electric vehicles (EVs) have become more common since 2014 and are the future of the automobile industry.",
       "rating": 8.37,
       "bestPlayers": "3"
     },
@@ -427,18 +427,18 @@ window.BOARD_GAMES = {
       "id": 521,
       "name": "Crokinole",
       "year": 1876,
-      "image": "",
-      "description": "Flick wooden discs across a round board, knocking away your opponent's pieces.",
+      "image": "https://cf.geekdo-images.com/DOwZ7_Q1w68iBhARcDAxig__original/img/0E7UQ_sXErRusbZVixlIiN8MIJQ=/0x0/filters:format(jpeg)/pic8549797.jpg",
+      "description": "Crokinole is a traditional two- or four-player dexterity game, played on a circular wooden board, with 3 rings and an inner recessed 'bullseye'.",
       "rating": 8.07,
-      "bestPlayers": "2"
+      "bestPlayers": "2, 4"
     },
     {
       "rank": 44,
       "id": 183394,
       "name": "Viticulture Essential Edition",
       "year": 2015,
-      "image": "",
-      "description": "Plant vines, harvest grapes and fill wine orders on your rustic Tuscan vineyard.",
+      "image": "https://cf.geekdo-images.com/l_PRU2lVlX9seScRFcvFlA__original/img/gDL7OZFlzoOFgU0VYlREs8P5hCQ=/0x0/filters:format(jpeg)/pic6500949.jpg",
+      "description": "In Viticulture, the players find themselves in the roles of people in rustic, pre-modern Tuscany who have inherited meagre vineyards.",
       "rating": 7.95,
       "bestPlayers": "3-4"
     },
@@ -447,8 +447,8 @@ window.BOARD_GAMES = {
       "id": 324856,
       "name": "The Crew: Mission Deep Sea",
       "year": 2021,
-      "image": "",
-      "description": "Cooperative trick-taking missions beneath the waves.",
+      "image": "https://cf.geekdo-images.com/VuBqZ1sMaDAVVHF_OEJP4g__original/img/jGWxczXC_VWZofeAmlO_DkB0hCI=/0x0/filters:format(jpeg)/pic5988903.jpg",
+      "description": "The Crew: Mission Deep Sea plunges players into a cooperative card game unlike any other.",
       "rating": 8.04,
       "bestPlayers": "4"
     },
@@ -457,8 +457,8 @@ window.BOARD_GAMES = {
       "id": 199792,
       "name": "Everdell",
       "year": 2018,
-      "image": "",
-      "description": "Gather resources to build a bustling city of critters and constructions.",
+      "image": "https://cf.geekdo-images.com/fjE7V5LNq31yVEW_yuqI-Q__original/img/HQ1ti16wT9lqja5_h3gUfHUIcVI=/0x0/filters:format(png)/pic3918905.png",
+      "description": "Within the charming valley of Everdell, beneath the boughs of towering trees, among meandering streams and mossy hollows, a civilization of forest critters is thriving and…",
       "rating": 7.97,
       "bestPlayers": "3"
     },
@@ -467,8 +467,8 @@ window.BOARD_GAMES = {
       "id": 366013,
       "name": "Heat: Pedal to the Metal",
       "year": 2022,
-      "image": "",
-      "description": "Race classic cars across the world while managing speed, heat and risk.",
+      "image": "https://cf.geekdo-images.com/-vOrd4bOspibyohYExLqWg__original/img/iXU8a9WaVlwrkiEiOxWN06y9y5g=/0x0/filters:format(png)/pic6940449.png",
+      "description": "Based on simple and intuitive hand management, Heat: Pedal to the Metal puts players in the driver's seat of intense car races, jockeying for position to cross the finish line…",
       "rating": 7.99,
       "bestPlayers": "5-6"
     },
@@ -477,8 +477,8 @@ window.BOARD_GAMES = {
       "id": 365717,
       "name": "Clank!: Catacombs",
       "year": 2022,
-      "image": "",
-      "description": "Sneak through catacombs built tile by tile in this deck-building dungeon crawl.",
+      "image": "https://cf.geekdo-images.com/cCLn9Mvb7jRSaZzHeUXhoQ__original/img/NK4hsA9nc-kdI07hR0Nc23dL_bk=/0x0/filters:format(jpeg)/pic6937913.jpg",
+      "description": "The catacombs of the skeletal dragon Umbrok Vessna are mysterious and dangerous.",
       "rating": 8.23,
       "bestPlayers": "3"
     },
@@ -487,8 +487,8 @@ window.BOARD_GAMES = {
       "id": 390092,
       "name": "Ticket to Ride Legacy: Legends of the West",
       "year": 2023,
-      "image": "",
-      "description": "Build railroads across the American West in a campaign that changes game after game.",
+      "image": "https://cf.geekdo-images.com/2H0pJddVJA3r6btqRNLG1g__original/img/q8N6sz7FIZkbXe_0d4RiIfM8aNU=/0x0/filters:format(png)/pic7541330.png",
+      "description": "In Ticket to Ride Legacy: Legends of the West, players embark on twelve journeys across North America as 19th century pioneers.",
       "rating": 8.6,
       "bestPlayers": "4"
     },
@@ -497,18 +497,18 @@ window.BOARD_GAMES = {
       "id": 285774,
       "name": "Marvel Champions: The Card Game",
       "year": 2019,
-      "image": "",
-      "description": "Team up as Marvel heroes to foil villains' schemes.",
-      "rating": 8.1,
-      "bestPlayers": "2"
+      "image": "https://cf.geekdo-images.com/kRvUgYiaOq07kC67ZK5UoQ__original/img/cqng0e4S7Cj6j6Sb49-OCggGi-8=/0x0/filters:format(jpeg)/pic4900321.jpg",
+      "description": "\"With great power, there must also come great responsibility.",
+      "rating": 8.11,
+      "bestPlayers": "1-2"
     },
     {
       "rank": 51,
       "id": 175914,
       "name": "Food Chain Magnate",
       "year": 2015,
-      "image": "",
-      "description": "Build a fast-food chain through hiring, marketing and ruthless pricing.",
+      "image": "https://cf.geekdo-images.com/Wtxml94LAXsIWQCxGPS63Q__original/img/9c-MJB6x54vN5eB-1hT4XQaHtP8=/0x0/filters:format(png)/pic2649434.png",
+      "description": "\"Lemonade? They want lemonade?",
       "rating": 8.03,
       "bestPlayers": "3-4"
     },
@@ -517,68 +517,68 @@ window.BOARD_GAMES = {
       "id": 414317,
       "name": "Harmonies",
       "year": 2024,
-      "image": "",
-      "description": "Shape rivers, mountains and forests to create homes for animals.",
+      "image": "https://cf.geekdo-images.com/A_XP2_VN3ugyqPhezowB_w__original/img/_Rv8lSr3fC1oDRkrQleQW2H2yCs=/0x0/filters:format(png)/pic8026369.png",
+      "description": "In Harmonies, build landscapes by placing colored tokens and create habitats for your animals.",
       "rating": 8.03,
-      "bestPlayers": "2"
+      "bestPlayers": "2-3"
     },
     {
       "rank": 53,
       "id": 247763,
       "name": "Underwater Cities",
       "year": 2018,
-      "image": "",
-      "description": "Build a network of underwater domes to secure humanity's future.",
+      "image": "https://cf.geekdo-images.com/PwOwTVHovJAUQgghnGqCOg__original/img/1WL5-4DZi0hX76HEgsLIYRRaIh4=/0x0/filters:format(png)/pic4837710.png",
+      "description": "In Underwater Cities, which takes about 30-45 minutes per player, players represent the most powerful brains in the world, brains nominated due to the overpopulation of Earth…",
       "rating": 8.04,
-      "bestPlayers": "3"
+      "bestPlayers": "2"
     },
     {
       "rank": 54,
       "id": 253344,
       "name": "Cthulhu: Death May Die",
       "year": 2019,
-      "image": "",
-      "description": "Investigators stop cultists and face the Great Old Ones head-on.",
+      "image": "https://cf.geekdo-images.com/SPpzri7fwLRgVWMKOocHxw__original/img/4TI0rpw6w0EpkgfvQpusj5Idmpw=/0x0/filters:format(png)/pic9712872.png",
+      "description": "In Cthulhu: Death May Die, inspired by the writings of H. P.",
       "rating": 8.18,
-      "bestPlayers": "4"
+      "bestPlayers": "3"
     },
     {
       "rank": 55,
       "id": 256960,
       "name": "Pax Pamir: Second Edition",
       "year": 2019,
-      "image": "",
-      "description": "Navigate the political struggles of 19th-century Afghanistan.",
+      "image": "https://cf.geekdo-images.com/oSM_AuKYfGIwOtKbVEsoVg__original/img/7DlaMCmuoJzm9AzelmStYIDgutI=/0x0/filters:format(png)/pic4503733.png",
+      "description": "In Pax Pamir, players assume the role of nineteenth century Afghan leaders attempting to forge a new state after the collapse of the Durrani Empire.",
       "rating": 8.12,
-      "bestPlayers": "3"
+      "bestPlayers": "4"
     },
     {
       "rank": 56,
       "id": 436217,
       "name": "The Lord of the Rings: Fate of the Fellowship",
       "year": 2025,
-      "image": "",
-      "description": "Guide the Fellowship together on a cooperative quest to destroy the One Ring.",
+      "image": "https://cf.geekdo-images.com/scw36iBIad7l-rGzxPGcGg__original/img/JZKAg-ETtE7z3YbgSMPd242rCqE=/0x0/filters:format(png)/pic8662670.png",
+      "description": "As members of The Fellowship and the allies who rise to aid them, you must embark on a journey that may either save or doom Middle-earth.",
       "rating": 8.34,
-      "bestPlayers": "2"
+      "bestPlayers": "3"
     },
     {
       "rank": 57,
       "id": 383179,
       "name": "Age of Innovation",
       "year": 2023,
-      "image": "",
-      "description": "Transform the land and expand your faction in this reimagining of Terra Mystica.",
-      "rating": 8.43,
-      "bestPlayers": "3"
+      "image": "https://cf.geekdo-images.com/D1vrcFEptCEoD8Z6s_iRfw__original/img/1vY0K3wSqlYXq0JEylSI-7agxKs=/0x0/filters:format(jpeg)/pic7430993.jpg",
+      "description": "Age of Innovation is a standalone game set in the world of Terra Mystica.",
+      "rating": 8.42,
+      "bestPlayers": "4"
     },
     {
       "rank": 58,
       "id": 3076,
       "name": "Puerto Rico",
       "year": 2002,
-      "image": "",
-      "description": "Ship goods, construct buildings and choose roles to prosper in colonial Puerto Rico.",
+      "image": "https://cf.geekdo-images.com/QFiIRd2kimaMqTyWsX0aUg__original/img/DOgIp57F7tKZvxeITGAd3e_Q9as=/0x0/filters:format(jpeg)/pic158548.jpg",
+      "description": "In Puerto Rico, players assume the roles of colonial governors on the island of Puerto Rico.",
       "rating": 7.9,
       "bestPlayers": "4"
     },
@@ -587,18 +587,18 @@ window.BOARD_GAMES = {
       "id": 184267,
       "name": "On Mars",
       "year": 2020,
-      "image": "",
-      "description": "Build the first colony on Mars, balancing work on the orbital station and the surface.",
+      "image": "https://cf.geekdo-images.com/Nm0Iw8NoiM9V8IsifimGBw__original/img/GNjjsgxq7wYO9pSIteDJe6Sxt00=/0x0/filters:format(jpeg)/pic4357658.jpg",
+      "description": "Following the success of unmanned rover missions, the United Nations established the Department of Operations and Mars Exploration (D.",
       "rating": 8.16,
-      "bestPlayers": "2"
+      "bestPlayers": "3"
     },
     {
       "rank": 60,
       "id": 314040,
       "name": "Pandemic Legacy: Season 0",
       "year": 2020,
-      "image": "",
-      "description": "Cold War agents race to stop a Soviet bioweapon in 1962.",
+      "image": "https://cf.geekdo-images.com/y0x1zbkpUXjddzWWnhekYw__original/img/2VlfzwT4b8f1s2HqbilcjR-bM3I=/0x0/filters:format(jpeg)/pic5581457.jpg",
+      "description": "1962 — The Cold War continues as a new threat looms on the horizon, a deadly new Soviet bioweapon, something called \"Project MEDUSA\".",
       "rating": 8.33,
       "bestPlayers": "4"
     },
@@ -607,18 +607,18 @@ window.BOARD_GAMES = {
       "id": 295947,
       "name": "Cascadia",
       "year": 2021,
-      "image": "",
-      "description": "Create a wildlife habitat puzzle of the Pacific Northwest with tiles and tokens.",
+      "image": "https://cf.geekdo-images.com/MjeJZfulbsM1DSV3DrGJYA__original/img/B374C04Eip7fmQBGJzgiOTp-jyQ=/0x0/filters:format(jpeg)/pic5100691.jpg",
+      "description": "Cascadia is a puzzly tile-laying and token-drafting game featuring the habitats and wildlife of the Pacific Northwest.",
       "rating": 7.88,
-      "bestPlayers": "3"
+      "bestPlayers": "2-3"
     },
     {
       "rank": 62,
       "id": 185343,
       "name": "Anachrony",
       "year": 2017,
-      "image": "",
-      "description": "Travel through time to prepare your faction for an apocalyptic impact.",
+      "image": "https://cf.geekdo-images.com/31quLNzteInnevVRAABoow__original/img/3KfMPSj7jjhG0g5lQBsO-bn67D0=/0x0/filters:format(jpeg)/pic3499707.jpg",
+      "description": "It is the late 26th century. Earth is recovering from a catastrophic explosion that exterminated the majority of the population centuries ago and made most of the surface…",
       "rating": 8.04,
       "bestPlayers": "3"
     },
@@ -627,38 +627,38 @@ window.BOARD_GAMES = {
       "id": 102794,
       "name": "Caverna: The Cave Farmers",
       "year": 2013,
-      "image": "",
-      "description": "Carve out a home in the mountain, build a farm, and craft weapons for adventures.",
+      "image": "https://cf.geekdo-images.com/EAqbd46lFxo-7GumlO8U4w__original/img/oNM6bkDbjww-7nKZX-WYYmPxRws=/0x0/filters:format(jpeg)/pic5598833.jpg",
+      "description": "Following along the same lines as its predecessor (Agricola), Caverna: The Cave Farmers is a worker-placement game at heart, with a focus on farming.",
       "rating": 7.92,
-      "bestPlayers": "3"
+      "bestPlayers": "4"
     },
     {
       "rank": 64,
       "id": 240980,
       "name": "Blood on the Clocktower",
       "year": 2022,
-      "image": "",
-      "description": "Bluff and deduce in a town hiding a demon, guided by a Storyteller.",
+      "image": "https://cf.geekdo-images.com/HINb2nkFn5IiZxAlzQIs4g__original/img/e7izEwSmnBPiErsIF6hlWbgybBE=/0x0/filters:format(jpeg)/pic7009391.jpg",
+      "description": "In the sleepy town of Ravenswood Bluff, &zwnj;a demon walks amongst you.",
       "rating": 8.33,
-      "bestPlayers": "10+"
+      "bestPlayers": "9-12"
     },
     {
       "rank": 65,
       "id": 251661,
       "name": "Oathsworn: Into the Deepwood",
       "year": 2022,
-      "image": "",
-      "description": "Hunt legendary beasts in a story-driven cooperative campaign.",
-      "rating": 8.75,
-      "bestPlayers": "2"
+      "image": "https://cf.geekdo-images.com/dezQ4YjF03lZVxTdI-UJYw__original/img/smV4u2r1moRbzsSTzykECb06Mpo=/0x0/filters:format(jpeg)/pic6863204.jpg",
+      "description": "Oathsworn is a Twisting Tales Game for 1-4 players where play is focused on narrative choices and rich miniature combat encounters.",
+      "rating": 8.74,
+      "bestPlayers": "2, 4"
     },
     {
       "rank": 66,
       "id": 31260,
       "name": "Agricola",
       "year": 2007,
-      "image": "",
-      "description": "Build your farmhouse, raise livestock and grow your family in the 17th century.",
+      "image": "https://cf.geekdo-images.com/3L6ZtOll9W5O6-3-EwSMyw__original/img/V37KuMJlCzpxAilzN39BzeLvc9Q=/0x0/filters:format(jpeg)/pic1899157.jpg",
+      "description": "In Agricola, you're a farmer in a wooden shack with your spouse and little else.",
       "rating": 7.85,
       "bestPlayers": "3-4"
     },
@@ -667,18 +667,18 @@ window.BOARD_GAMES = {
       "id": 231733,
       "name": "Obsession",
       "year": 2018,
-      "image": "",
-      "description": "Build your family's estate and reputation in Victorian England.",
+      "image": "https://cf.geekdo-images.com/sy89BiuZXfbSnG7Cag9tBQ__original/img/uArsqbWyUALa982zGWsy8QQWnjE=/0x0/filters:format(png)/pic5902073.png",
+      "description": "You are the head of a respected but troubled family estate in mid-19th century Victorian England.",
       "rating": 8.07,
-      "bestPlayers": "2-3"
+      "bestPlayers": "2"
     },
     {
       "rank": 68,
       "id": 170216,
       "name": "Blood Rage",
       "year": 2015,
-      "image": "",
-      "description": "Pillage, fight and die gloriously as Viking clans race to Valhalla before Ragnarök.",
+      "image": "https://cf.geekdo-images.com/HkZSJfQnZ3EpS214xtuplg__original/img/Myy6IPDJDzLoPdXrPXVZcddBQoQ=/0x0/filters:format(jpeg)/pic2439223.jpg",
+      "description": "\"Life is Battle; Battle is Glory; Glory is ALL\" In Blood Rage, players control the warriors, leader, and ship of their own Viking clan.",
       "rating": 7.89,
       "bestPlayers": "4"
     },
@@ -687,8 +687,8 @@ window.BOARD_GAMES = {
       "id": 182874,
       "name": "Grand Austria Hotel",
       "year": 2015,
-      "image": "",
-      "description": "Run a Viennese hotel, serving guests and pleasing the Emperor.",
+      "image": "https://cf.geekdo-images.com/PJRaImV8iXGAq2L-6rrn-w__original/img/8DrrN_WD5-jXfWj7ZFr0A3eqKPM=/0x0/filters:format(jpeg)/pic2649931.jpg",
+      "description": "In the thick of the Viennese modern age, exquisite caf&eacute;s are competing for customers.",
       "rating": 7.96,
       "bestPlayers": "2"
     },
@@ -697,8 +697,8 @@ window.BOARD_GAMES = {
       "id": 367966,
       "name": "Endeavor: Deep Sea",
       "year": 2024,
-      "image": "",
-      "description": "Explore the ocean depths and advance marine research.",
+      "image": "https://cf.geekdo-images.com/wIbevITv9W79ELP8rEZoKA__original/img/41fYEG_IYb9ECcCO24Dk4dZUNT0=/0x0/filters:format(jpeg)/pic6996584.jpg",
+      "description": "Plunge into the modern era, where our planet's vast interconnected ocean scape is one of the last frontiers to discover and explore.",
       "rating": 8.21,
       "bestPlayers": "3"
     },
@@ -707,8 +707,8 @@ window.BOARD_GAMES = {
       "id": 161533,
       "name": "Lisboa",
       "year": 2017,
-      "image": "",
-      "description": "Rebuild Lisbon after the great earthquake of 1755 under the Marquis of Pombal.",
+      "image": "https://cf.geekdo-images.com/OrHS8_a1CqSGiXeTfCk0Wg__original/img/hVArRkZYHiPTGTfi0DPR58i4o44=/0x0/filters:format(jpeg)/pic3209553.jpg",
+      "description": "Lisboa is a game about the reconstruction of Lisboa after the great earthquake of 1755.",
       "rating": 8.16,
       "bestPlayers": "3"
     },
@@ -717,18 +717,18 @@ window.BOARD_GAMES = {
       "id": 371942,
       "name": "The White Castle",
       "year": 2023,
-      "image": "",
-      "description": "Rise in the service of the daimyo at Himeji Castle through careful dice drafting.",
+      "image": "https://cf.geekdo-images.com/qXT1U-nFh9PE8ujfdmI7dA__original/img/jzmifZJ0Sg2Js7hmQjzX7bEHVBY=/0x0/filters:format(jpeg)/pic7754663.jpg",
+      "description": "The heron flies over the Himeji sky while the Daimyo, from the top of the castle, watches his servants move.",
       "rating": 7.98,
-      "bestPlayers": "2"
+      "bestPlayers": "3"
     },
     {
       "rank": 73,
       "id": 380607,
       "name": "Great Western Trail: New Zealand",
       "year": 2023,
-      "image": "",
-      "description": "Raise sheep and ship wool across New Zealand in this Great Western Trail sequel.",
+      "image": "https://cf.geekdo-images.com/X4KaD6ADLW1ohOznNay7xg__original/img/HhxsLMIsz6Te567qXEbRBen4Sm8=/0x0/filters:format(png)/pic7350809.png",
+      "description": "Kia ora, and welcome to Great Western Trail New Zealand! Towards the end of the 19th century, you established yourself as a runholder (owner of a sheep station) on the South…",
       "rating": 8.44,
       "bestPlayers": "3"
     },
@@ -737,8 +737,8 @@ window.BOARD_GAMES = {
       "id": 221107,
       "name": "Pandemic Legacy: Season 2",
       "year": 2017,
-      "image": "",
-      "description": "Keep the last survivors alive in a world ravaged by disease.",
+      "image": "https://cf.geekdo-images.com/Qtkb-UTvHa0-kxt_MK1nKw__original/img/wJiRr7lBmWSKcRS3lPpvKIPMgQQ=/0x0/filters:format(jpeg)/pic3763549.jpg",
+      "description": "Description from the publisher: The world almost ended 71 years ago...",
       "rating": 8.01,
       "bestPlayers": "4"
     },
@@ -747,18 +747,18 @@ window.BOARD_GAMES = {
       "id": 255984,
       "name": "Sleeping Gods",
       "year": 2021,
-      "image": "",
-      "description": "Explore an uncharted world of islands in this cooperative storybook adventure.",
+      "image": "https://cf.geekdo-images.com/Zdt8l4oTBpFICsMyNof7Jg__original/img/-okZ810RkA8fKKhIeZyX4cnqmbE=/0x0/filters:format(png)/pic5975244.png",
+      "description": "\"Are the stars unfamiliar here? \" she asked, and the sky grew suddenly dark, the star's patterns alien and exotic.",
       "rating": 8.08,
-      "bestPlayers": "2"
+      "bestPlayers": "1-2"
     },
     {
       "rank": 76,
       "id": 2651,
       "name": "Power Grid",
       "year": 2004,
-      "image": "",
-      "description": "Buy power plants and fuel, and expand your network of cities.",
+      "image": "https://cf.geekdo-images.com/yd6LuatytHRhcFCxCf-EEg__original/img/OS13C6W4i1XW__wWVVVaqF7BV0c=/0x0/filters:format(jpeg)/pic4459753.jpg",
+      "description": "Power Grid is the updated release of the Friedemann Friese crayon game Funkenschlag.",
       "rating": 7.8,
       "bestPlayers": "4-5"
     },
@@ -767,8 +767,8 @@ window.BOARD_GAMES = {
       "id": 126163,
       "name": "Tzolk'in: The Mayan Calendar",
       "year": 2012,
-      "image": "",
-      "description": "Place workers on gears that turn with time to advance your Mayan tribe.",
+      "image": "https://cf.geekdo-images.com/kXf7mDyDYuHg6oe8yTUIEA__original/img/f6-Au0KTnNR4nugSu2U-wPNbZCU=/0x0/filters:format(jpeg)/pic4604439.jpg",
+      "description": "Tzolkin: The Mayan Calendar presents a new game mechanism: dynamic worker placement.",
       "rating": 7.84,
       "bestPlayers": "4"
     },
@@ -777,38 +777,38 @@ window.BOARD_GAMES = {
       "id": 216132,
       "name": "Clans of Caledonia",
       "year": 2017,
-      "image": "",
-      "description": "Produce and trade goods as Scottish clans in the 19th century.",
+      "image": "https://cf.geekdo-images.com/SPuwc6RJ6y4PnTH36Pegsg__original/img/GcuvCavv-ZZP5_O1kCTrZELuZdY=/0x0/filters:format(png)/pic3511783.png",
+      "description": "Clans of Caledonia is a mid-to-heavy economic game set in 19th-century Scotland.",
       "rating": 7.94,
-      "bestPlayers": "3"
+      "bestPlayers": "4"
     },
     {
       "rank": 79,
       "id": 205059,
       "name": "Mansions of Madness: Second Edition",
       "year": 2016,
-      "image": "",
-      "description": "Investigate haunted places and solve mysteries guided by a companion app.",
+      "image": "https://cf.geekdo-images.com/LIooA9bTdjnE9qmhjL-UFw__original/img/Go6c8-ZiXomS8E7X4MBCdDd-aZc=/0x0/filters:format(jpeg)/pic3118622.jpg",
+      "description": "Mansions of Madness: Second Edition is a fully co-operative, app-driven board game of horror and mystery for one to five players that takes place in the same universe as…",
       "rating": 7.91,
-      "bestPlayers": "2-3"
+      "bestPlayers": "3-4"
     },
     {
       "rank": 80,
       "id": 337627,
       "name": "Voidfall",
       "year": 2023,
-      "image": "",
-      "description": "Lead a noble house through a galaxy-spanning war against the Void.",
+      "image": "https://cf.geekdo-images.com/hItZjdDTNuaCZ7fEztwcUQ__original/img/gIhusTrYRr_2JQGEv0zuSgLtuUo=/0x0/filters:format(jpeg)/pic6153324.jpg",
+      "description": "For centuries, the Novarchs, descendants of the royal House of Novarchon, have ruled with an iron fist over the feudalistic galactic empire of humankind, the Domineum.",
       "rating": 8.5,
-      "bestPlayers": "2"
+      "bestPlayers": "1, 3"
     },
     {
       "rank": 81,
       "id": 244521,
       "name": "Quacks",
       "year": 2018,
-      "image": "",
-      "description": "Brew potions by drawing ingredients from your bag, but don't let them explode.",
+      "image": "https://cf.geekdo-images.com/B1bLRWzTASZ-xx9NoAE79A__original/img/HulJk6gFzp_bxl0wzc2XEMq8NLM=/0x0/filters:format(png)/pic8780293.png",
+      "description": "In Quacks, which was first released as The Quacks of Quedlinburg, players are charlatans — or quack doctors — each making their own secret brew by adding ingredients one at a time.",
       "rating": 7.8,
       "bestPlayers": "4"
     },
@@ -817,18 +817,18 @@ window.BOARD_GAMES = {
       "id": 266810,
       "name": "Paladins of the West Kingdom",
       "year": 2019,
-      "image": "",
-      "description": "Defend the kingdom with knights, faith and fortifications in the 10th century.",
+      "image": "https://cf.geekdo-images.com/4nhokcLdYoo6ulbZ1rmGgA__original/img/9ktZDu003VVVTw0RxD-ufLYV1HQ=/0x0/filters:format(png)/pic4462987.png",
+      "description": "Paladins of the West Kingdom is set at a turbulent time of West Francia's story, circa 900 AD.",
       "rating": 7.95,
-      "bestPlayers": "3"
+      "bestPlayers": "2"
     },
     {
       "rank": 83,
       "id": 35677,
       "name": "Le Havre",
       "year": 2008,
-      "image": "",
-      "description": "Build up the port town of Le Havre with ships, buildings and trade.",
+      "image": "https://cf.geekdo-images.com/y7Rqd3S6J7vyVhicR1bqTQ__original/img/tQFXv1w2R-J-1cjyaKG9LAS2UOs=/0x0/filters:format(jpeg)/pic6091101.jpg",
+      "description": "In Le Havre, a player's turn consists of two parts: First, distribute newly supplied goods onto the offer spaces; then take an action.",
       "rating": 7.83,
       "bestPlayers": "3"
     },
@@ -837,8 +837,8 @@ window.BOARD_GAMES = {
       "id": 413246,
       "name": "Bomb Busters",
       "year": 2024,
-      "image": "",
-      "description": "Defuse bombs together in a cooperative deduction game of numbered wires.",
+      "image": "https://cf.geekdo-images.com/HpGXIlt5i6T-0jbiQRReOg__original/img/2uApg8IOYjNVSzbUIwJUa-Z8eL8=/0x0/filters:format(png)/pic8303080.png",
+      "description": "There is a bomb full of wires and the countdown has started...",
       "rating": 8.03,
       "bestPlayers": "4"
     },
@@ -847,8 +847,8 @@ window.BOARD_GAMES = {
       "id": 124742,
       "name": "Android: Netrunner",
       "year": 2012,
-      "image": "",
-      "description": "A cyberpunk card duel between a megacorporation and a lone hacker.",
+      "image": "https://cf.geekdo-images.com/2ewHIIG_TRq8bYlqk0jIMw__original/img/cassW39WF2QrPImJF59efADAmM0=/0x0/filters:format(jpeg)/pic3738560.jpg",
+      "description": "Welcome to New Angeles, home of the Beanstalk. From our branch offices in this monument of human achievement, NBN proudly broadcasts all your favorite media programming.",
       "rating": 7.89,
       "bestPlayers": "2"
     },
@@ -857,38 +857,38 @@ window.BOARD_GAMES = {
       "id": 125153,
       "name": "The Gallerist",
       "year": 2015,
-      "image": "",
-      "description": "Promote artists, buy and sell art, and build your gallery's reputation.",
-      "rating": 8.0,
-      "bestPlayers": "3"
+      "image": "https://cf.geekdo-images.com/ie1GSt1XV04sXQXt-3O1UQ__original/img/59dZRZePEgtcupkRSA2zohZuHpM=/0x0/filters:format(png)/pic2503200.png",
+      "description": "This age of art and capitalism has created a need for a new occupation - The Gallerist.",
+      "rating": 8,
+      "bestPlayers": "3-4"
     },
     {
       "rank": 87,
       "id": 200680,
       "name": "Agricola (Revised Edition)",
       "year": 2016,
-      "image": "",
-      "description": "Build your farmhouse, raise livestock and grow your family in the 17th century.",
+      "image": "https://cf.geekdo-images.com/YCGWJMFwOI5efji2RJ2mSw__original/img/jC_He46LcIcKWU-kSwkYdr9Z45E=/0x0/filters:format(jpeg)/pic8093340.jpg",
+      "description": "Updated and streamlined for a new generation of players, Agricola, the award-winning and highly acclaimed game by Uwe Rosenberg, features a revised rulebook and gameplay, wood…",
       "rating": 7.95,
-      "bestPlayers": "3"
+      "bestPlayers": "3-4"
     },
     {
       "rank": 88,
       "id": 164153,
       "name": "Star Wars: Imperial Assault",
       "year": 2014,
-      "image": "",
-      "description": "Heroes of the Rebellion battle the Empire in tactical skirmishes and campaigns.",
+      "image": "https://cf.geekdo-images.com/pIQ_MXvaoARRp1loCHJuHg__original/img/12Xvbw01hpsAjsO0xrajZt2b5HY=/0x0/filters:format(jpeg)/pic2247647.jpg",
+      "description": "Star Wars: Imperial Assault is a strategy board game of tactical combat and missions for two to five players, offering two distinct games of battle and adventure in the Star…",
       "rating": 7.95,
-      "bestPlayers": "2"
+      "bestPlayers": "2, 5"
     },
     {
       "rank": 89,
       "id": 366161,
       "name": "Wingspan Asia",
       "year": 2022,
-      "image": "",
-      "description": "A standalone Wingspan with the birds of Asia, including a two-player duel mode.",
+      "image": "https://cf.geekdo-images.com/h1dRxq4lNMpuSUSGdgCmfA__original/img/MSX7waTxS81SiyxAmmCJFFWAl1I=/0x0/filters:format(jpeg)/pic7107431.jpg",
+      "description": "Wingspan: Asia introduces the diverse and vibrant birds of the Asian continent.",
       "rating": 8.21,
       "bestPlayers": "2"
     },
@@ -897,8 +897,8 @@ window.BOARD_GAMES = {
       "id": 322289,
       "name": "Darwin's Journey",
       "year": 2023,
-      "image": "",
-      "description": "Follow in Darwin's footsteps to explore the Galápagos Islands.",
+      "image": "https://cf.geekdo-images.com/-A_ABjMw4PdoAZrH-FjiiA__original/img/GuDlOog3eTRrkxCUzCEgRc17B-g=/0x0/filters:format(png)/pic5726930.png",
+      "description": "When all you can identify in the horizon for many long days is the line that detaches the sea from the sky, the glimpse of a distant shore appearing before you will make you…",
       "rating": 8.09,
       "bestPlayers": "3"
     },
@@ -907,8 +907,8 @@ window.BOARD_GAMES = {
       "id": 276025,
       "name": "Maracaibo",
       "year": 2019,
-      "image": "",
-      "description": "Sail the Caribbean of the 17th century, trading and exploring for your nation.",
+      "image": "https://cf.geekdo-images.com/rMNa0k05zMdKgSEp26Q3Tw__original/img/yhnCcq9UplffqjSCe08mjTFvgOM=/0x0/filters:format(jpeg)/pic4917407.jpg",
+      "description": "Maracaibo, a strategy game for 1-4 players by Alexander Pfister, is set in the Caribbean during the 17th century.",
       "rating": 7.93,
       "bestPlayers": "3"
     },
@@ -917,8 +917,8 @@ window.BOARD_GAMES = {
       "id": 332772,
       "name": "Revive",
       "year": 2022,
-      "image": "",
-      "description": "Rebuild civilization in a frozen world by exploring and reviving the land.",
+      "image": "https://cf.geekdo-images.com/V0OZ9QR0pC9G5t5i9MoZTQ__original/img/NxxAoxVxMNkDGEkD3aoobPL14dI=/0x0/filters:format(jpeg)/pic6950224.jpg",
+      "description": "Revive civilization, 5000 years after everything was destroyed.",
       "rating": 8.05,
       "bestPlayers": "3"
     },
@@ -927,8 +927,8 @@ window.BOARD_GAMES = {
       "id": 209010,
       "name": "Mechs vs. Minions",
       "year": 2016,
-      "image": "",
-      "description": "Program your mech's actions and battle hordes of minions in this cooperative campaign.",
+      "image": "https://cf.geekdo-images.com/n4J5LebMj0DQD016qW7ABw__original/img/KDP4s1942J-T52OEytY2VpUWZC0=/0x0/filters:format(jpeg)/pic3184103.jpg",
+      "description": "Mechs vs. Minions is a cooperative tabletop campaign for 2-4 players.",
       "rating": 7.94,
       "bestPlayers": "4"
     },
@@ -937,8 +937,8 @@ window.BOARD_GAMES = {
       "id": 28143,
       "name": "Race for the Galaxy",
       "year": 2007,
-      "image": "",
-      "description": "Build galactic civilizations by playing game cards that represent worlds and developments.",
+      "image": "https://cf.geekdo-images.com/-DOqixs8uwKUvvWPKI4f9w__original/img/Vh-DCkTPa8OU45LaJdUywwhiYqE=/0x0/filters:format(jpeg)/pic5261714.jpg",
+      "description": "In Race for the Galaxy, players build galactic civilizations by playing cards representing worlds or technical and social developments.",
       "rating": 7.74,
       "bestPlayers": "2"
     },
@@ -947,8 +947,8 @@ window.BOARD_GAMES = {
       "id": 55690,
       "name": "Kingdom Death: Monster",
       "year": 2015,
-      "image": "",
-      "description": "Survive a nightmare horror world by hunting monsters and building a settlement.",
+      "image": "https://cf.geekdo-images.com/LenzJBOHboAGU0cUIqAZPQ__original/img/-dnx4zkvdOn3CMVHpXIfESazj40=/0x0/filters:format(jpeg)/pic2931007.jpg",
+      "description": "Kingdom Death: Monster is a fully cooperative tabletop hobby game experience.",
       "rating": 8.47,
       "bestPlayers": "4"
     },
@@ -957,8 +957,8 @@ window.BOARD_GAMES = {
       "id": 277659,
       "name": "Final Girl",
       "year": 2021,
-      "image": "",
-      "description": "Survive a horror movie as the final girl facing a relentless killer.",
+      "image": "https://cf.geekdo-images.com/TUtzY-F7gKTIKm9y8e1AQw__original/img/vpBmnZOOyLZA4va7N6S8j9NyGPQ=/0x0/filters:format(jpeg)/pic6520382.jpg",
+      "description": "Playing on a famous horror movie trope, Final Girl is a solitaire-only game that puts the player in the shoes of a female protagonist who must kill the slasher if she wants to…",
       "rating": 8.21,
       "bestPlayers": "1"
     },
@@ -967,8 +967,8 @@ window.BOARD_GAMES = {
       "id": 284083,
       "name": "The Crew: The Quest for Planet Nine",
       "year": 2019,
-      "image": "",
-      "description": "Cooperative trick-taking where the team completes missions in space.",
+      "image": "https://cf.geekdo-images.com/98LnQShydr11OBKS46xY-Q__original/img/Q-ZkgnuBu9OTBr7J3qnqPjqamAE=/0x0/filters:format(jpeg)/pic5687013.jpg",
+      "description": "In the co-operative trick-taking game The Crew: The Quest for Planet Nine, the players set out as astronauts on an uncertain space adventure.",
       "rating": 7.75,
       "bestPlayers": "4"
     },
@@ -977,8 +977,8 @@ window.BOARD_GAMES = {
       "id": 157354,
       "name": "Five Tribes: The Djinns of Naqala",
       "year": 2014,
-      "image": "",
-      "description": "Move the tribes of Naqala like mancala pieces to gain control of the sultanate.",
+      "image": "https://cf.geekdo-images.com/dmo-WD6HZHVUPrbVHunaTw__original/img/PS9HXrThM8Pepbd-cuA1tX8KCYU=/0x0/filters:format(jpeg)/pic2055255.jpg",
+      "description": "Crossing into the Land of 1001 Nights, your caravan arrives at the fabled Sultanate of Naqala.",
       "rating": 7.76,
       "bestPlayers": "2"
     },
@@ -987,8 +987,8 @@ window.BOARD_GAMES = {
       "id": 230802,
       "name": "Azul",
       "year": 2017,
-      "image": "",
-      "description": "Draft colorful tiles to decorate the walls of a Portuguese royal palace.",
+      "image": "https://cf.geekdo-images.com/aPSHJO0d0XOpQR5X-wJonw__original/img/AkbtYVc6xXJF3c9EUrakklcclKw=/0x0/filters:format(png)/pic6973671.png",
+      "description": "Introduced by the Moors, azulejos (originally white and blue ceramic tiles) were fully embraced by the Portuguese when their king Manuel I, on a visit to the Alhambra palace in…",
       "rating": 7.71,
       "bestPlayers": "2"
     },
@@ -997,8 +997,8 @@ window.BOARD_GAMES = {
       "id": 93,
       "name": "El Grande",
       "year": 1995,
-      "image": "",
-      "description": "Gain control of the regions of medieval Spain with your grandes and caballeros.",
+      "image": "https://cf.geekdo-images.com/RRKDHaYtFPHhczkUDcHOmg__original/img/E_QazS4f8ffj6oBcUl3C_VROCEw=/0x0/filters:format(jpeg)/pic7906240.jpg",
+      "description": "In this award-winning game, players take on the roles of Grandes in medieval Spain.",
       "rating": 7.77,
       "bestPlayers": "5"
     }
