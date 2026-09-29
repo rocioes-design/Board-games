@@ -9,7 +9,7 @@
 //
 //   BGG_TOKEN=your-token node scripts/fetch-games.mjs
 
-import { writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 
 const TOKEN = process.env.BGG_TOKEN;
 const LIMIT = 100;
@@ -68,23 +68,38 @@ async function topIds() {
   return ids.slice(0, LIMIT);
 }
 
+// If BGG's browse page can't be read, fall back to the games already in data/games.js;
+// their current ranks still come from the API below.
+async function currentIds() {
+  const js = await readFile(OUT, "utf8");
+  const data = JSON.parse(js.slice(js.indexOf("{"), js.lastIndexOf("}") + 1));
+  return data.games.map((g) => String(g.id));
+}
+
 function parseItem(xml) {
   const attr = (tag) => (xml.match(new RegExp(`<${tag}[^>]*value="([^"]*)"`)) || [])[1];
-  const best = (xml.match(/<result name="bestwith" value="([^"]*)"/) || [])[1] || "";
+  const best = decode(decode((xml.match(/<result name="bestwith" value="([^"]*)"/) || [])[1] || ""));
   const players = best.replace(/^Best with\s*/i, "").replace(/\s*players?$/i, "");
   return {
     id: +(xml.match(/<item[^>]*id="(\d+)"/) || [])[1],
-    name: decode((xml.match(/<name type="primary"[^>]*value="([^"]*)"/) || [])[1]),
+    name: decode(decode((xml.match(/<name type="primary"[^>]*value="([^"]*)"/) || [])[1])),
     year: +attr("yearpublished") || null,
     image: ((xml.match(/<image>([^<]*)<\/image>/) || [])[1] || "").trim(),
     description: shortDescription((xml.match(/<description>([\s\S]*?)<\/description>/) || [])[1]),
     rating: Math.round(parseFloat(attr("average")) * 100) / 100,
     bestPlayers: players.replace(/–/g, "-"),
+    bggRank: +(xml.match(/<rank[^>]*name="boardgame"[^>]*value="(\d+)"/) || [])[1] || null,
   };
 }
 
 async function main() {
-  const ids = await topIds();
+  let ids;
+  try {
+    ids = await topIds();
+  } catch (err) {
+    console.warn(`Couldn't read the browse page (${err.message}); using the current list instead`);
+    ids = await currentIds();
+  }
   const byId = new Map();
   for (let i = 0; i < ids.length; i += BATCH) {
     const chunk = ids.slice(i, i + BATCH);
@@ -96,7 +111,12 @@ async function main() {
     console.log(`Fetched ${Math.min(i + BATCH, ids.length)} / ${ids.length}`);
     await sleep(2000);
   }
-  const games = ids.map((id, i) => ({ rank: i + 1, ...byId.get(id) }));
+  // order by BGG's live rank, falling back to the browse-page order
+  const games = ids
+    .map((id, i) => ({ order: i, ...byId.get(id) }))
+    .filter((g) => g.name)
+    .sort((a, b) => (a.bggRank ?? 1e9) - (b.bggRank ?? 1e9) || a.order - b.order)
+    .map(({ order, bggRank, ...g }, i) => ({ rank: bggRank ?? i + 1, ...g }));
   const data = { source: "boardgamegeek", updated: new Date().toISOString().slice(0, 10), games };
   // Saved as a script (not plain JSON) so index.html also works when opened straight from disk
   await writeFile(OUT, "window.BOARD_GAMES = " + JSON.stringify(data, null, 2) + ";\n");
