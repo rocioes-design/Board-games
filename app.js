@@ -187,19 +187,42 @@ const ranges = {
 };
 const applied = { players: [1, PLAYERS_MAX], weight: [1, 5] };
 
-function readRange(name) {
+// players glide freely while dragging and count in whole numbers; complexity keeps one decimal
+const settle = (name, v) => (name === "players" ? Math.round(v) : Math.round(v * 10) / 10);
+
+function readRange(name, raw = false) {
   const lo = document.getElementById(`${name}-min`);
   const hi = document.getElementById(`${name}-max`);
-  return [Math.min(+lo.value, +hi.value), Math.max(+lo.value, +hi.value)];
+  const [a, b] = [Math.min(+lo.value, +hi.value), Math.max(+lo.value, +hi.value)];
+  return raw ? [a, b] : [settle(name, a), settle(name, b)];
+}
+
+// when a players handle is let go, it slides to the nearest whole number
+function snap(input) {
+  const target = Math.round(+input.value);
+  const start = +input.value;
+  if (start === target) return;
+  const el = input.closest(".range");
+  const t0 = performance.now();
+  const step = (now) => {
+    const k = Math.min(1, (now - t0) / 160);
+    input.value = start + (target - start) * (1 - Math.pow(1 - k, 3));
+    paintRange("players");
+    if (k < 1) requestAnimationFrame(step);
+    else el.classList.remove("is-snapping");
+  };
+  el.classList.add("is-snapping");
+  requestAnimationFrame(step);
 }
 
 function paintRange(name) {
   const r = ranges[name];
   const [a, b] = readRange(name);
+  const [ra, rb] = readRange(name, true); // the fill follows the handles exactly
   const pct = (v) => `${((v - r.min) / (r.max - r.min)) * 100}%`;
   const el = document.querySelector(`[data-range="${name}"]`);
-  el.style.setProperty("--from", pct(a));
-  el.style.setProperty("--to", pct(b));
+  el.style.setProperty("--from", pct(ra));
+  el.style.setProperty("--to", pct(rb));
   const text = name === "players" && a === b
     ? `${r.fmt(a)} ${a === 1 ? "player" : "players"}`
     : `${r.fmt(a)} to ${r.fmt(b)}${name === "players" ? " players" : ""}`;
@@ -249,7 +272,19 @@ function openPanel(open) {
 
 for (const name of Object.keys(ranges)) {
   for (const end of ["min", "max"]) {
-    document.getElementById(`${name}-${end}`).addEventListener("input", () => paintRange(name));
+    const input = document.getElementById(`${name}-${end}`);
+    input.addEventListener("input", () => paintRange(name));
+    if (name === "players") {
+      input.addEventListener("change", () => snap(input));
+      // arrow keys still move one whole player at a time
+      input.addEventListener("keydown", (e) => {
+        const dir = { ArrowRight: 1, ArrowUp: 1, ArrowLeft: -1, ArrowDown: -1 }[e.key];
+        if (!dir) return;
+        e.preventDefault();
+        input.value = Math.min(PLAYERS_MAX, Math.max(1, Math.round(+input.value) + dir));
+        paintRange("players");
+      });
+    }
   }
 }
 if (!hasWeights) {
