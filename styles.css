@@ -132,21 +132,13 @@ body {
   overflow: hidden;
   background: #efe6d2;
 }
-/* the whole box cover, centred over a soft blurred copy of itself */
+/* the cover fills the card's width; the crop leans to the top, where most boxes print their title */
 .art img {
-  position: relative;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center 18%;
   display: block;
-  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, .28));
-}
-.art::before {
-  content: "";
-  position: absolute;
-  inset: -40px;
-  background: var(--art, none) center / cover no-repeat;
-  filter: blur(28px) saturate(1.15) brightness(.92);
 }
 .art img[hidden] { display: none; }
 
@@ -245,6 +237,8 @@ h1 {
 /* player avatars, adapted from Watermelon UI "Avatar 16" and "Avatar 19" (MIT) */
 .players {
   position: relative;
+  width: fit-content;
+  margin-left: auto;
   display: flex;
   justify-content: flex-end;
   outline: none;
@@ -278,7 +272,7 @@ h1 {
 .players-tip {
   position: absolute;
   top: 50%;
-  right: calc(100% + 10px);
+  right: calc(100% + 4px);
   padding: 8px 14px;
   border-radius: 14px;
   border: 1px solid #ececec;
@@ -339,7 +333,8 @@ h1 {
   .info { flex-direction: column; align-items: flex-start; gap: 16px; padding: 18px 10px 8px; }
   .stats { text-align: left; }
   .stats p, .players { justify-content: flex-start; }
-  .players-tip { right: auto; left: calc(100% + 10px); transform: translate(-4px, -50%); }
+  .players { margin-left: 0; }
+  .players-tip { right: auto; left: calc(100% + 4px); transform: translate(-4px, -50%); }
   .rating { font-size: 24px; }
   .description { font-size: 18px; }
   .counter { margin-top: 28px; }
