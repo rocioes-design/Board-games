@@ -1,0 +1,341 @@
+:root {
+  --ink: #1d3450;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --gold: #f5b90a;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; margin: 0; }
+
+body {
+  font-family: "Instrument Sans", system-ui, sans-serif;
+  color: var(--ink);
+  background: #5f8f6a;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 72px 16px 32px;
+}
+
+.landscape {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: #5f8f6a url("assets/background-horses.webp") left center / cover no-repeat;
+}
+
+/* ---------- slideshow ---------- */
+
+.stage {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+  width: 100%;
+  max-width: 1300px;
+  justify-content: center;
+}
+
+.nav {
+  flex: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #e4e4e7;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .04);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform .15s ease, background .15s ease;
+}
+.nav:hover { transform: scale(1.06); border-color: #d4d4d8; }
+.nav:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+.nav svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: #18181b;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ---------- the deck ---------- */
+
+.deck {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+}
+
+.card {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  background: var(--card);
+  border-radius: 30px;
+  padding: 10px;
+  box-shadow: 0 24px 50px rgba(80, 55, 25, .25), 0 4px 10px rgba(80, 55, 25, .12);
+  transform-origin: 20% 100%;
+  transition:
+    transform .95s cubic-bezier(.45, .05, .2, 1),
+    opacity .8s ease,
+    filter .95s ease,
+    box-shadow .95s ease;
+}
+/* the front card sets the deck's height */
+.card[data-pos="0"] { position: relative; z-index: 4; }
+/* the next games, fanned out to the right */
+.card[data-pos="1"] {
+  z-index: 3;
+  transform: translate(20px, 8px) rotate(2.2deg) scale(.985);
+  filter: brightness(.97);
+  box-shadow: 0 12px 30px rgba(80, 55, 25, .18);
+}
+.card[data-pos="2"] {
+  z-index: 2;
+  transform: translate(38px, 16px) rotate(4.4deg) scale(.97);
+  filter: brightness(.94);
+  box-shadow: 0 10px 24px rgba(80, 55, 25, .14);
+}
+/* waiting at the very back, or leaving from there */
+.card[data-pos="3"] {
+  z-index: 1;
+  transform: translate(52px, 22px) rotate(6deg) scale(.955);
+  opacity: 0;
+}
+/* tossed off to the left (or arriving from there) */
+.card[data-pos="out"] {
+  z-index: 5;
+  transform: translate(-75%, 40px) rotate(-12deg);
+  opacity: 0;
+}
+.card[data-pos="out"] { transition-duration: .95s, .65s, .95s, .95s; }
+/* the cards behind follow a beat later, so the deck settles like a cascade */
+.card[data-pos="1"] { transition-delay: .06s; }
+.card[data-pos="2"] { transition-delay: .12s; }
+/* only the front card shows its tag and text; the rest show just their edges and art */
+.card .rank,
+.card .info { transition: opacity .5s ease .15s; }
+.card:not([data-pos="0"]) .rank,
+.card:not([data-pos="0"]) .info { opacity: 0; }
+
+.art {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #efe6d2;
+}
+.art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.art img[hidden] { display: none; }
+
+/* shown until real artwork arrives from BoardGameGeek */
+.placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at center, rgba(255, 250, 235, .9), rgba(226, 208, 168, .9) 70%, rgba(190, 162, 112, .95)),
+    #e8d9b5;
+}
+.placeholder[hidden] { display: none; }
+.placeholder span {
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(24px, 4.2vw, 52px);
+  letter-spacing: .12em;
+  color: #3b3024;
+  line-height: 1.2;
+  max-width: 14ch;
+}
+
+/* ---------- ranking number: golden label ---------- */
+
+.rank {
+  position: absolute;
+  top: -30px;
+  left: 26px;
+  z-index: 2;
+  width: 84px;
+  height: 126px;
+  transform: rotate(-4deg);
+  transform-origin: top left;
+  filter: drop-shadow(0 6px 8px rgba(60, 40, 15, .35)) drop-shadow(0 1px 1px rgba(60, 40, 15, .3));
+  pointer-events: none;
+}
+.rank-tag { width: 100%; height: 100%; display: block; }
+.rank-text {
+  font-family: "Cinzel", Georgia, serif;
+  font-weight: 600;
+  font-size: 58px;
+  fill: #3a2912;
+  text-anchor: middle;
+}
+.rank-text.long { font-size: 38px; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- details ---------- */
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  padding: 22px 20px 12px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+.year { color: var(--muted); font-weight: 400; font-size: 18px; margin-left: 10px; }
+
+.description {
+  margin: 0;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.45;
+  color: #1f2937;
+}
+
+.stats { flex: none; text-align: right; }
+.stats p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  white-space: nowrap;
+}
+.rating { font-size: 28px; font-weight: 600; margin-bottom: 6px !important; }
+/* player avatars, adapted from Watermelon UI "Avatar 16" and "Avatar 19" (MIT) */
+.players {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  outline: none;
+  cursor: default;
+}
+.avatars { display: flex; }
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--card);
+  background: #f3f1ee;
+  object-fit: cover;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  transition: transform .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.avatar + .avatar { margin-left: -8px; }
+.avatar.more { background: #ece6da; color: var(--ink); }
+/* hovering a player lifts it above its neighbours, as in Watermelon UI "Avatar 16" */
+.avatar { position: relative; }
+.avatar:hover {
+  z-index: 1;
+  transform: translateY(-4px);
+  box-shadow: 0 0 0 2px var(--card), 0 10px 15px -3px rgba(0, 0, 0, .12), 0 4px 6px -4px rgba(0, 0, 0, .1);
+}
+
+.players-tip {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 10px);
+  padding: 8px 14px;
+  border-radius: 14px;
+  border: 1px solid #ececec;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .08), 0 1px 3px rgba(0, 0, 0, .05);
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(4px, -50%);
+  transition: opacity .18s ease, transform .18s ease;
+  pointer-events: none;
+}
+.players:hover .players-tip,
+.players:focus .players-tip { opacity: 1; transform: translate(0, -50%); }
+
+.star { width: 28px; height: 28px; fill: url(#starGold); }
+
+.counter {
+  margin: 64px 0 0;
+  font-size: 14px;
+  letter-spacing: .08em;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, .35);
+}
+
+.credit {
+  position: fixed;
+  right: 32px;
+  bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow: 0 4px 14px rgba(80, 55, 25, .15);
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.credit:hover { box-shadow: 0 6px 18px rgba(80, 55, 25, .22); }
+.bgg-mark { width: 20px; height: 25px; fill: #ff5100; margin-left: 4px; margin-right: -2px; }
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 760px) {
+  body { padding-top: 64px; }
+  .stage { flex-wrap: wrap; gap: 20px; }
+  .deck { order: -1; }
+  .card { border-radius: 22px; padding: 8px; }
+  .card[data-pos="1"] { transform: translate(8px, 6px) rotate(1.5deg) scale(.985); }
+  .card[data-pos="2"] { transform: translate(15px, 12px) rotate(3deg) scale(.97); }
+  .art { border-radius: 16px; }
+  .rank { width: 64px; height: 96px; top: -24px; left: 16px; }
+  .info { flex-direction: column; align-items: flex-start; gap: 16px; padding: 18px 10px 8px; }
+  .stats { text-align: left; }
+  .stats p, .players { justify-content: flex-start; }
+  .players-tip { right: auto; left: calc(100% + 10px); transform: translate(-4px, -50%); }
+  .rating { font-size: 24px; }
+  .description { font-size: 18px; }
+  .counter { margin-top: 28px; }
+  .credit { position: static; margin-top: 14px; padding: 8px 18px; font-size: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card, .nav, .card .rank, .card .info { transition: none; }
+}
