@@ -6,13 +6,13 @@ A slideshow of the 100 highest-ranked games on [BoardGameGeek](https://boardgame
 
 ## Where the data comes from
 
-The games are stored in `data/games.js`. The ranks, years and ratings come from BoardGameGeek's daily rank file (25 Sep 2026). The images aren't there yet, and the descriptions and best player counts were written by hand. To replace it with live data from BoardGameGeek:
+The games are stored in `data/games.js`, and their box covers in `assets/covers/`. Both come from BoardGameGeek's XML API and are refreshed by a weekly GitHub Action. To set it up:
 
 1. Get a free BGG API token. Sign in to BoardGameGeek, go to <https://boardgamegeek.com/applications>, and register an application. BGG requires a token for its [XML API](https://boardgamegeek.com/using_the_xml_api).
 2. In this GitHub repository, go to **Settings → Secrets and variables → Actions → New repository secret**. Name it `BGG_TOKEN` and paste in the token.
 3. Go to **Actions → Update games from BoardGameGeek → Run workflow**.
 
-After the first run, the list refreshes itself every Monday. Each game gets its box image, year, a short description, its average rating and BGG's "best with" player count.
+After the first run, the list refreshes itself every Monday. Each game gets its box cover (saved into the project at web size), year, a short description, its average rating and BGG's "best with" player count.
 
 To refresh the list on your own computer instead, run `BGG_TOKEN=your-token node scripts/fetch-games.mjs`.
 
@@ -25,4 +25,5 @@ To refresh the list on your own computer instead, run `BGG_TOKEN=your-token node
 | `assets/background-horses.webp` | The background image |
 | `app.js` | The slideshow |
 | `data/games.js` | The 100 games |
+| `assets/covers/` | Box covers saved by the weekly update |
 | `scripts/fetch-games.mjs` | Downloads fresh data from BoardGameGeek |
