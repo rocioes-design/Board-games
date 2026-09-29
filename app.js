@@ -1,4 +1,5 @@
-const games = (window.BOARD_GAMES?.games || []).slice(0, 100);
+const allGames = (window.BOARD_GAMES?.games || []).slice(0, 100);
+let games = allGames; // the games currently in the deck (all of them, or the filtered ones)
 
 const deck = document.querySelector(".deck");
 const template = document.getElementById("card-template");
@@ -74,7 +75,6 @@ function makeCard(i) {
     img.addEventListener("load", () => {
       img.hidden = false;
       placeholder.hidden = true;
-      q(".art").style.setProperty("--art", `url("${g.image}")`);
     });
     img.src = g.image;
   }
@@ -82,6 +82,10 @@ function makeCard(i) {
 }
 
 // give every card its place in the fan; CSS animates the moves
+function depth() {
+  return Math.min(BEHIND, games.length - 1); // with few games, fewer peek out behind
+}
+
 function layout() {
   cards.forEach((card, pos) => {
     card.dataset.pos = pos;
@@ -105,12 +109,12 @@ function discard(card, pos) {
 }
 
 function go(step) {
-  if (!games.length) return;
+  if (games.length < 2) return;
   index = wrap(index + step);
   if (step > 0) {
     // toss the front card away, pull a new one in at the back
     discard(cards.shift(), "out");
-    const card = makeCard(index + BEHIND);
+    const card = makeCard(index + depth());
     add(card, BEHIND + 1);
     cards.push(card);
   } else {
@@ -126,6 +130,7 @@ function go(step) {
 document.querySelector(".prev").addEventListener("click", () => go(-1));
 document.querySelector(".next").addEventListener("click", () => go(1));
 document.addEventListener("keydown", (e) => {
+  if (e.target.closest("input, .filter-panel")) return; // arrow keys move the sliders there
   if (e.key === "ArrowLeft") go(-1);
   if (e.key === "ArrowRight") go(1);
 });
@@ -139,11 +144,182 @@ deck.addEventListener("touchend", (e) => {
   touchX = null;
 });
 
-if (games.length) {
-  for (let k = 0; k <= BEHIND; k++) {
+// (re)builds the deck from the current list of games
+function deal() {
+  cards.forEach((card) => card.remove());
+  cards = [];
+  index = 0;
+  const none = games.length === 0;
+  document.querySelector(".stage").hidden = none;
+  counter.hidden = none;
+  document.querySelector(".empty").hidden = !none;
+  if (none) return;
+  for (let k = 0; k <= depth(); k++) {
     const card = makeCard(k);
     deck.appendChild(card);
     cards.push(card);
   }
+  document.querySelectorAll(".nav").forEach((b) => (b.disabled = games.length < 2));
   layout();
 }
+
+/* ---------- filters ---------- */
+
+const PLAYERS_MAX = 6; // the top of the players slider means "6 or more"
+const hasWeights = allGames.some((g) => g.weight);
+
+// the player counts a game is best with: "3-4" → [3, 4], "2 or 4" → [2, 4], "10+" → [10]
+function bestCounts(best) {
+  const counts = [];
+  for (const part of String(best || "").split(/\s+or\s+|,\s*/)) {
+    const [a, b] = part.match(/\d+/g)?.map(Number) || [];
+    if (a === undefined) continue;
+    for (let n = a; n <= (b ?? a); n++) counts.push(n);
+  }
+  return counts;
+}
+
+const panel = document.getElementById("filter-panel");
+const toggle = document.querySelector(".filter-toggle");
+const ranges = {
+  players: { min: 1, max: PLAYERS_MAX, from: 1, to: PLAYERS_MAX, fmt: (v) => (v >= PLAYERS_MAX ? `${v}+` : `${v}`) },
+  weight: { min: 1, max: 5, from: 1, to: 5, fmt: (v) => Number(v).toFixed(1) },
+};
+const applied = { players: [1, PLAYERS_MAX], weight: [1, 5] };
+
+// players glide freely while dragging and count in whole numbers; complexity keeps one decimal
+const settle = (name, v) => (name === "players" ? Math.round(v) : Math.round(v * 10) / 10);
+
+function readRange(name, raw = false) {
+  const lo = document.getElementById(`${name}-min`);
+  const hi = document.getElementById(`${name}-max`);
+  const [a, b] = [Math.min(+lo.value, +hi.value), Math.max(+lo.value, +hi.value)];
+  return raw ? [a, b] : [settle(name, a), settle(name, b)];
+}
+
+// when a players handle is let go, it slides to the nearest whole number
+function snap(input) {
+  const target = Math.round(+input.value);
+  const start = +input.value;
+  if (start === target) return;
+  const el = input.closest(".range");
+  const t0 = performance.now();
+  const step = (now) => {
+    const k = Math.min(1, (now - t0) / 160);
+    input.value = start + (target - start) * (1 - Math.pow(1 - k, 3));
+    paintRange("players");
+    if (k < 1) requestAnimationFrame(step);
+    else el.classList.remove("is-snapping");
+  };
+  el.classList.add("is-snapping");
+  requestAnimationFrame(step);
+}
+
+function paintRange(name) {
+  const r = ranges[name];
+  const [a, b] = readRange(name);
+  const [ra, rb] = readRange(name, true); // the fill follows the handles exactly
+  const pct = (v) => `${((v - r.min) / (r.max - r.min)) * 100}%`;
+  const el = document.querySelector(`[data-range="${name}"]`);
+  el.style.setProperty("--from", pct(ra));
+  el.style.setProperty("--to", pct(rb));
+  const text = name === "players" && a === b
+    ? `${r.fmt(a)} ${a === 1 ? "player" : "players"}`
+    : `${r.fmt(a)} to ${r.fmt(b)}${name === "players" ? " players" : ""}`;
+  document.getElementById(`${name}-value`).textContent = text;
+}
+
+function setRange(name, [a, b]) {
+  document.getElementById(`${name}-min`).value = a;
+  document.getElementById(`${name}-max`).value = b;
+  paintRange(name);
+}
+
+function isDefault(name, [a, b]) {
+  return a === ranges[name].min && b === ranges[name].max;
+}
+
+function matches(g) {
+  const [pa, pb] = applied.players;
+  if (!isDefault("players", applied.players)) {
+    const ok = bestCounts(g.bestPlayers).some((n) => n >= pa && (pb >= PLAYERS_MAX ? true : n <= pb));
+    if (!ok) return false;
+  }
+  const [wa, wb] = applied.weight;
+  if (hasWeights && !isDefault("weight", applied.weight)) {
+    if (!g.weight || g.weight < wa || g.weight > wb + 0.001) return false;
+  }
+  return true;
+}
+
+function applyFilters() {
+  applied.players = readRange("players");
+  applied.weight = readRange("weight");
+  games = allGames.filter(matches);
+  document.querySelector(".filter-dot").hidden = isDefault("players", applied.players) && isDefault("weight", applied.weight);
+  deal();
+}
+
+function openPanel(open) {
+  panel.hidden = !open;
+  toggle.setAttribute("aria-expanded", String(open));
+  if (open) {
+    // show what's currently applied, not a half-finished edit from last time
+    setRange("players", applied.players);
+    setRange("weight", applied.weight);
+  }
+}
+
+for (const name of Object.keys(ranges)) {
+  for (const end of ["min", "max"]) {
+    const input = document.getElementById(`${name}-${end}`);
+    input.addEventListener("input", () => paintRange(name));
+    if (name === "players") {
+      input.addEventListener("change", () => snap(input));
+      // arrow keys still move one whole player at a time
+      input.addEventListener("keydown", (e) => {
+        const dir = { ArrowRight: 1, ArrowUp: 1, ArrowLeft: -1, ArrowDown: -1 }[e.key];
+        if (!dir) return;
+        e.preventDefault();
+        input.value = Math.min(PLAYERS_MAX, Math.max(1, Math.round(+input.value) + dir));
+        paintRange("players");
+      });
+    }
+  }
+}
+if (!hasWeights) {
+  document.querySelector('[data-range="weight"]').classList.add("is-disabled");
+  document.querySelectorAll("#weight-min, #weight-max").forEach((i) => (i.disabled = true));
+  document.getElementById("weight-note").hidden = false;
+}
+
+toggle.addEventListener("click", () => openPanel(panel.hidden));
+panel.addEventListener("submit", (e) => {
+  e.preventDefault();
+  applyFilters();
+  openPanel(false);
+  toggle.focus();
+});
+function clearFilters() {
+  setRange("players", [1, PLAYERS_MAX]);
+  setRange("weight", [1, 5]);
+  applyFilters();
+}
+document.getElementById("filter-clear").addEventListener("click", () => {
+  clearFilters();
+  openPanel(false);
+});
+document.getElementById("empty-clear").addEventListener("click", clearFilters);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !panel.hidden) {
+    openPanel(false);
+    toggle.focus();
+  }
+});
+document.addEventListener("click", (e) => {
+  if (!panel.hidden && !e.target.closest(".filters")) openPanel(false);
+});
+
+setRange("players", applied.players);
+setRange("weight", applied.weight);
+deal();

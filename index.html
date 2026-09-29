@@ -38,6 +38,42 @@
   </svg>
 
 
+  <!-- filters: a button in the top-right corner that opens a small panel -->
+  <div class="filters">
+    <button class="filter-toggle" type="button" aria-label="Filters" aria-expanded="false" aria-controls="filter-panel">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M7 12h10M10 18h4"/></svg>
+      <span class="filter-dot" hidden></span>
+    </button>
+    <form class="filter-panel" id="filter-panel" hidden>
+      <p class="filter-title">Filters</p>
+
+      <div class="filter-group">
+        <label class="filter-label" for="players-min">Best with <span class="filter-value" id="players-value"></span></label>
+        <div class="range" data-range="players">
+          <div class="range-track"><div class="range-fill"></div></div>
+          <input type="range" id="players-min" min="1" max="6" step="0.01" aria-label="Fewest players">
+          <input type="range" id="players-max" min="1" max="6" step="0.01" aria-label="Most players">
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label" for="weight-min">Complexity <span class="filter-value" id="weight-value"></span></label>
+        <div class="range" data-range="weight">
+          <div class="range-track"><div class="range-fill"></div></div>
+          <input type="range" id="weight-min" min="1" max="5" step="0.1" aria-label="Lightest">
+          <input type="range" id="weight-max" min="1" max="5" step="0.1" aria-label="Heaviest">
+        </div>
+        <div class="range-scale" aria-hidden="true"><span>Light</span><span>Heavy</span></div>
+        <p class="filter-note" id="weight-note" hidden>Complexity arrives with the next weekly update.</p>
+      </div>
+
+      <div class="filter-actions">
+        <button type="button" class="btn btn-outline" id="filter-clear">Clear</button>
+        <button type="submit" class="btn btn-solid">Apply</button>
+      </div>
+    </form>
+  </div>
+
   <main class="stage" aria-roledescription="carousel" aria-label="Top 100 board games">
     <button class="nav prev" type="button" aria-label="Previous game">
       <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>
@@ -52,10 +88,12 @@
   </main>
 
   <p class="counter"></p>
-  <a class="credit" href="https://boardgamegeek.com" target="_blank" rel="noopener" aria-label="Powered by BoardGameGeek">
-    Powered by
-    <svg class="bgg-mark" viewBox="0 0 24 30" aria-hidden="true"><path d="M3 5.5 L17.5 1 L16.2 6.4 L21.5 5 L19.6 17.5 L21 18.6 L13.2 29 L4.2 25.6 Z"/></svg>
-    BGG
+  <div class="empty" hidden>
+    <p>No games match these filters.</p>
+    <button type="button" class="btn btn-outline" id="empty-clear">Clear filters</button>
+  </div>
+  <a class="credit" href="https://boardgamegeek.com" target="_blank" rel="noopener">
+    <img src="assets/powered-by-bgg.png" alt="Powered by BGG" width="137" height="31">
   </a>
 
   <template id="card-template">
