@@ -97,6 +97,7 @@ function parseItem(xml) {
     image: ((xml.match(/<image>([^<]*)<\/image>/) || [])[1] || "").trim(),
     description: shortDescription((xml.match(/<description>([\s\S]*?)<\/description>/) || [])[1]),
     rating: Math.round(parseFloat(attr("average")) * 100) / 100,
+    weight: Math.round(parseFloat(attr("averageweight")) * 100) / 100 || null, // complexity, 1 (light) to 5 (heavy)
     bestPlayers: players.replace(/–/g, "-"),
     bggRank: +(xml.match(/<rank[^>]*name="boardgame"[^>]*value="(\d+)"/) || [])[1] || null,
   };

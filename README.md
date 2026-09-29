@@ -12,7 +12,7 @@ The games are stored in `data/games.js`, and their box covers in `assets/covers/
 2. In this GitHub repository, go to **Settings → Secrets and variables → Actions → New repository secret**. Name it `BGG_TOKEN` and paste in the token.
 3. Go to **Actions → Update games from BoardGameGeek → Run workflow**.
 
-After the first run, the list refreshes itself every Monday. Each game gets its box cover (saved into the project at web size), year, a short description, its average rating and BGG's "best with" player count.
+After the first run, the list refreshes itself every Monday. Each game gets its box cover (saved into the project at web size), year, a short description, its average rating, its complexity (BGG's 1–5 "weight") and BGG's "best with" player count.
 
 To refresh the list on your own computer instead, run `BGG_TOKEN=your-token node scripts/fetch-games.mjs`.
 
