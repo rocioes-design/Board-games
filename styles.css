@@ -317,7 +317,7 @@ h1 {
   text-decoration: none;
 }
 .credit:hover { box-shadow: 0 6px 18px rgba(80, 55, 25, .22); }
-.bgg-mark { width: 20px; height: 25px; fill: #ff5100; margin-left: 4px; margin-right: -2px; }
+.credit img { display: block; height: 22px; width: auto; }
 
 /* ---------- small screens ---------- */
 
