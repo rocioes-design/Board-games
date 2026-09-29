@@ -34,17 +34,22 @@ async function get(url, tries = 5) {
   throw new Error(`Gave up on ${url}`);
 }
 
+// named HTML entities BGG uses in its text (numeric ones are handled generically)
+const ENTITIES = {
+  quot: '"', apos: "'", lt: "<", gt: ">", nbsp: " ", zwnj: "", zwj: "", shy: "",
+  ndash: "–", mdash: "—", lsquo: "‘", rsquo: "’", ldquo: "“", rdquo: "”", hellip: "…",
+  bull: "•", middot: "·", times: "×", deg: "°", eacute: "é", Eacute: "É", egrave: "è",
+  ecirc: "ê", euml: "ë", aacute: "á", agrave: "à", acirc: "â", auml: "ä", Auml: "Ä",
+  aring: "å", atilde: "ã", iacute: "í", icirc: "î", iuml: "ï", oacute: "ó", ocirc: "ô",
+  ouml: "ö", Ouml: "Ö", otilde: "õ", oslash: "ø", uacute: "ú", ucirc: "û", uuml: "ü",
+  Uuml: "Ü", ntilde: "ñ", ccedil: "ç", szlig: "ß", aelig: "æ", trade: "™", reg: "®", copy: "©",
+};
+
 function decode(s = "") {
   return s
     .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(+n))
     .replace(/&#x([0-9a-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
-    .replace(/&quot;/g, '"')
-    .replace(/&apos;/g, "'")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&ndash;/g, "–")
-    .replace(/&mdash;/g, "—")
-    .replace(/&rsquo;/g, "’")
+    .replace(/&([a-z]+);/gi, (m, name) => (name in ENTITIES ? ENTITIES[name] : m))
     .replace(/&amp;/g, "&");
 }
 
@@ -79,7 +84,10 @@ async function currentIds() {
 function parseItem(xml) {
   const attr = (tag) => (xml.match(new RegExp(`<${tag}[^>]*value="([^"]*)"`)) || [])[1];
   const best = decode(decode((xml.match(/<result name="bestwith" value="([^"]*)"/) || [])[1] || ""));
-  const players = best.replace(/^Best with\s*/i, "").replace(/\s*players?$/i, "");
+  const players = best
+    .replace(/^Best with\s*/i, "")
+    .replace(/\s*players?$/i, "")
+    .replace(/,\s*/g, " or "); // "2, 4" reads as "2 or 4"
   return {
     id: +(xml.match(/<item[^>]*id="(\d+)"/) || [])[1],
     name: decode(decode((xml.match(/<name type="primary"[^>]*value="([^"]*)"/) || [])[1])),

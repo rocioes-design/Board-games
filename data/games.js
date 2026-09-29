@@ -230,7 +230,7 @@ window.BOARD_GAMES = {
       "image": "https://cf.geekdo-images.com/Oh3kHw6lweg6ru71Q16h2Q__original/img/yW7d4RNfU1ndISCaPlfGYUyxnRU=/0x0/filters:format(jpeg)/pic5235277.jpg",
       "description": "A game of Eclipse places you in control of a vast interstellar civilization, competing for success with its rivals.",
       "rating": 8.38,
-      "bestPlayers": "4, 6"
+      "bestPlayers": "4 or 6"
     },
     {
       "rank": 24,
@@ -348,7 +348,7 @@ window.BOARD_GAMES = {
       "name": "Orléans",
       "year": 2014,
       "image": "https://cf.geekdo-images.com/nagl1li6kYt9elV9jbfVQw__original/img/Qn6vlBaTUaHNFsqohIUjd0EA4z0=/0x0/filters:format(jpeg)/pic6228507.jpg",
-      "description": "During the medieval goings-on around Orl&eacute;ans, you must assemble a following of farmers, merchants, knights, monks, etc.",
+      "description": "During the medieval goings-on around Orléans, you must assemble a following of farmers, merchants, knights, monks, etc.",
       "rating": 8.05,
       "bestPlayers": "4"
     },
@@ -378,7 +378,7 @@ window.BOARD_GAMES = {
       "name": "Wingspan",
       "year": 2019,
       "image": "https://cf.geekdo-images.com/yLZJCVLlIx4c7eJEWUNJ7w__original/img/cI782Zis9cT66j2MjSHKJGnFPNw=/0x0/filters:format(jpeg)/pic4458123.jpg",
-      "description": "Wingspan is&nbsp;a competitive, medium-weight, card-driven, engine-building board game from Stonemaier Games.",
+      "description": "Wingspan is a competitive, medium-weight, card-driven, engine-building board game from Stonemaier Games.",
       "rating": 7.99,
       "bestPlayers": "3"
     },
@@ -430,7 +430,7 @@ window.BOARD_GAMES = {
       "image": "https://cf.geekdo-images.com/DOwZ7_Q1w68iBhARcDAxig__original/img/0E7UQ_sXErRusbZVixlIiN8MIJQ=/0x0/filters:format(jpeg)/pic8549797.jpg",
       "description": "Crokinole is a traditional two- or four-player dexterity game, played on a circular wooden board, with 3 rings and an inner recessed 'bullseye'.",
       "rating": 8.07,
-      "bestPlayers": "2, 4"
+      "bestPlayers": "2 or 4"
     },
     {
       "rank": 44,
@@ -638,7 +638,7 @@ window.BOARD_GAMES = {
       "name": "Blood on the Clocktower",
       "year": 2022,
       "image": "https://cf.geekdo-images.com/HINb2nkFn5IiZxAlzQIs4g__original/img/e7izEwSmnBPiErsIF6hlWbgybBE=/0x0/filters:format(jpeg)/pic7009391.jpg",
-      "description": "In the sleepy town of Ravenswood Bluff, &zwnj;a demon walks amongst you.",
+      "description": "In the sleepy town of Ravenswood Bluff, a demon walks amongst you.",
       "rating": 8.33,
       "bestPlayers": "9-12"
     },
@@ -650,7 +650,7 @@ window.BOARD_GAMES = {
       "image": "https://cf.geekdo-images.com/dezQ4YjF03lZVxTdI-UJYw__original/img/smV4u2r1moRbzsSTzykECb06Mpo=/0x0/filters:format(jpeg)/pic6863204.jpg",
       "description": "Oathsworn is a Twisting Tales Game for 1-4 players where play is focused on narrative choices and rich miniature combat encounters.",
       "rating": 8.74,
-      "bestPlayers": "2, 4"
+      "bestPlayers": "2 or 4"
     },
     {
       "rank": 66,
@@ -688,7 +688,7 @@ window.BOARD_GAMES = {
       "name": "Grand Austria Hotel",
       "year": 2015,
       "image": "https://cf.geekdo-images.com/PJRaImV8iXGAq2L-6rrn-w__original/img/8DrrN_WD5-jXfWj7ZFr0A3eqKPM=/0x0/filters:format(jpeg)/pic2649931.jpg",
-      "description": "In the thick of the Viennese modern age, exquisite caf&eacute;s are competing for customers.",
+      "description": "In the thick of the Viennese modern age, exquisite cafés are competing for customers.",
       "rating": 7.96,
       "bestPlayers": "2"
     },
@@ -800,7 +800,7 @@ window.BOARD_GAMES = {
       "image": "https://cf.geekdo-images.com/hItZjdDTNuaCZ7fEztwcUQ__original/img/gIhusTrYRr_2JQGEv0zuSgLtuUo=/0x0/filters:format(jpeg)/pic6153324.jpg",
       "description": "For centuries, the Novarchs, descendants of the royal House of Novarchon, have ruled with an iron fist over the feudalistic galactic empire of humankind, the Domineum.",
       "rating": 8.5,
-      "bestPlayers": "1, 3"
+      "bestPlayers": "1 or 3"
     },
     {
       "rank": 81,
@@ -880,7 +880,7 @@ window.BOARD_GAMES = {
       "image": "https://cf.geekdo-images.com/pIQ_MXvaoARRp1loCHJuHg__original/img/12Xvbw01hpsAjsO0xrajZt2b5HY=/0x0/filters:format(jpeg)/pic2247647.jpg",
       "description": "Star Wars: Imperial Assault is a strategy board game of tactical combat and missions for two to five players, offering two distinct games of battle and adventure in the Star…",
       "rating": 7.95,
-      "bestPlayers": "2, 5"
+      "bestPlayers": "2 or 5"
     },
     {
       "rank": 89,

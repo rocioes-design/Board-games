@@ -132,11 +132,21 @@ body {
   overflow: hidden;
   background: #efe6d2;
 }
+/* the whole box cover, centred over a soft blurred copy of itself */
 .art img {
+  position: relative;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, .28));
+}
+.art::before {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  background: var(--art, none) center / cover no-repeat;
+  filter: blur(28px) saturate(1.15) brightness(.92);
 }
 .art img[hidden] { display: none; }
 

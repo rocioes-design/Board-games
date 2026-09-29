@@ -74,6 +74,7 @@ function makeCard(i) {
     img.addEventListener("load", () => {
       img.hidden = false;
       placeholder.hidden = true;
+      q(".art").style.setProperty("--art", `url("${g.image}")`);
     });
     img.src = g.image;
   }
