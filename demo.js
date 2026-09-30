@@ -128,6 +128,7 @@
 
     // rest the cursor out of the way
     await moveTo({ x: innerWidth * 0.62, y: innerHeight * 0.9 }, 900);
+    document.documentElement.dataset.demo = "done"; // lets recording tools know the tour is over
   }
 
   // start once the page (and the first covers) have loaded
