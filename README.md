@@ -4,6 +4,8 @@ A slideshow of the 100 highest-ranked games on [BoardGameGeek](https://boardgame
 
 **To view it:** open `index.html` in a browser. Use the arrows, your keyboard's ← → keys, or swipe on a phone.
 
+**Demo mode:** add `#demo` to the address (for example `index.html#demo`) and the page plays a short tour by itself, with an on-screen cursor. Handy for screen recordings. Reload to play it again.
+
 ## Where the data comes from
 
 The games are stored in `data/games.js`, and their box covers in `assets/covers/`. Both come from BoardGameGeek's XML API and are refreshed by a weekly GitHub Action. To set it up:
@@ -24,6 +26,7 @@ To refresh the list on your own computer instead, run `BGG_TOKEN=your-token node
 | `styles.css` | Colors and layout |
 | `assets/background-horses.webp` | The background image |
 | `app.js` | The slideshow and the filters |
+| `demo.js` | The self-playing tour for `#demo` |
 | `data/games.js` | The 100 games |
 | `assets/covers/` | Box covers saved by the weekly update |
 | `scripts/fetch-games.mjs` | Downloads fresh data from BoardGameGeek |
