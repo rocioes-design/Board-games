@@ -27,3 +27,4 @@ To refresh the list on your own computer instead, run `BGG_TOKEN=your-token node
 | `data/games.js` | The 100 games |
 | `assets/covers/` | Box covers saved by the weekly update |
 | `scripts/fetch-games.mjs` | Downloads fresh data from BoardGameGeek |
+| `favicon.svg`, `apple-touch-icon.png` | The game die icon, from Microsoft's [Fluent Emoji](https://github.com/microsoft/fluentui-emoji) (MIT) |
