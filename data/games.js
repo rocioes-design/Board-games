@@ -1,6 +1,6 @@
 window.BOARD_GAMES = {
   "source": "boardgamegeek",
-  "updated": "2026-09-29",
+  "updated": "2026-10-05",
   "games": [
     {
       "rank": 1,
@@ -8,7 +8,7 @@ window.BOARD_GAMES = {
       "name": "Brass: Birmingham",
       "year": 2018,
       "image": "assets/covers/224517.jpg",
-      "description": "Brass: Birmingham is an economic strategy game sequel to Martin Wallace's 2007 masterpiece, Brass.",
+      "description": "Brass: Birmingham is an economic strategy game sequel to Brass.",
       "rating": 8.56,
       "weight": 3.86,
       "bestPlayers": "3-4",
@@ -208,18 +208,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 18,
-      "id": 182028,
-      "name": "Through the Ages: A New Story of Civilization",
-      "year": 2015,
-      "image": "assets/covers/182028.jpg",
-      "description": "Through the Ages: A New Story of Civilization is the new edition of Through the Ages: A Story of Civilization, with many changes small and large to the game's cards over its…",
-      "rating": 8.24,
-      "weight": 4.44,
-      "bestPlayers": "3",
-      "imageSource": "https://cf.geekdo-images.com/fVwPntkJKgaEo0rIC0RwpA__original/img/1jawNpljTXwnT4km_2CjGwoUPR8=/0x0/filters:format(jpeg)/pic2663291.jpg"
-    },
-    {
-      "rank": 19,
       "id": 421006,
       "name": "The Lord of the Rings: Duel for Middle-earth",
       "year": 2024,
@@ -229,6 +217,18 @@ window.BOARD_GAMES = {
       "weight": 2.07,
       "bestPlayers": "2",
       "imageSource": "https://cf.geekdo-images.com/EybxJlUc9rz7F7HVFLqsdw__original/img/Ts4M5eOW38r2oTvJmkx0uwNodv4=/0x0/filters:format(jpeg)/pic8378939.jpg"
+    },
+    {
+      "rank": 19,
+      "id": 182028,
+      "name": "Through the Ages: A New Story of Civilization",
+      "year": 2015,
+      "image": "assets/covers/182028.jpg",
+      "description": "Through the Ages: A New Story of Civilization is the new edition of Through the Ages: A Story of Civilization, with many changes small and large to the game's cards over its…",
+      "rating": 8.24,
+      "weight": 4.44,
+      "bestPlayers": "3",
+      "imageSource": "https://cf.geekdo-images.com/fVwPntkJKgaEo0rIC0RwpA__original/img/1jawNpljTXwnT4km_2CjGwoUPR8=/0x0/filters:format(jpeg)/pic2663291.jpg"
     },
     {
       "rank": 20,
@@ -333,7 +333,7 @@ window.BOARD_GAMES = {
       "year": 2019,
       "image": "assets/covers/266507.jpg",
       "description": "Clank! Legacy: Acquisitions Incorporated extends the deck-building fun of Clank!",
-      "rating": 8.48,
+      "rating": 8.49,
       "weight": 2.74,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/hc2NDafu5c24iLJh_IZmyg__original/img/1Fpyz7j7rTvMPRiDdPjn0Vf0m2k=/0x0/filters:format(png)/pic4885780.png"
@@ -441,7 +441,7 @@ window.BOARD_GAMES = {
       "year": 2017,
       "image": "assets/covers/192135.jpg",
       "description": "Too Many Bones comes loaded for bear by breaking into a new genre: the dice-builder RPG.",
-      "rating": 8.28,
+      "rating": 8.27,
       "weight": 3.87,
       "bestPlayers": "2",
       "imageSource": "https://cf.geekdo-images.com/wKwRk0wYBcrtLAfgn4PCdg__original/img/Wpp0vzsVe4HxXGUqiZ1hDvwAHZU=/0x0/filters:format(png)/pic6624445.png"
@@ -537,7 +537,7 @@ window.BOARD_GAMES = {
       "year": 2021,
       "image": "assets/covers/324856.jpg",
       "description": "The Crew: Mission Deep Sea plunges players into a cooperative card game unlike any other.",
-      "rating": 8.04,
+      "rating": 8.03,
       "weight": 2.06,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/VuBqZ1sMaDAVVHF_OEJP4g__original/img/jGWxczXC_VWZofeAmlO_DkB0hCI=/0x0/filters:format(jpeg)/pic5988903.jpg"
@@ -556,18 +556,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 47,
-      "id": 366013,
-      "name": "Heat: Pedal to the Metal",
-      "year": 2022,
-      "image": "assets/covers/366013.jpg",
-      "description": "Based on simple and intuitive hand management, Heat: Pedal to the Metal puts players in the driver's seat of intense car races, jockeying for position to cross the finish line…",
-      "rating": 7.99,
-      "weight": 2.2,
-      "bestPlayers": "5-6",
-      "imageSource": "https://cf.geekdo-images.com/-vOrd4bOspibyohYExLqWg__original/img/iXU8a9WaVlwrkiEiOxWN06y9y5g=/0x0/filters:format(png)/pic6940449.png"
-    },
-    {
-      "rank": 48,
       "id": 365717,
       "name": "Clank!: Catacombs",
       "year": 2022,
@@ -579,13 +567,25 @@ window.BOARD_GAMES = {
       "imageSource": "https://cf.geekdo-images.com/cCLn9Mvb7jRSaZzHeUXhoQ__original/img/NK4hsA9nc-kdI07hR0Nc23dL_bk=/0x0/filters:format(jpeg)/pic6937913.jpg"
     },
     {
+      "rank": 48,
+      "id": 366013,
+      "name": "Heat: Pedal to the Metal",
+      "year": 2022,
+      "image": "assets/covers/366013.jpg",
+      "description": "Based on simple and intuitive hand management, Heat: Pedal to the Metal puts players in the driver's seat of intense car races, jockeying for position to cross the finish line…",
+      "rating": 7.99,
+      "weight": 2.2,
+      "bestPlayers": "5-6",
+      "imageSource": "https://cf.geekdo-images.com/-vOrd4bOspibyohYExLqWg__original/img/iXU8a9WaVlwrkiEiOxWN06y9y5g=/0x0/filters:format(png)/pic6940449.png"
+    },
+    {
       "rank": 49,
       "id": 390092,
       "name": "Ticket to Ride Legacy: Legends of the West",
       "year": 2023,
       "image": "assets/covers/390092.jpg",
       "description": "In Ticket to Ride Legacy: Legends of the West, players embark on twelve journeys across North America as 19th century pioneers.",
-      "rating": 8.6,
+      "rating": 8.61,
       "weight": 2.55,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/2H0pJddVJA3r6btqRNLG1g__original/img/q8N6sz7FIZkbXe_0d4RiIfM8aNU=/0x0/filters:format(png)/pic7541330.png"
@@ -598,24 +598,12 @@ window.BOARD_GAMES = {
       "image": "assets/covers/285774.jpg",
       "description": "\"With great power, there must also come great responsibility.",
       "rating": 8.11,
-      "weight": 2.96,
+      "weight": 2.97,
       "bestPlayers": "1-2",
       "imageSource": "https://cf.geekdo-images.com/kRvUgYiaOq07kC67ZK5UoQ__original/img/cqng0e4S7Cj6j6Sb49-OCggGi-8=/0x0/filters:format(jpeg)/pic4900321.jpg"
     },
     {
       "rank": 51,
-      "id": 175914,
-      "name": "Food Chain Magnate",
-      "year": 2015,
-      "image": "assets/covers/175914.jpg",
-      "description": "\"Lemonade? They want lemonade?",
-      "rating": 8.03,
-      "weight": 4.18,
-      "bestPlayers": "3-4",
-      "imageSource": "https://cf.geekdo-images.com/Wtxml94LAXsIWQCxGPS63Q__original/img/9c-MJB6x54vN5eB-1hT4XQaHtP8=/0x0/filters:format(png)/pic2649434.png"
-    },
-    {
-      "rank": 52,
       "id": 414317,
       "name": "Harmonies",
       "year": 2024,
@@ -627,7 +615,7 @@ window.BOARD_GAMES = {
       "imageSource": "https://cf.geekdo-images.com/A_XP2_VN3ugyqPhezowB_w__original/img/_Rv8lSr3fC1oDRkrQleQW2H2yCs=/0x0/filters:format(png)/pic8026369.png"
     },
     {
-      "rank": 53,
+      "rank": 52,
       "id": 247763,
       "name": "Underwater Cities",
       "year": 2018,
@@ -639,7 +627,31 @@ window.BOARD_GAMES = {
       "imageSource": "https://cf.geekdo-images.com/PwOwTVHovJAUQgghnGqCOg__original/img/1WL5-4DZi0hX76HEgsLIYRRaIh4=/0x0/filters:format(png)/pic4837710.png"
     },
     {
+      "rank": 53,
+      "id": 175914,
+      "name": "Food Chain Magnate",
+      "year": 2015,
+      "image": "assets/covers/175914.jpg",
+      "description": "\"Lemonade? They want lemonade?",
+      "rating": 8.03,
+      "weight": 4.18,
+      "bestPlayers": "3-4",
+      "imageSource": "https://cf.geekdo-images.com/Wtxml94LAXsIWQCxGPS63Q__original/img/9c-MJB6x54vN5eB-1hT4XQaHtP8=/0x0/filters:format(png)/pic2649434.png"
+    },
+    {
       "rank": 54,
+      "id": 436217,
+      "name": "The Lord of the Rings: Fate of the Fellowship",
+      "year": 2025,
+      "image": "assets/covers/436217.jpg",
+      "description": "As members of The Fellowship and the allies who rise to aid them, you must embark on a journey that may either save or doom Middle-earth.",
+      "rating": 8.34,
+      "weight": 3.11,
+      "bestPlayers": "3",
+      "imageSource": "https://cf.geekdo-images.com/scw36iBIad7l-rGzxPGcGg__original/img/JZKAg-ETtE7z3YbgSMPd242rCqE=/0x0/filters:format(png)/pic8662670.png"
+    },
+    {
+      "rank": 55,
       "id": 253344,
       "name": "Cthulhu: Death May Die",
       "year": 2019,
@@ -651,7 +663,7 @@ window.BOARD_GAMES = {
       "imageSource": "https://cf.geekdo-images.com/SPpzri7fwLRgVWMKOocHxw__original/img/4TI0rpw6w0EpkgfvQpusj5Idmpw=/0x0/filters:format(png)/pic9712872.png"
     },
     {
-      "rank": 55,
+      "rank": 56,
       "id": 256960,
       "name": "Pax Pamir: Second Edition",
       "year": 2019,
@@ -661,18 +673,6 @@ window.BOARD_GAMES = {
       "weight": 3.85,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/oSM_AuKYfGIwOtKbVEsoVg__original/img/7DlaMCmuoJzm9AzelmStYIDgutI=/0x0/filters:format(png)/pic4503733.png"
-    },
-    {
-      "rank": 56,
-      "id": 436217,
-      "name": "The Lord of the Rings: Fate of the Fellowship",
-      "year": 2025,
-      "image": "assets/covers/436217.jpg",
-      "description": "As members of The Fellowship and the allies who rise to aid them, you must embark on a journey that may either save or doom Middle-earth.",
-      "rating": 8.34,
-      "weight": 3.11,
-      "bestPlayers": "3",
-      "imageSource": "https://cf.geekdo-images.com/scw36iBIad7l-rGzxPGcGg__original/img/JZKAg-ETtE7z3YbgSMPd242rCqE=/0x0/filters:format(png)/pic8662670.png"
     },
     {
       "rank": 57,
@@ -736,18 +736,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 62,
-      "id": 185343,
-      "name": "Anachrony",
-      "year": 2017,
-      "image": "assets/covers/185343.jpg",
-      "description": "It is the late 26th century. Earth is recovering from a catastrophic explosion that exterminated the majority of the population centuries ago and made most of the surface…",
-      "rating": 8.04,
-      "weight": 3.99,
-      "bestPlayers": "3",
-      "imageSource": "https://cf.geekdo-images.com/31quLNzteInnevVRAABoow__original/img/3KfMPSj7jjhG0g5lQBsO-bn67D0=/0x0/filters:format(jpeg)/pic3499707.jpg"
-    },
-    {
-      "rank": 63,
       "id": 102794,
       "name": "Caverna: The Cave Farmers",
       "year": 2013,
@@ -759,6 +747,18 @@ window.BOARD_GAMES = {
       "imageSource": "https://cf.geekdo-images.com/EAqbd46lFxo-7GumlO8U4w__original/img/oNM6bkDbjww-7nKZX-WYYmPxRws=/0x0/filters:format(jpeg)/pic5598833.jpg"
     },
     {
+      "rank": 63,
+      "id": 185343,
+      "name": "Anachrony",
+      "year": 2017,
+      "image": "assets/covers/185343.jpg",
+      "description": "It is the late 26th century. Earth is recovering from a catastrophic explosion that exterminated the majority of the population centuries ago and made most of the surface…",
+      "rating": 8.03,
+      "weight": 3.99,
+      "bestPlayers": "3",
+      "imageSource": "https://cf.geekdo-images.com/31quLNzteInnevVRAABoow__original/img/3KfMPSj7jjhG0g5lQBsO-bn67D0=/0x0/filters:format(jpeg)/pic3499707.jpg"
+    },
+    {
       "rank": 64,
       "id": 240980,
       "name": "Blood on the Clocktower",
@@ -766,7 +766,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/240980.jpg",
       "description": "In the sleepy town of Ravenswood Bluff, a demon walks amongst you.",
       "rating": 8.33,
-      "weight": 3.03,
+      "weight": 3.02,
       "bestPlayers": "9-12",
       "imageSource": "https://cf.geekdo-images.com/HINb2nkFn5IiZxAlzQIs4g__original/img/e7izEwSmnBPiErsIF6hlWbgybBE=/0x0/filters:format(jpeg)/pic7009391.jpg"
     },
@@ -796,30 +796,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 67,
-      "id": 231733,
-      "name": "Obsession",
-      "year": 2018,
-      "image": "assets/covers/231733.jpg",
-      "description": "You are the head of a respected but troubled family estate in mid-19th century Victorian England.",
-      "rating": 8.07,
-      "weight": 3.12,
-      "bestPlayers": "2",
-      "imageSource": "https://cf.geekdo-images.com/sy89BiuZXfbSnG7Cag9tBQ__original/img/uArsqbWyUALa982zGWsy8QQWnjE=/0x0/filters:format(png)/pic5902073.png"
-    },
-    {
-      "rank": 68,
-      "id": 170216,
-      "name": "Blood Rage",
-      "year": 2015,
-      "image": "assets/covers/170216.jpg",
-      "description": "\"Life is Battle; Battle is Glory; Glory is ALL\" In Blood Rage, players control the warriors, leader, and ship of their own Viking clan.",
-      "rating": 7.89,
-      "weight": 2.88,
-      "bestPlayers": "4",
-      "imageSource": "https://cf.geekdo-images.com/HkZSJfQnZ3EpS214xtuplg__original/img/Myy6IPDJDzLoPdXrPXVZcddBQoQ=/0x0/filters:format(jpeg)/pic2439223.jpg"
-    },
-    {
-      "rank": 69,
       "id": 182874,
       "name": "Grand Austria Hotel",
       "year": 2015,
@@ -829,6 +805,30 @@ window.BOARD_GAMES = {
       "weight": 3.19,
       "bestPlayers": "2",
       "imageSource": "https://cf.geekdo-images.com/PJRaImV8iXGAq2L-6rrn-w__original/img/8DrrN_WD5-jXfWj7ZFr0A3eqKPM=/0x0/filters:format(jpeg)/pic2649931.jpg"
+    },
+    {
+      "rank": 68,
+      "id": 231733,
+      "name": "Obsession",
+      "year": 2018,
+      "image": "assets/covers/231733.jpg",
+      "description": "You are the head of a respected but troubled family estate in mid-19th century Victorian England.",
+      "rating": 8.07,
+      "weight": 3.11,
+      "bestPlayers": "2",
+      "imageSource": "https://cf.geekdo-images.com/sy89BiuZXfbSnG7Cag9tBQ__original/img/uArsqbWyUALa982zGWsy8QQWnjE=/0x0/filters:format(png)/pic5902073.png"
+    },
+    {
+      "rank": 69,
+      "id": 170216,
+      "name": "Blood Rage",
+      "year": 2015,
+      "image": "assets/covers/170216.jpg",
+      "description": "\"Life is Battle; Battle is Glory; Glory is ALL\" In Blood Rage, players control the warriors, leader, and ship of their own Viking clan.",
+      "rating": 7.89,
+      "weight": 2.88,
+      "bestPlayers": "4",
+      "imageSource": "https://cf.geekdo-images.com/HkZSJfQnZ3EpS214xtuplg__original/img/Myy6IPDJDzLoPdXrPXVZcddBQoQ=/0x0/filters:format(jpeg)/pic2439223.jpg"
     },
     {
       "rank": 70,
@@ -940,18 +940,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 79,
-      "id": 205059,
-      "name": "Mansions of Madness: Second Edition",
-      "year": 2016,
-      "image": "assets/covers/205059.jpg",
-      "description": "Mansions of Madness: Second Edition is a fully co-operative, app-driven board game of horror and mystery for one to five players that takes place in the same universe as…",
-      "rating": 7.91,
-      "weight": 2.69,
-      "bestPlayers": "3-4",
-      "imageSource": "https://cf.geekdo-images.com/LIooA9bTdjnE9qmhjL-UFw__original/img/Go6c8-ZiXomS8E7X4MBCdDd-aZc=/0x0/filters:format(jpeg)/pic3118622.jpg"
-    },
-    {
-      "rank": 80,
       "id": 337627,
       "name": "Voidfall",
       "year": 2023,
@@ -961,6 +949,18 @@ window.BOARD_GAMES = {
       "weight": 4.62,
       "bestPlayers": "1 or 3",
       "imageSource": "https://cf.geekdo-images.com/hItZjdDTNuaCZ7fEztwcUQ__original/img/gIhusTrYRr_2JQGEv0zuSgLtuUo=/0x0/filters:format(jpeg)/pic6153324.jpg"
+    },
+    {
+      "rank": 80,
+      "id": 205059,
+      "name": "Mansions of Madness: Second Edition",
+      "year": 2016,
+      "image": "assets/covers/205059.jpg",
+      "description": "Mansions of Madness: Second Edition is a fully co-operative, app-driven board game of horror and mystery for one to five players that takes place in the same universe as…",
+      "rating": 7.91,
+      "weight": 2.69,
+      "bestPlayers": "3-4",
+      "imageSource": "https://cf.geekdo-images.com/LIooA9bTdjnE9qmhjL-UFw__original/img/Go6c8-ZiXomS8E7X4MBCdDd-aZc=/0x0/filters:format(jpeg)/pic3118622.jpg"
     },
     {
       "rank": 81,
@@ -976,6 +976,18 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 82,
+      "id": 413246,
+      "name": "Bomb Busters",
+      "year": 2024,
+      "image": "assets/covers/413246.jpg",
+      "description": "There is a bomb full of wires and the countdown has started...",
+      "rating": 8.03,
+      "weight": 2.01,
+      "bestPlayers": "4",
+      "imageSource": "https://cf.geekdo-images.com/HpGXIlt5i6T-0jbiQRReOg__original/img/2uApg8IOYjNVSzbUIwJUa-Z8eL8=/0x0/filters:format(png)/pic8303080.png"
+    },
+    {
+      "rank": 83,
       "id": 266810,
       "name": "Paladins of the West Kingdom",
       "year": 2019,
@@ -987,7 +999,7 @@ window.BOARD_GAMES = {
       "imageSource": "https://cf.geekdo-images.com/4nhokcLdYoo6ulbZ1rmGgA__original/img/9ktZDu003VVVTw0RxD-ufLYV1HQ=/0x0/filters:format(png)/pic4462987.png"
     },
     {
-      "rank": 83,
+      "rank": 84,
       "id": 35677,
       "name": "Le Havre",
       "year": 2008,
@@ -997,18 +1009,6 @@ window.BOARD_GAMES = {
       "weight": 3.71,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/y7Rqd3S6J7vyVhicR1bqTQ__original/img/tQFXv1w2R-J-1cjyaKG9LAS2UOs=/0x0/filters:format(jpeg)/pic6091101.jpg"
-    },
-    {
-      "rank": 84,
-      "id": 413246,
-      "name": "Bomb Busters",
-      "year": 2024,
-      "image": "assets/covers/413246.jpg",
-      "description": "There is a bomb full of wires and the countdown has started...",
-      "rating": 8.03,
-      "weight": 2.01,
-      "bestPlayers": "4",
-      "imageSource": "https://cf.geekdo-images.com/HpGXIlt5i6T-0jbiQRReOg__original/img/2uApg8IOYjNVSzbUIwJUa-Z8eL8=/0x0/filters:format(png)/pic8303080.png"
     },
     {
       "rank": 85,
@@ -1120,6 +1120,18 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 94,
+      "id": 277659,
+      "name": "Final Girl",
+      "year": 2021,
+      "image": "assets/covers/277659.jpg",
+      "description": "Playing on a famous horror movie trope, Final Girl is a solitaire-only game that puts the player in the shoes of a female protagonist who must kill the slasher if she wants to…",
+      "rating": 8.21,
+      "weight": 2.75,
+      "bestPlayers": "1",
+      "imageSource": "https://cf.geekdo-images.com/TUtzY-F7gKTIKm9y8e1AQw__original/img/vpBmnZOOyLZA4va7N6S8j9NyGPQ=/0x0/filters:format(jpeg)/pic6520382.jpg"
+    },
+    {
+      "rank": 95,
       "id": 28143,
       "name": "Race for the Galaxy",
       "year": 2007,
@@ -1131,7 +1143,7 @@ window.BOARD_GAMES = {
       "imageSource": "https://cf.geekdo-images.com/-DOqixs8uwKUvvWPKI4f9w__original/img/Vh-DCkTPa8OU45LaJdUywwhiYqE=/0x0/filters:format(jpeg)/pic5261714.jpg"
     },
     {
-      "rank": 95,
+      "rank": 96,
       "id": 55690,
       "name": "Kingdom Death: Monster",
       "year": 2015,
@@ -1141,18 +1153,6 @@ window.BOARD_GAMES = {
       "weight": 4.28,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/LenzJBOHboAGU0cUIqAZPQ__original/img/-dnx4zkvdOn3CMVHpXIfESazj40=/0x0/filters:format(jpeg)/pic2931007.jpg"
-    },
-    {
-      "rank": 96,
-      "id": 277659,
-      "name": "Final Girl",
-      "year": 2021,
-      "image": "assets/covers/277659.jpg",
-      "description": "Playing on a famous horror movie trope, Final Girl is a solitaire-only game that puts the player in the shoes of a female protagonist who must kill the slasher if she wants to…",
-      "rating": 8.21,
-      "weight": 2.76,
-      "bestPlayers": "1",
-      "imageSource": "https://cf.geekdo-images.com/TUtzY-F7gKTIKm9y8e1AQw__original/img/vpBmnZOOyLZA4va7N6S8j9NyGPQ=/0x0/filters:format(jpeg)/pic6520382.jpg"
     },
     {
       "rank": 97,
