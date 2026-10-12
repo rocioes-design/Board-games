@@ -1,6 +1,6 @@
 window.BOARD_GAMES = {
   "source": "boardgamegeek",
-  "updated": "2026-10-05",
+  "updated": "2026-10-12",
   "games": [
     {
       "rank": 1,
@@ -333,7 +333,7 @@ window.BOARD_GAMES = {
       "year": 2019,
       "image": "assets/covers/266507.jpg",
       "description": "Clank! Legacy: Acquisitions Incorporated extends the deck-building fun of Clank!",
-      "rating": 8.49,
+      "rating": 8.48,
       "weight": 2.74,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/hc2NDafu5c24iLJh_IZmyg__original/img/1Fpyz7j7rTvMPRiDdPjn0Vf0m2k=/0x0/filters:format(png)/pic4885780.png"
@@ -544,18 +544,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 46,
-      "id": 199792,
-      "name": "Everdell",
-      "year": 2018,
-      "image": "assets/covers/199792.jpg",
-      "description": "Within the charming valley of Everdell, beneath the boughs of towering trees, among meandering streams and mossy hollows, a civilization of forest critters is thriving and…",
-      "rating": 7.97,
-      "weight": 2.84,
-      "bestPlayers": "3",
-      "imageSource": "https://cf.geekdo-images.com/fjE7V5LNq31yVEW_yuqI-Q__original/img/HQ1ti16wT9lqja5_h3gUfHUIcVI=/0x0/filters:format(png)/pic3918905.png"
-    },
-    {
-      "rank": 47,
       "id": 365717,
       "name": "Clank!: Catacombs",
       "year": 2022,
@@ -565,6 +553,18 @@ window.BOARD_GAMES = {
       "weight": 2.5,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/cCLn9Mvb7jRSaZzHeUXhoQ__original/img/NK4hsA9nc-kdI07hR0Nc23dL_bk=/0x0/filters:format(jpeg)/pic6937913.jpg"
+    },
+    {
+      "rank": 47,
+      "id": 199792,
+      "name": "Everdell",
+      "year": 2018,
+      "image": "assets/covers/199792.jpg",
+      "description": "Within the charming valley of Everdell, beneath the boughs of towering trees, among meandering streams and mossy hollows, a civilization of forest critters is thriving and…",
+      "rating": 7.97,
+      "weight": 2.84,
+      "bestPlayers": "3",
+      "imageSource": "https://cf.geekdo-images.com/fjE7V5LNq31yVEW_yuqI-Q__original/img/HQ1ti16wT9lqja5_h3gUfHUIcVI=/0x0/filters:format(png)/pic3918905.png"
     },
     {
       "rank": 48,
@@ -585,7 +585,7 @@ window.BOARD_GAMES = {
       "year": 2023,
       "image": "assets/covers/390092.jpg",
       "description": "In Ticket to Ride Legacy: Legends of the West, players embark on twelve journeys across North America as 19th century pioneers.",
-      "rating": 8.61,
+      "rating": 8.6,
       "weight": 2.55,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/2H0pJddVJA3r6btqRNLG1g__original/img/q8N6sz7FIZkbXe_0d4RiIfM8aNU=/0x0/filters:format(png)/pic7541330.png"
@@ -670,7 +670,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/256960.jpg",
       "description": "In Pax Pamir, players assume the role of nineteenth century Afghan leaders attempting to forge a new state after the collapse of the Durrani Empire.",
       "rating": 8.12,
-      "weight": 3.85,
+      "weight": 3.84,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/oSM_AuKYfGIwOtKbVEsoVg__original/img/7DlaMCmuoJzm9AzelmStYIDgutI=/0x0/filters:format(png)/pic4503733.png"
     },
@@ -796,6 +796,18 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 67,
+      "id": 231733,
+      "name": "Obsession",
+      "year": 2018,
+      "image": "assets/covers/231733.jpg",
+      "description": "You are the head of a respected but troubled family estate in mid-19th century Victorian England.",
+      "rating": 8.07,
+      "weight": 3.12,
+      "bestPlayers": "2",
+      "imageSource": "https://cf.geekdo-images.com/sy89BiuZXfbSnG7Cag9tBQ__original/img/uArsqbWyUALa982zGWsy8QQWnjE=/0x0/filters:format(png)/pic5902073.png"
+    },
+    {
+      "rank": 68,
       "id": 182874,
       "name": "Grand Austria Hotel",
       "year": 2015,
@@ -805,18 +817,6 @@ window.BOARD_GAMES = {
       "weight": 3.19,
       "bestPlayers": "2",
       "imageSource": "https://cf.geekdo-images.com/PJRaImV8iXGAq2L-6rrn-w__original/img/8DrrN_WD5-jXfWj7ZFr0A3eqKPM=/0x0/filters:format(jpeg)/pic2649931.jpg"
-    },
-    {
-      "rank": 68,
-      "id": 231733,
-      "name": "Obsession",
-      "year": 2018,
-      "image": "assets/covers/231733.jpg",
-      "description": "You are the head of a respected but troubled family estate in mid-19th century Victorian England.",
-      "rating": 8.07,
-      "weight": 3.11,
-      "bestPlayers": "2",
-      "imageSource": "https://cf.geekdo-images.com/sy89BiuZXfbSnG7Cag9tBQ__original/img/uArsqbWyUALa982zGWsy8QQWnjE=/0x0/filters:format(png)/pic5902073.png"
     },
     {
       "rank": 69,
@@ -861,7 +861,7 @@ window.BOARD_GAMES = {
       "year": 2023,
       "image": "assets/covers/371942.jpg",
       "description": "The heron flies over the Himeji sky while the Daimyo, from the top of the castle, watches his servants move.",
-      "rating": 7.98,
+      "rating": 7.97,
       "weight": 3.07,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/qXT1U-nFh9PE8ujfdmI7dA__original/img/jzmifZJ0Sg2Js7hmQjzX7bEHVBY=/0x0/filters:format(jpeg)/pic7754663.jpg"
@@ -874,7 +874,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/380607.jpg",
       "description": "Kia ora, and welcome to Great Western Trail New Zealand! Towards the end of the 19th century, you established yourself as a runholder (owner of a sheep station) on the South…",
       "rating": 8.44,
-      "weight": 3.99,
+      "weight": 4,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/X4KaD6ADLW1ohOznNay7xg__original/img/HhxsLMIsz6Te567qXEbRBen4Sm8=/0x0/filters:format(png)/pic7350809.png"
     },
@@ -892,18 +892,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 75,
-      "id": 255984,
-      "name": "Sleeping Gods",
-      "year": 2021,
-      "image": "assets/covers/255984.jpg",
-      "description": "\"Are the stars unfamiliar here? \" she asked, and the sky grew suddenly dark, the star's patterns alien and exotic.",
-      "rating": 8.08,
-      "weight": 3.26,
-      "bestPlayers": "1-2",
-      "imageSource": "https://cf.geekdo-images.com/Zdt8l4oTBpFICsMyNof7Jg__original/img/-okZ810RkA8fKKhIeZyX4cnqmbE=/0x0/filters:format(png)/pic5975244.png"
-    },
-    {
-      "rank": 76,
       "id": 2651,
       "name": "Power Grid",
       "year": 2004,
@@ -913,6 +901,18 @@ window.BOARD_GAMES = {
       "weight": 3.25,
       "bestPlayers": "4-5",
       "imageSource": "https://cf.geekdo-images.com/yd6LuatytHRhcFCxCf-EEg__original/img/OS13C6W4i1XW__wWVVVaqF7BV0c=/0x0/filters:format(jpeg)/pic4459753.jpg"
+    },
+    {
+      "rank": 76,
+      "id": 255984,
+      "name": "Sleeping Gods",
+      "year": 2021,
+      "image": "assets/covers/255984.jpg",
+      "description": "\"Are the stars unfamiliar here? \" she asked, and the sky grew suddenly dark, the star's patterns alien and exotic.",
+      "rating": 8.08,
+      "weight": 3.26,
+      "bestPlayers": "1-2",
+      "imageSource": "https://cf.geekdo-images.com/Zdt8l4oTBpFICsMyNof7Jg__original/img/-okZ810RkA8fKKhIeZyX4cnqmbE=/0x0/filters:format(png)/pic5975244.png"
     },
     {
       "rank": 77,
@@ -947,7 +947,7 @@ window.BOARD_GAMES = {
       "description": "For centuries, the Novarchs, descendants of the royal House of Novarchon, have ruled with an iron fist over the feudalistic galactic empire of humankind, the Domineum.",
       "rating": 8.5,
       "weight": 4.62,
-      "bestPlayers": "1 or 3",
+      "bestPlayers": "1",
       "imageSource": "https://cf.geekdo-images.com/hItZjdDTNuaCZ7fEztwcUQ__original/img/gIhusTrYRr_2JQGEv0zuSgLtuUo=/0x0/filters:format(jpeg)/pic6153324.jpg"
     },
     {
@@ -1024,18 +1024,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 86,
-      "id": 125153,
-      "name": "The Gallerist",
-      "year": 2015,
-      "image": "assets/covers/125153.jpg",
-      "description": "This age of art and capitalism has created a need for a new occupation - The Gallerist.",
-      "rating": 8,
-      "weight": 4.21,
-      "bestPlayers": "3-4",
-      "imageSource": "https://cf.geekdo-images.com/ie1GSt1XV04sXQXt-3O1UQ__original/img/59dZRZePEgtcupkRSA2zohZuHpM=/0x0/filters:format(png)/pic2503200.png"
-    },
-    {
-      "rank": 87,
       "id": 200680,
       "name": "Agricola (Revised Edition)",
       "year": 2016,
@@ -1045,6 +1033,18 @@ window.BOARD_GAMES = {
       "weight": 3.45,
       "bestPlayers": "3-4",
       "imageSource": "https://cf.geekdo-images.com/YCGWJMFwOI5efji2RJ2mSw__original/img/jC_He46LcIcKWU-kSwkYdr9Z45E=/0x0/filters:format(jpeg)/pic8093340.jpg"
+    },
+    {
+      "rank": 87,
+      "id": 125153,
+      "name": "The Gallerist",
+      "year": 2015,
+      "image": "assets/covers/125153.jpg",
+      "description": "This age of art and capitalism has created a need for a new occupation - The Gallerist.",
+      "rating": 8,
+      "weight": 4.21,
+      "bestPlayers": "3-4",
+      "imageSource": "https://cf.geekdo-images.com/ie1GSt1XV04sXQXt-3O1UQ__original/img/59dZRZePEgtcupkRSA2zohZuHpM=/0x0/filters:format(png)/pic2503200.png"
     },
     {
       "rank": 88,
@@ -1066,7 +1066,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/366161.jpg",
       "description": "Wingspan: Asia introduces the diverse and vibrant birds of the Asian continent.",
       "rating": 8.21,
-      "weight": 2.64,
+      "weight": 2.63,
       "bestPlayers": "2",
       "imageSource": "https://cf.geekdo-images.com/h1dRxq4lNMpuSUSGdgCmfA__original/img/MSX7waTxS81SiyxAmmCJFFWAl1I=/0x0/filters:format(jpeg)/pic7107431.jpg"
     },
@@ -1101,7 +1101,7 @@ window.BOARD_GAMES = {
       "year": 2022,
       "image": "assets/covers/332772.jpg",
       "description": "Revive civilization, 5000 years after everything was destroyed.",
-      "rating": 8.05,
+      "rating": 8.04,
       "weight": 3.46,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/V0OZ9QR0pC9G5t5i9MoZTQ__original/img/NxxAoxVxMNkDGEkD3aoobPL14dI=/0x0/filters:format(jpeg)/pic6950224.jpg"
@@ -1126,7 +1126,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/277659.jpg",
       "description": "Playing on a famous horror movie trope, Final Girl is a solitaire-only game that puts the player in the shoes of a female protagonist who must kill the slasher if she wants to…",
       "rating": 8.21,
-      "weight": 2.75,
+      "weight": 2.76,
       "bestPlayers": "1",
       "imageSource": "https://cf.geekdo-images.com/TUtzY-F7gKTIKm9y8e1AQw__original/img/vpBmnZOOyLZA4va7N6S8j9NyGPQ=/0x0/filters:format(jpeg)/pic6520382.jpg"
     },
