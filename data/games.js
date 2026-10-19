@@ -1,6 +1,6 @@
 window.BOARD_GAMES = {
   "source": "boardgamegeek",
-  "updated": "2026-10-12",
+  "updated": "2026-10-19",
   "games": [
     {
       "rank": 1,
@@ -586,7 +586,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/390092.jpg",
       "description": "In Ticket to Ride Legacy: Legends of the West, players embark on twelve journeys across North America as 19th century pioneers.",
       "rating": 8.6,
-      "weight": 2.55,
+      "weight": 2.56,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/2H0pJddVJA3r6btqRNLG1g__original/img/q8N6sz7FIZkbXe_0d4RiIfM8aNU=/0x0/filters:format(png)/pic7541330.png"
     },
@@ -616,15 +616,15 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 52,
-      "id": 247763,
-      "name": "Underwater Cities",
-      "year": 2018,
-      "image": "assets/covers/247763.jpg",
-      "description": "In Underwater Cities, which takes about 30-45 minutes per player, players represent the most powerful brains in the world, brains nominated due to the overpopulation of Earth…",
-      "rating": 8.04,
-      "weight": 3.59,
-      "bestPlayers": "2",
-      "imageSource": "https://cf.geekdo-images.com/PwOwTVHovJAUQgghnGqCOg__original/img/1WL5-4DZi0hX76HEgsLIYRRaIh4=/0x0/filters:format(png)/pic4837710.png"
+      "id": 436217,
+      "name": "The Lord of the Rings: Fate of the Fellowship",
+      "year": 2025,
+      "image": "assets/covers/436217.jpg",
+      "description": "As members of The Fellowship and the allies who rise to aid them, you must embark on a journey that may either save or doom Middle-earth.",
+      "rating": 8.34,
+      "weight": 3.11,
+      "bestPlayers": "3",
+      "imageSource": "https://cf.geekdo-images.com/scw36iBIad7l-rGzxPGcGg__original/img/JZKAg-ETtE7z3YbgSMPd242rCqE=/0x0/filters:format(png)/pic8662670.png"
     },
     {
       "rank": 53,
@@ -640,15 +640,15 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 54,
-      "id": 436217,
-      "name": "The Lord of the Rings: Fate of the Fellowship",
-      "year": 2025,
-      "image": "assets/covers/436217.jpg",
-      "description": "As members of The Fellowship and the allies who rise to aid them, you must embark on a journey that may either save or doom Middle-earth.",
-      "rating": 8.34,
-      "weight": 3.11,
-      "bestPlayers": "3",
-      "imageSource": "https://cf.geekdo-images.com/scw36iBIad7l-rGzxPGcGg__original/img/JZKAg-ETtE7z3YbgSMPd242rCqE=/0x0/filters:format(png)/pic8662670.png"
+      "id": 247763,
+      "name": "Underwater Cities",
+      "year": 2018,
+      "image": "assets/covers/247763.jpg",
+      "description": "In Underwater Cities, which takes about 30-45 minutes per player, players represent the most powerful brains in the world, brains nominated due to the overpopulation of Earth…",
+      "rating": 8.04,
+      "weight": 3.59,
+      "bestPlayers": "2",
+      "imageSource": "https://cf.geekdo-images.com/PwOwTVHovJAUQgghnGqCOg__original/img/1WL5-4DZi0hX76HEgsLIYRRaIh4=/0x0/filters:format(png)/pic4837710.png"
     },
     {
       "rank": 55,
@@ -669,7 +669,7 @@ window.BOARD_GAMES = {
       "year": 2019,
       "image": "assets/covers/256960.jpg",
       "description": "In Pax Pamir, players assume the role of nineteenth century Afghan leaders attempting to forge a new state after the collapse of the Durrani Empire.",
-      "rating": 8.12,
+      "rating": 8.11,
       "weight": 3.84,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/oSM_AuKYfGIwOtKbVEsoVg__original/img/7DlaMCmuoJzm9AzelmStYIDgutI=/0x0/filters:format(png)/pic4503733.png"
@@ -820,18 +820,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 69,
-      "id": 170216,
-      "name": "Blood Rage",
-      "year": 2015,
-      "image": "assets/covers/170216.jpg",
-      "description": "\"Life is Battle; Battle is Glory; Glory is ALL\" In Blood Rage, players control the warriors, leader, and ship of their own Viking clan.",
-      "rating": 7.89,
-      "weight": 2.88,
-      "bestPlayers": "4",
-      "imageSource": "https://cf.geekdo-images.com/HkZSJfQnZ3EpS214xtuplg__original/img/Myy6IPDJDzLoPdXrPXVZcddBQoQ=/0x0/filters:format(jpeg)/pic2439223.jpg"
-    },
-    {
-      "rank": 70,
       "id": 367966,
       "name": "Endeavor: Deep Sea",
       "year": 2024,
@@ -841,6 +829,18 @@ window.BOARD_GAMES = {
       "weight": 2.93,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/wIbevITv9W79ELP8rEZoKA__original/img/41fYEG_IYb9ECcCO24Dk4dZUNT0=/0x0/filters:format(jpeg)/pic6996584.jpg"
+    },
+    {
+      "rank": 70,
+      "id": 170216,
+      "name": "Blood Rage",
+      "year": 2015,
+      "image": "assets/covers/170216.jpg",
+      "description": "\"Life is Battle; Battle is Glory; Glory is ALL\" In Blood Rage, players control the warriors, leader, and ship of their own Viking clan.",
+      "rating": 7.89,
+      "weight": 2.88,
+      "bestPlayers": "4",
+      "imageSource": "https://cf.geekdo-images.com/HkZSJfQnZ3EpS214xtuplg__original/img/Myy6IPDJDzLoPdXrPXVZcddBQoQ=/0x0/filters:format(jpeg)/pic2439223.jpg"
     },
     {
       "rank": 71,
@@ -898,7 +898,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/2651.jpg",
       "description": "Power Grid is the updated release of the Friedemann Friese crayon game Funkenschlag.",
       "rating": 7.8,
-      "weight": 3.25,
+      "weight": 3.24,
       "bestPlayers": "4-5",
       "imageSource": "https://cf.geekdo-images.com/yd6LuatytHRhcFCxCf-EEg__original/img/OS13C6W4i1XW__wWVVVaqF7BV0c=/0x0/filters:format(jpeg)/pic4459753.jpg"
     },
@@ -910,7 +910,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/255984.jpg",
       "description": "\"Are the stars unfamiliar here? \" she asked, and the sky grew suddenly dark, the star's patterns alien and exotic.",
       "rating": 8.08,
-      "weight": 3.26,
+      "weight": 3.25,
       "bestPlayers": "1-2",
       "imageSource": "https://cf.geekdo-images.com/Zdt8l4oTBpFICsMyNof7Jg__original/img/-okZ810RkA8fKKhIeZyX4cnqmbE=/0x0/filters:format(png)/pic5975244.png"
     },
@@ -928,18 +928,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 78,
-      "id": 216132,
-      "name": "Clans of Caledonia",
-      "year": 2017,
-      "image": "assets/covers/216132.jpg",
-      "description": "Clans of Caledonia is a mid-to-heavy economic game set in 19th-century Scotland.",
-      "rating": 7.94,
-      "weight": 3.47,
-      "bestPlayers": "4",
-      "imageSource": "https://cf.geekdo-images.com/SPuwc6RJ6y4PnTH36Pegsg__original/img/GcuvCavv-ZZP5_O1kCTrZELuZdY=/0x0/filters:format(png)/pic3511783.png"
-    },
-    {
-      "rank": 79,
       "id": 337627,
       "name": "Voidfall",
       "year": 2023,
@@ -949,6 +937,18 @@ window.BOARD_GAMES = {
       "weight": 4.62,
       "bestPlayers": "1",
       "imageSource": "https://cf.geekdo-images.com/hItZjdDTNuaCZ7fEztwcUQ__original/img/gIhusTrYRr_2JQGEv0zuSgLtuUo=/0x0/filters:format(jpeg)/pic6153324.jpg"
+    },
+    {
+      "rank": 79,
+      "id": 216132,
+      "name": "Clans of Caledonia",
+      "year": 2017,
+      "image": "assets/covers/216132.jpg",
+      "description": "Clans of Caledonia is a mid-to-heavy economic game set in 19th-century Scotland.",
+      "rating": 7.94,
+      "weight": 3.47,
+      "bestPlayers": "4",
+      "imageSource": "https://cf.geekdo-images.com/SPuwc6RJ6y4PnTH36Pegsg__original/img/GcuvCavv-ZZP5_O1kCTrZELuZdY=/0x0/filters:format(png)/pic3511783.png"
     },
     {
       "rank": 80,
@@ -1077,7 +1077,7 @@ window.BOARD_GAMES = {
       "year": 2023,
       "image": "assets/covers/322289.jpg",
       "description": "When all you can identify in the horizon for many long days is the line that detaches the sea from the sky, the glimpse of a distant shore appearing before you will make you…",
-      "rating": 8.09,
+      "rating": 8.08,
       "weight": 3.91,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/-A_ABjMw4PdoAZrH-FjiiA__original/img/GuDlOog3eTRrkxCUzCEgRc17B-g=/0x0/filters:format(png)/pic5726930.png"
@@ -1108,18 +1108,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 93,
-      "id": 209010,
-      "name": "Mechs vs. Minions",
-      "year": 2016,
-      "image": "assets/covers/209010.jpg",
-      "description": "Mechs vs. Minions is a cooperative tabletop campaign for 2-4 players.",
-      "rating": 7.94,
-      "weight": 2.45,
-      "bestPlayers": "4",
-      "imageSource": "https://cf.geekdo-images.com/n4J5LebMj0DQD016qW7ABw__original/img/KDP4s1942J-T52OEytY2VpUWZC0=/0x0/filters:format(jpeg)/pic3184103.jpg"
-    },
-    {
-      "rank": 94,
       "id": 277659,
       "name": "Final Girl",
       "year": 2021,
@@ -1129,6 +1117,18 @@ window.BOARD_GAMES = {
       "weight": 2.76,
       "bestPlayers": "1",
       "imageSource": "https://cf.geekdo-images.com/TUtzY-F7gKTIKm9y8e1AQw__original/img/vpBmnZOOyLZA4va7N6S8j9NyGPQ=/0x0/filters:format(jpeg)/pic6520382.jpg"
+    },
+    {
+      "rank": 94,
+      "id": 209010,
+      "name": "Mechs vs. Minions",
+      "year": 2016,
+      "image": "assets/covers/209010.jpg",
+      "description": "Mechs vs. Minions is a cooperative tabletop campaign for 2-4 players.",
+      "rating": 7.94,
+      "weight": 2.45,
+      "bestPlayers": "4",
+      "imageSource": "https://cf.geekdo-images.com/n4J5LebMj0DQD016qW7ABw__original/img/KDP4s1942J-T52OEytY2VpUWZC0=/0x0/filters:format(jpeg)/pic3184103.jpg"
     },
     {
       "rank": 95,
