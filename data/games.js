@@ -1,6 +1,6 @@
 window.BOARD_GAMES = {
   "source": "boardgamegeek",
-  "updated": "2026-10-19",
+  "updated": "2026-10-26",
   "games": [
     {
       "rank": 1,
@@ -178,7 +178,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/338960.jpg",
       "description": "Slay the Spire: The Board Game is a co-operative deck-building, dungeon-crawling adventure.",
       "rating": 8.61,
-      "weight": 2.91,
+      "weight": 2.9,
       "bestPlayers": "2",
       "imageSource": "https://cf.geekdo-images.com/PQzVclEoOQ_wr4e1V86kxA__original/img/KXOf1hP1cIJQLabKhZulWP-e9wI=/0x0/filters:format(png)/pic8157856.png"
     },
@@ -357,7 +357,7 @@ window.BOARD_GAMES = {
       "year": 2020,
       "image": "assets/covers/312484.jpg",
       "description": "On an uninhabited island in uncharted seas, explorers have found traces of a great civilization.",
-      "rating": 8.08,
+      "rating": 8.09,
       "weight": 2.93,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/6GqH14TJJhza86BX5HCLEQ__original/img/CXqwimJPonWy1oyXEMgPN_ZVmUI=/0x0/filters:format(jpeg)/pic5674958.jpg"
@@ -460,6 +460,18 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 39,
+      "id": 251247,
+      "name": "Barrage",
+      "year": 2019,
+      "image": "assets/covers/251247.jpg",
+      "description": "In the dystopic 1930s, the industrial revolution pushed the exploitation of fossil-based resources to the limit, and now the only thing powerful enough to quench the thirst for…",
+      "rating": 8.13,
+      "weight": 4.11,
+      "bestPlayers": "4",
+      "imageSource": "https://cf.geekdo-images.com/jEPmWvvYpqkWrKOzqIHFsg__original/img/rkHKwkUqpQC7PAGG7n2gbrcQiUY=/0x0/filters:format(png)/pic4336469.png"
+    },
+    {
+      "rank": 40,
       "id": 96848,
       "name": "Mage Knight Board Game",
       "year": 2011,
@@ -469,18 +481,6 @@ window.BOARD_GAMES = {
       "weight": 4.38,
       "bestPlayers": "1-2",
       "imageSource": "https://cf.geekdo-images.com/DUO2hz9AlLOH8p9ED-lCWg__original/img/PDDH38Vf9NEB_4ODURxcJKNBfVQ=/0x0/filters:format(jpeg)/pic1083380.jpg"
-    },
-    {
-      "rank": 40,
-      "id": 251247,
-      "name": "Barrage",
-      "year": 2019,
-      "image": "assets/covers/251247.jpg",
-      "description": "In the dystopic 1930s, the industrial revolution pushed the exploitation of fossil-based resources to the limit, and now the only thing powerful enough to quench the thirst for…",
-      "rating": 8.13,
-      "weight": 4.12,
-      "bestPlayers": "4",
-      "imageSource": "https://cf.geekdo-images.com/jEPmWvvYpqkWrKOzqIHFsg__original/img/rkHKwkUqpQC7PAGG7n2gbrcQiUY=/0x0/filters:format(png)/pic4336469.png"
     },
     {
       "rank": 41,
@@ -550,7 +550,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/365717.jpg",
       "description": "The catacombs of the skeletal dragon Umbrok Vessna are mysterious and dangerous.",
       "rating": 8.23,
-      "weight": 2.5,
+      "weight": 2.49,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/cCLn9Mvb7jRSaZzHeUXhoQ__original/img/NK4hsA9nc-kdI07hR0Nc23dL_bk=/0x0/filters:format(jpeg)/pic6937913.jpg"
     },
@@ -568,18 +568,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 48,
-      "id": 366013,
-      "name": "Heat: Pedal to the Metal",
-      "year": 2022,
-      "image": "assets/covers/366013.jpg",
-      "description": "Based on simple and intuitive hand management, Heat: Pedal to the Metal puts players in the driver's seat of intense car races, jockeying for position to cross the finish line…",
-      "rating": 7.99,
-      "weight": 2.2,
-      "bestPlayers": "5-6",
-      "imageSource": "https://cf.geekdo-images.com/-vOrd4bOspibyohYExLqWg__original/img/iXU8a9WaVlwrkiEiOxWN06y9y5g=/0x0/filters:format(png)/pic6940449.png"
-    },
-    {
-      "rank": 49,
       "id": 390092,
       "name": "Ticket to Ride Legacy: Legends of the West",
       "year": 2023,
@@ -589,6 +577,18 @@ window.BOARD_GAMES = {
       "weight": 2.56,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/2H0pJddVJA3r6btqRNLG1g__original/img/q8N6sz7FIZkbXe_0d4RiIfM8aNU=/0x0/filters:format(png)/pic7541330.png"
+    },
+    {
+      "rank": 49,
+      "id": 366013,
+      "name": "Heat: Pedal to the Metal",
+      "year": 2022,
+      "image": "assets/covers/366013.jpg",
+      "description": "Based on simple and intuitive hand management, Heat: Pedal to the Metal puts players in the driver's seat of intense car races, jockeying for position to cross the finish line…",
+      "rating": 7.99,
+      "weight": 2.2,
+      "bestPlayers": "5-6",
+      "imageSource": "https://cf.geekdo-images.com/-vOrd4bOspibyohYExLqWg__original/img/iXU8a9WaVlwrkiEiOxWN06y9y5g=/0x0/filters:format(png)/pic6940449.png"
     },
     {
       "rank": 50,
@@ -609,7 +609,7 @@ window.BOARD_GAMES = {
       "year": 2024,
       "image": "assets/covers/414317.jpg",
       "description": "In Harmonies, build landscapes by placing colored tokens and create habitats for your animals.",
-      "rating": 8.03,
+      "rating": 8.04,
       "weight": 2.01,
       "bestPlayers": "2-3",
       "imageSource": "https://cf.geekdo-images.com/A_XP2_VN3ugyqPhezowB_w__original/img/_Rv8lSr3fC1oDRkrQleQW2H2yCs=/0x0/filters:format(png)/pic8026369.png"
@@ -669,7 +669,7 @@ window.BOARD_GAMES = {
       "year": 2019,
       "image": "assets/covers/256960.jpg",
       "description": "In Pax Pamir, players assume the role of nineteenth century Afghan leaders attempting to forge a new state after the collapse of the Durrani Empire.",
-      "rating": 8.11,
+      "rating": 8.12,
       "weight": 3.84,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/oSM_AuKYfGIwOtKbVEsoVg__original/img/7DlaMCmuoJzm9AzelmStYIDgutI=/0x0/filters:format(png)/pic4503733.png"
@@ -682,7 +682,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/383179.jpg",
       "description": "Age of Innovation is a standalone game set in the world of Terra Mystica.",
       "rating": 8.42,
-      "weight": 4.27,
+      "weight": 4.26,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/D1vrcFEptCEoD8Z6s_iRfw__original/img/1vY0K3wSqlYXq0JEylSI-7agxKs=/0x0/filters:format(jpeg)/pic7430993.jpg"
     },
@@ -754,7 +754,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/185343.jpg",
       "description": "It is the late 26th century. Earth is recovering from a catastrophic explosion that exterminated the majority of the population centuries ago and made most of the surface…",
       "rating": 8.03,
-      "weight": 3.99,
+      "weight": 4,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/31quLNzteInnevVRAABoow__original/img/3KfMPSj7jjhG0g5lQBsO-bn67D0=/0x0/filters:format(jpeg)/pic3499707.jpg"
     },
@@ -766,7 +766,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/240980.jpg",
       "description": "In the sleepy town of Ravenswood Bluff, a demon walks amongst you.",
       "rating": 8.33,
-      "weight": 3.02,
+      "weight": 3.01,
       "bestPlayers": "9-12",
       "imageSource": "https://cf.geekdo-images.com/HINb2nkFn5IiZxAlzQIs4g__original/img/e7izEwSmnBPiErsIF6hlWbgybBE=/0x0/filters:format(jpeg)/pic7009391.jpg"
     },
@@ -796,15 +796,15 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 67,
-      "id": 231733,
-      "name": "Obsession",
-      "year": 2018,
-      "image": "assets/covers/231733.jpg",
-      "description": "You are the head of a respected but troubled family estate in mid-19th century Victorian England.",
-      "rating": 8.07,
-      "weight": 3.12,
-      "bestPlayers": "2",
-      "imageSource": "https://cf.geekdo-images.com/sy89BiuZXfbSnG7Cag9tBQ__original/img/uArsqbWyUALa982zGWsy8QQWnjE=/0x0/filters:format(png)/pic5902073.png"
+      "id": 367966,
+      "name": "Endeavor: Deep Sea",
+      "year": 2024,
+      "image": "assets/covers/367966.jpg",
+      "description": "Plunge into the modern era, where our planet's vast interconnected ocean scape is one of the last frontiers to discover and explore.",
+      "rating": 8.21,
+      "weight": 2.93,
+      "bestPlayers": "3",
+      "imageSource": "https://cf.geekdo-images.com/wIbevITv9W79ELP8rEZoKA__original/img/41fYEG_IYb9ECcCO24Dk4dZUNT0=/0x0/filters:format(jpeg)/pic6996584.jpg"
     },
     {
       "rank": 68,
@@ -820,15 +820,15 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 69,
-      "id": 367966,
-      "name": "Endeavor: Deep Sea",
-      "year": 2024,
-      "image": "assets/covers/367966.jpg",
-      "description": "Plunge into the modern era, where our planet's vast interconnected ocean scape is one of the last frontiers to discover and explore.",
-      "rating": 8.21,
-      "weight": 2.93,
-      "bestPlayers": "3",
-      "imageSource": "https://cf.geekdo-images.com/wIbevITv9W79ELP8rEZoKA__original/img/41fYEG_IYb9ECcCO24Dk4dZUNT0=/0x0/filters:format(jpeg)/pic6996584.jpg"
+      "id": 231733,
+      "name": "Obsession",
+      "year": 2018,
+      "image": "assets/covers/231733.jpg",
+      "description": "You are the head of a respected but troubled family estate in mid-19th century Victorian England.",
+      "rating": 8.06,
+      "weight": 3.12,
+      "bestPlayers": "2",
+      "imageSource": "https://cf.geekdo-images.com/sy89BiuZXfbSnG7Cag9tBQ__original/img/uArsqbWyUALa982zGWsy8QQWnjE=/0x0/filters:format(png)/pic5902073.png"
     },
     {
       "rank": 70,
@@ -862,7 +862,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/371942.jpg",
       "description": "The heron flies over the Himeji sky while the Daimyo, from the top of the castle, watches his servants move.",
       "rating": 7.97,
-      "weight": 3.07,
+      "weight": 3.08,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/qXT1U-nFh9PE8ujfdmI7dA__original/img/jzmifZJ0Sg2Js7hmQjzX7bEHVBY=/0x0/filters:format(jpeg)/pic7754663.jpg"
     },
@@ -904,6 +904,18 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 76,
+      "id": 337627,
+      "name": "Voidfall",
+      "year": 2023,
+      "image": "assets/covers/337627.jpg",
+      "description": "For centuries, the Novarchs, descendants of the royal House of Novarchon, have ruled with an iron fist over the feudalistic galactic empire of humankind, the Domineum.",
+      "rating": 8.5,
+      "weight": 4.63,
+      "bestPlayers": "1 or 3",
+      "imageSource": "https://cf.geekdo-images.com/hItZjdDTNuaCZ7fEztwcUQ__original/img/gIhusTrYRr_2JQGEv0zuSgLtuUo=/0x0/filters:format(jpeg)/pic6153324.jpg"
+    },
+    {
+      "rank": 77,
       "id": 255984,
       "name": "Sleeping Gods",
       "year": 2021,
@@ -915,7 +927,7 @@ window.BOARD_GAMES = {
       "imageSource": "https://cf.geekdo-images.com/Zdt8l4oTBpFICsMyNof7Jg__original/img/-okZ810RkA8fKKhIeZyX4cnqmbE=/0x0/filters:format(png)/pic5975244.png"
     },
     {
-      "rank": 77,
+      "rank": 78,
       "id": 126163,
       "name": "Tzolk'in: The Mayan Calendar",
       "year": 2012,
@@ -925,18 +937,6 @@ window.BOARD_GAMES = {
       "weight": 3.66,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/kXf7mDyDYuHg6oe8yTUIEA__original/img/f6-Au0KTnNR4nugSu2U-wPNbZCU=/0x0/filters:format(jpeg)/pic4604439.jpg"
-    },
-    {
-      "rank": 78,
-      "id": 337627,
-      "name": "Voidfall",
-      "year": 2023,
-      "image": "assets/covers/337627.jpg",
-      "description": "For centuries, the Novarchs, descendants of the royal House of Novarchon, have ruled with an iron fist over the feudalistic galactic empire of humankind, the Domineum.",
-      "rating": 8.5,
-      "weight": 4.62,
-      "bestPlayers": "1",
-      "imageSource": "https://cf.geekdo-images.com/hItZjdDTNuaCZ7fEztwcUQ__original/img/gIhusTrYRr_2JQGEv0zuSgLtuUo=/0x0/filters:format(jpeg)/pic6153324.jpg"
     },
     {
       "rank": 79,
@@ -981,7 +981,7 @@ window.BOARD_GAMES = {
       "year": 2024,
       "image": "assets/covers/413246.jpg",
       "description": "There is a bomb full of wires and the countdown has started...",
-      "rating": 8.03,
+      "rating": 8.02,
       "weight": 2.01,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/HpGXIlt5i6T-0jbiQRReOg__original/img/2uApg8IOYjNVSzbUIwJUa-Z8eL8=/0x0/filters:format(png)/pic8303080.png"
@@ -1102,24 +1102,12 @@ window.BOARD_GAMES = {
       "image": "assets/covers/332772.jpg",
       "description": "Revive civilization, 5000 years after everything was destroyed.",
       "rating": 8.04,
-      "weight": 3.46,
+      "weight": 3.47,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/V0OZ9QR0pC9G5t5i9MoZTQ__original/img/NxxAoxVxMNkDGEkD3aoobPL14dI=/0x0/filters:format(jpeg)/pic6950224.jpg"
     },
     {
       "rank": 93,
-      "id": 277659,
-      "name": "Final Girl",
-      "year": 2021,
-      "image": "assets/covers/277659.jpg",
-      "description": "Playing on a famous horror movie trope, Final Girl is a solitaire-only game that puts the player in the shoes of a female protagonist who must kill the slasher if she wants to…",
-      "rating": 8.21,
-      "weight": 2.76,
-      "bestPlayers": "1",
-      "imageSource": "https://cf.geekdo-images.com/TUtzY-F7gKTIKm9y8e1AQw__original/img/vpBmnZOOyLZA4va7N6S8j9NyGPQ=/0x0/filters:format(jpeg)/pic6520382.jpg"
-    },
-    {
-      "rank": 94,
       "id": 209010,
       "name": "Mechs vs. Minions",
       "year": 2016,
@@ -1129,6 +1117,18 @@ window.BOARD_GAMES = {
       "weight": 2.45,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/n4J5LebMj0DQD016qW7ABw__original/img/KDP4s1942J-T52OEytY2VpUWZC0=/0x0/filters:format(jpeg)/pic3184103.jpg"
+    },
+    {
+      "rank": 94,
+      "id": 277659,
+      "name": "Final Girl",
+      "year": 2021,
+      "image": "assets/covers/277659.jpg",
+      "description": "Playing on a famous horror movie trope, Final Girl is a solitaire-only game that puts the player in the shoes of a female protagonist who must kill the slasher if she wants to…",
+      "rating": 8.2,
+      "weight": 2.76,
+      "bestPlayers": "1",
+      "imageSource": "https://cf.geekdo-images.com/TUtzY-F7gKTIKm9y8e1AQw__original/img/vpBmnZOOyLZA4va7N6S8j9NyGPQ=/0x0/filters:format(jpeg)/pic6520382.jpg"
     },
     {
       "rank": 95,
@@ -1191,7 +1191,7 @@ window.BOARD_GAMES = {
       "imageSource": "https://cf.geekdo-images.com/aPSHJO0d0XOpQR5X-wJonw__original/img/AkbtYVc6xXJF3c9EUrakklcclKw=/0x0/filters:format(png)/pic6973671.png"
     },
     {
-      "rank": 100,
+      "rank": 101,
       "id": 93,
       "name": "El Grande",
       "year": 1995,
