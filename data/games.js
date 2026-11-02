@@ -1,6 +1,6 @@
 window.BOARD_GAMES = {
   "source": "boardgamegeek",
-  "updated": "2026-10-26",
+  "updated": "2026-11-02",
   "games": [
     {
       "rank": 1,
@@ -178,7 +178,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/338960.jpg",
       "description": "Slay the Spire: The Board Game is a co-operative deck-building, dungeon-crawling adventure.",
       "rating": 8.61,
-      "weight": 2.9,
+      "weight": 2.91,
       "bestPlayers": "2",
       "imageSource": "https://cf.geekdo-images.com/PQzVclEoOQ_wr4e1V86kxA__original/img/KXOf1hP1cIJQLabKhZulWP-e9wI=/0x0/filters:format(png)/pic8157856.png"
     },
@@ -189,7 +189,7 @@ window.BOARD_GAMES = {
       "year": 2005,
       "image": "assets/covers/12333.jpg",
       "description": "Now the trumpet summons us again, not as a call to bear arms, though arms we need; not as a call to battle, though embattled we are – but a call to bear the burden of a long…",
-      "rating": 8.23,
+      "rating": 8.22,
       "weight": 3.61,
       "bestPlayers": "2",
       "imageSource": "https://cf.geekdo-images.com/pNCiUUphnoeWOYfsWq0kng__original/img/Iae47UtAd_RXVd5tJ3YzbDHOv4E=/0x0/filters:format(jpeg)/pic3530661.jpg"
@@ -298,7 +298,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/167355.jpg",
       "description": "Playing Nemesis will take you into the heart of sci-fi survival horror in all its terror.",
       "rating": 8.24,
-      "weight": 3.49,
+      "weight": 3.5,
       "bestPlayers": "4-5",
       "imageSource": "https://cf.geekdo-images.com/4KSmlm59w0GwLIlgDnJDAQ__original/img/f0VmAKrPrMRQOUcOJHekRvuysDE=/0x0/filters:format(png)/pic8211747.png"
     },
@@ -308,7 +308,7 @@ window.BOARD_GAMES = {
       "name": "A Feast for Odin",
       "year": 2016,
       "image": "assets/covers/177736.jpg",
-      "description": "A Feast for Odin is a saga in the form of a board game. You are reliving the cultural achievements, mercantile expeditions, and pillages of those tribes we know as Viking today…",
+      "description": "A Feast for Odin is a saga in the form of a board game. You are reliving the cultural achievements, mercantile expeditions, and pillages of those tribes we know as Viking.",
       "rating": 8.16,
       "weight": 3.87,
       "bestPlayers": "3",
@@ -520,6 +520,18 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 44,
+      "id": 365717,
+      "name": "Clank!: Catacombs",
+      "year": 2022,
+      "image": "assets/covers/365717.jpg",
+      "description": "The catacombs of the skeletal dragon Umbrok Vessna are mysterious and dangerous.",
+      "rating": 8.23,
+      "weight": 2.49,
+      "bestPlayers": "3",
+      "imageSource": "https://cf.geekdo-images.com/cCLn9Mvb7jRSaZzHeUXhoQ__original/img/NK4hsA9nc-kdI07hR0Nc23dL_bk=/0x0/filters:format(jpeg)/pic6937913.jpg"
+    },
+    {
+      "rank": 45,
       "id": 183394,
       "name": "Viticulture Essential Edition",
       "year": 2015,
@@ -531,7 +543,7 @@ window.BOARD_GAMES = {
       "imageSource": "https://cf.geekdo-images.com/l_PRU2lVlX9seScRFcvFlA__original/img/gDL7OZFlzoOFgU0VYlREs8P5hCQ=/0x0/filters:format(jpeg)/pic6500949.jpg"
     },
     {
-      "rank": 45,
+      "rank": 46,
       "id": 324856,
       "name": "The Crew: Mission Deep Sea",
       "year": 2021,
@@ -541,18 +553,6 @@ window.BOARD_GAMES = {
       "weight": 2.06,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/VuBqZ1sMaDAVVHF_OEJP4g__original/img/jGWxczXC_VWZofeAmlO_DkB0hCI=/0x0/filters:format(jpeg)/pic5988903.jpg"
-    },
-    {
-      "rank": 46,
-      "id": 365717,
-      "name": "Clank!: Catacombs",
-      "year": 2022,
-      "image": "assets/covers/365717.jpg",
-      "description": "The catacombs of the skeletal dragon Umbrok Vessna are mysterious and dangerous.",
-      "rating": 8.23,
-      "weight": 2.49,
-      "bestPlayers": "3",
-      "imageSource": "https://cf.geekdo-images.com/cCLn9Mvb7jRSaZzHeUXhoQ__original/img/NK4hsA9nc-kdI07hR0Nc23dL_bk=/0x0/filters:format(jpeg)/pic6937913.jpg"
     },
     {
       "rank": 47,
@@ -604,18 +604,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 51,
-      "id": 414317,
-      "name": "Harmonies",
-      "year": 2024,
-      "image": "assets/covers/414317.jpg",
-      "description": "In Harmonies, build landscapes by placing colored tokens and create habitats for your animals.",
-      "rating": 8.04,
-      "weight": 2.01,
-      "bestPlayers": "2-3",
-      "imageSource": "https://cf.geekdo-images.com/A_XP2_VN3ugyqPhezowB_w__original/img/_Rv8lSr3fC1oDRkrQleQW2H2yCs=/0x0/filters:format(png)/pic8026369.png"
-    },
-    {
-      "rank": 52,
       "id": 436217,
       "name": "The Lord of the Rings: Fate of the Fellowship",
       "year": 2025,
@@ -625,6 +613,18 @@ window.BOARD_GAMES = {
       "weight": 3.11,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/scw36iBIad7l-rGzxPGcGg__original/img/JZKAg-ETtE7z3YbgSMPd242rCqE=/0x0/filters:format(png)/pic8662670.png"
+    },
+    {
+      "rank": 52,
+      "id": 414317,
+      "name": "Harmonies",
+      "year": 2024,
+      "image": "assets/covers/414317.jpg",
+      "description": "In Harmonies, build landscapes by placing colored tokens and create habitats for your animals.",
+      "rating": 8.04,
+      "weight": 2.01,
+      "bestPlayers": "2-3",
+      "imageSource": "https://cf.geekdo-images.com/A_XP2_VN3ugyqPhezowB_w__original/img/_Rv8lSr3fC1oDRkrQleQW2H2yCs=/0x0/filters:format(png)/pic8026369.png"
     },
     {
       "rank": 53,
@@ -669,7 +669,7 @@ window.BOARD_GAMES = {
       "year": 2019,
       "image": "assets/covers/256960.jpg",
       "description": "In Pax Pamir, players assume the role of nineteenth century Afghan leaders attempting to forge a new state after the collapse of the Durrani Empire.",
-      "rating": 8.12,
+      "rating": 8.11,
       "weight": 3.84,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/oSM_AuKYfGIwOtKbVEsoVg__original/img/7DlaMCmuoJzm9AzelmStYIDgutI=/0x0/filters:format(png)/pic4503733.png"
@@ -724,6 +724,18 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 61,
+      "id": 240980,
+      "name": "Blood on the Clocktower",
+      "year": 2022,
+      "image": "assets/covers/240980.jpg",
+      "description": "In the sleepy town of Ravenswood Bluff, a demon walks amongst you.",
+      "rating": 8.32,
+      "weight": 3.01,
+      "bestPlayers": "9-12",
+      "imageSource": "https://cf.geekdo-images.com/HINb2nkFn5IiZxAlzQIs4g__original/img/e7izEwSmnBPiErsIF6hlWbgybBE=/0x0/filters:format(jpeg)/pic7009391.jpg"
+    },
+    {
+      "rank": 62,
       "id": 295947,
       "name": "Cascadia",
       "year": 2021,
@@ -735,7 +747,7 @@ window.BOARD_GAMES = {
       "imageSource": "https://cf.geekdo-images.com/MjeJZfulbsM1DSV3DrGJYA__original/img/B374C04Eip7fmQBGJzgiOTp-jyQ=/0x0/filters:format(jpeg)/pic5100691.jpg"
     },
     {
-      "rank": 62,
+      "rank": 63,
       "id": 102794,
       "name": "Caverna: The Cave Farmers",
       "year": 2013,
@@ -747,7 +759,7 @@ window.BOARD_GAMES = {
       "imageSource": "https://cf.geekdo-images.com/EAqbd46lFxo-7GumlO8U4w__original/img/oNM6bkDbjww-7nKZX-WYYmPxRws=/0x0/filters:format(jpeg)/pic5598833.jpg"
     },
     {
-      "rank": 63,
+      "rank": 64,
       "id": 185343,
       "name": "Anachrony",
       "year": 2017,
@@ -757,18 +769,6 @@ window.BOARD_GAMES = {
       "weight": 4,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/31quLNzteInnevVRAABoow__original/img/3KfMPSj7jjhG0g5lQBsO-bn67D0=/0x0/filters:format(jpeg)/pic3499707.jpg"
-    },
-    {
-      "rank": 64,
-      "id": 240980,
-      "name": "Blood on the Clocktower",
-      "year": 2022,
-      "image": "assets/covers/240980.jpg",
-      "description": "In the sleepy town of Ravenswood Bluff, a demon walks amongst you.",
-      "rating": 8.33,
-      "weight": 3.01,
-      "bestPlayers": "9-12",
-      "imageSource": "https://cf.geekdo-images.com/HINb2nkFn5IiZxAlzQIs4g__original/img/e7izEwSmnBPiErsIF6hlWbgybBE=/0x0/filters:format(jpeg)/pic7009391.jpg"
     },
     {
       "rank": 65,
@@ -784,18 +784,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 66,
-      "id": 31260,
-      "name": "Agricola",
-      "year": 2007,
-      "image": "assets/covers/31260.jpg",
-      "description": "In Agricola, you're a farmer in a wooden shack with your spouse and little else.",
-      "rating": 7.85,
-      "weight": 3.64,
-      "bestPlayers": "3-4",
-      "imageSource": "https://cf.geekdo-images.com/3L6ZtOll9W5O6-3-EwSMyw__original/img/V37KuMJlCzpxAilzN39BzeLvc9Q=/0x0/filters:format(jpeg)/pic1899157.jpg"
-    },
-    {
-      "rank": 67,
       "id": 367966,
       "name": "Endeavor: Deep Sea",
       "year": 2024,
@@ -807,7 +795,31 @@ window.BOARD_GAMES = {
       "imageSource": "https://cf.geekdo-images.com/wIbevITv9W79ELP8rEZoKA__original/img/41fYEG_IYb9ECcCO24Dk4dZUNT0=/0x0/filters:format(jpeg)/pic6996584.jpg"
     },
     {
+      "rank": 67,
+      "id": 31260,
+      "name": "Agricola",
+      "year": 2007,
+      "image": "assets/covers/31260.jpg",
+      "description": "In Agricola, you're a farmer in a wooden shack with your spouse and little else.",
+      "rating": 7.85,
+      "weight": 3.64,
+      "bestPlayers": "3-4",
+      "imageSource": "https://cf.geekdo-images.com/3L6ZtOll9W5O6-3-EwSMyw__original/img/V37KuMJlCzpxAilzN39BzeLvc9Q=/0x0/filters:format(jpeg)/pic1899157.jpg"
+    },
+    {
       "rank": 68,
+      "id": 231733,
+      "name": "Obsession",
+      "year": 2018,
+      "image": "assets/covers/231733.jpg",
+      "description": "You are the head of a respected but troubled family estate in mid-19th century Victorian England.",
+      "rating": 8.07,
+      "weight": 3.12,
+      "bestPlayers": "2",
+      "imageSource": "https://cf.geekdo-images.com/sy89BiuZXfbSnG7Cag9tBQ__original/img/uArsqbWyUALa982zGWsy8QQWnjE=/0x0/filters:format(png)/pic5902073.png"
+    },
+    {
+      "rank": 69,
       "id": 182874,
       "name": "Grand Austria Hotel",
       "year": 2015,
@@ -817,18 +829,6 @@ window.BOARD_GAMES = {
       "weight": 3.19,
       "bestPlayers": "2",
       "imageSource": "https://cf.geekdo-images.com/PJRaImV8iXGAq2L-6rrn-w__original/img/8DrrN_WD5-jXfWj7ZFr0A3eqKPM=/0x0/filters:format(jpeg)/pic2649931.jpg"
-    },
-    {
-      "rank": 69,
-      "id": 231733,
-      "name": "Obsession",
-      "year": 2018,
-      "image": "assets/covers/231733.jpg",
-      "description": "You are the head of a respected but troubled family estate in mid-19th century Victorian England.",
-      "rating": 8.06,
-      "weight": 3.12,
-      "bestPlayers": "2",
-      "imageSource": "https://cf.geekdo-images.com/sy89BiuZXfbSnG7Cag9tBQ__original/img/uArsqbWyUALa982zGWsy8QQWnjE=/0x0/filters:format(png)/pic5902073.png"
     },
     {
       "rank": 70,
@@ -850,7 +850,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/161533.jpg",
       "description": "Lisboa is a game about the reconstruction of Lisboa after the great earthquake of 1755.",
       "rating": 8.16,
-      "weight": 4.56,
+      "weight": 4.57,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/OrHS8_a1CqSGiXeTfCk0Wg__original/img/hVArRkZYHiPTGTfi0DPR58i4o44=/0x0/filters:format(jpeg)/pic3209553.jpg"
     },
@@ -873,7 +873,7 @@ window.BOARD_GAMES = {
       "year": 2023,
       "image": "assets/covers/380607.jpg",
       "description": "Kia ora, and welcome to Great Western Trail New Zealand! Towards the end of the 19th century, you established yourself as a runholder (owner of a sheep station) on the South…",
-      "rating": 8.44,
+      "rating": 8.43,
       "weight": 4,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/X4KaD6ADLW1ohOznNay7xg__original/img/HhxsLMIsz6Te567qXEbRBen4Sm8=/0x0/filters:format(png)/pic7350809.png"
@@ -892,18 +892,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 75,
-      "id": 2651,
-      "name": "Power Grid",
-      "year": 2004,
-      "image": "assets/covers/2651.jpg",
-      "description": "Power Grid is the updated release of the Friedemann Friese crayon game Funkenschlag.",
-      "rating": 7.8,
-      "weight": 3.24,
-      "bestPlayers": "4-5",
-      "imageSource": "https://cf.geekdo-images.com/yd6LuatytHRhcFCxCf-EEg__original/img/OS13C6W4i1XW__wWVVVaqF7BV0c=/0x0/filters:format(jpeg)/pic4459753.jpg"
-    },
-    {
-      "rank": 76,
       "id": 337627,
       "name": "Voidfall",
       "year": 2023,
@@ -915,19 +903,19 @@ window.BOARD_GAMES = {
       "imageSource": "https://cf.geekdo-images.com/hItZjdDTNuaCZ7fEztwcUQ__original/img/gIhusTrYRr_2JQGEv0zuSgLtuUo=/0x0/filters:format(jpeg)/pic6153324.jpg"
     },
     {
-      "rank": 77,
-      "id": 255984,
-      "name": "Sleeping Gods",
-      "year": 2021,
-      "image": "assets/covers/255984.jpg",
-      "description": "\"Are the stars unfamiliar here? \" she asked, and the sky grew suddenly dark, the star's patterns alien and exotic.",
-      "rating": 8.08,
-      "weight": 3.25,
-      "bestPlayers": "1-2",
-      "imageSource": "https://cf.geekdo-images.com/Zdt8l4oTBpFICsMyNof7Jg__original/img/-okZ810RkA8fKKhIeZyX4cnqmbE=/0x0/filters:format(png)/pic5975244.png"
+      "rank": 76,
+      "id": 2651,
+      "name": "Power Grid",
+      "year": 2004,
+      "image": "assets/covers/2651.jpg",
+      "description": "Power Grid is the updated release of the Friedemann Friese crayon game Funkenschlag.",
+      "rating": 7.8,
+      "weight": 3.24,
+      "bestPlayers": "4-5",
+      "imageSource": "https://cf.geekdo-images.com/yd6LuatytHRhcFCxCf-EEg__original/img/OS13C6W4i1XW__wWVVVaqF7BV0c=/0x0/filters:format(jpeg)/pic4459753.jpg"
     },
     {
-      "rank": 78,
+      "rank": 77,
       "id": 126163,
       "name": "Tzolk'in: The Mayan Calendar",
       "year": 2012,
@@ -937,6 +925,18 @@ window.BOARD_GAMES = {
       "weight": 3.66,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/kXf7mDyDYuHg6oe8yTUIEA__original/img/f6-Au0KTnNR4nugSu2U-wPNbZCU=/0x0/filters:format(jpeg)/pic4604439.jpg"
+    },
+    {
+      "rank": 78,
+      "id": 255984,
+      "name": "Sleeping Gods",
+      "year": 2021,
+      "image": "assets/covers/255984.jpg",
+      "description": "\"Are the stars unfamiliar here? \" she asked, and the sky grew suddenly dark, the star's patterns alien and exotic.",
+      "rating": 8.07,
+      "weight": 3.25,
+      "bestPlayers": "1-2",
+      "imageSource": "https://cf.geekdo-images.com/Zdt8l4oTBpFICsMyNof7Jg__original/img/-okZ810RkA8fKKhIeZyX4cnqmbE=/0x0/filters:format(png)/pic5975244.png"
     },
     {
       "rank": 79,
@@ -1108,6 +1108,18 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 93,
+      "id": 277659,
+      "name": "Final Girl Core Box",
+      "year": 2021,
+      "image": "assets/covers/277659.jpg",
+      "description": "Playing on a famous horror movie trope, Final Girl is a solitaire-only game that puts the player in the shoes of a female protagonist who must kill the slasher if she wants to…",
+      "rating": 8.21,
+      "weight": 2.77,
+      "bestPlayers": "1",
+      "imageSource": "https://cf.geekdo-images.com/TUtzY-F7gKTIKm9y8e1AQw__original/img/vpBmnZOOyLZA4va7N6S8j9NyGPQ=/0x0/filters:format(jpeg)/pic6520382.jpg"
+    },
+    {
+      "rank": 94,
       "id": 209010,
       "name": "Mechs vs. Minions",
       "year": 2016,
@@ -1117,18 +1129,6 @@ window.BOARD_GAMES = {
       "weight": 2.45,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/n4J5LebMj0DQD016qW7ABw__original/img/KDP4s1942J-T52OEytY2VpUWZC0=/0x0/filters:format(jpeg)/pic3184103.jpg"
-    },
-    {
-      "rank": 94,
-      "id": 277659,
-      "name": "Final Girl",
-      "year": 2021,
-      "image": "assets/covers/277659.jpg",
-      "description": "Playing on a famous horror movie trope, Final Girl is a solitaire-only game that puts the player in the shoes of a female protagonist who must kill the slasher if she wants to…",
-      "rating": 8.2,
-      "weight": 2.76,
-      "bestPlayers": "1",
-      "imageSource": "https://cf.geekdo-images.com/TUtzY-F7gKTIKm9y8e1AQw__original/img/vpBmnZOOyLZA4va7N6S8j9NyGPQ=/0x0/filters:format(jpeg)/pic6520382.jpg"
     },
     {
       "rank": 95,
@@ -1191,7 +1191,7 @@ window.BOARD_GAMES = {
       "imageSource": "https://cf.geekdo-images.com/aPSHJO0d0XOpQR5X-wJonw__original/img/AkbtYVc6xXJF3c9EUrakklcclKw=/0x0/filters:format(png)/pic6973671.png"
     },
     {
-      "rank": 101,
+      "rank": 102,
       "id": 93,
       "name": "El Grande",
       "year": 1995,
