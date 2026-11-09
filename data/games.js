@@ -1,6 +1,6 @@
 window.BOARD_GAMES = {
   "source": "boardgamegeek",
-  "updated": "2026-11-02",
+  "updated": "2026-11-09",
   "games": [
     {
       "rank": 1,
@@ -142,7 +142,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/291457.jpg",
       "description": "Gloomhaven: Jaws of the Lion is a standalone game that takes place before the events of Gloomhaven.",
       "rating": 8.35,
-      "weight": 3.64,
+      "weight": 3.65,
       "bestPlayers": "2",
       "imageSource": "https://cf.geekdo-images.com/_HhIdavYW-hid20Iq3hhmg__original/img/PBzsLRqNKQKJxGnzpb7o3qLWPQM=/0x0/filters:format(jpeg)/pic5055631.jpg"
     },
@@ -178,7 +178,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/338960.jpg",
       "description": "Slay the Spire: The Board Game is a co-operative deck-building, dungeon-crawling adventure.",
       "rating": 8.61,
-      "weight": 2.91,
+      "weight": 2.9,
       "bestPlayers": "2",
       "imageSource": "https://cf.geekdo-images.com/PQzVclEoOQ_wr4e1V86kxA__original/img/KXOf1hP1cIJQLabKhZulWP-e9wI=/0x0/filters:format(png)/pic8157856.png"
     },
@@ -237,8 +237,8 @@ window.BOARD_GAMES = {
       "year": 2022,
       "image": "assets/covers/295770.jpg",
       "description": "Frosthaven is the story of a small outpost far to the north of the capital city of White Oak.",
-      "rating": 8.72,
-      "weight": 4.41,
+      "rating": 8.71,
+      "weight": 4.4,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/cwUgf-f-qwri8UHBUnifuQ__original/img/Tk7wFDJuaU8RPjNkmyC3AWYOPpU=/0x0/filters:format(png)/pic5092291.png"
     },
@@ -381,7 +381,7 @@ window.BOARD_GAMES = {
       "year": 2023,
       "image": "assets/covers/373106.jpg",
       "description": "Sky Team is a co-operative game, exclusively for two players, in which you play a pilot and co-pilot at the controls of an airliner.",
-      "rating": 8.11,
+      "rating": 8.1,
       "weight": 2.04,
       "bestPlayers": "2",
       "imageSource": "https://cf.geekdo-images.com/uXMeQzNenHb3zK7Hoa6b2w__original/img/mWOQnkpyYBorh_Y1-0Y2o-ew17k=/0x0/filters:format(jpeg)/pic7398904.jpg"
@@ -460,18 +460,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 39,
-      "id": 251247,
-      "name": "Barrage",
-      "year": 2019,
-      "image": "assets/covers/251247.jpg",
-      "description": "In the dystopic 1930s, the industrial revolution pushed the exploitation of fossil-based resources to the limit, and now the only thing powerful enough to quench the thirst for…",
-      "rating": 8.13,
-      "weight": 4.11,
-      "bestPlayers": "4",
-      "imageSource": "https://cf.geekdo-images.com/jEPmWvvYpqkWrKOzqIHFsg__original/img/rkHKwkUqpQC7PAGG7n2gbrcQiUY=/0x0/filters:format(png)/pic4336469.png"
-    },
-    {
-      "rank": 40,
       "id": 96848,
       "name": "Mage Knight Board Game",
       "year": 2011,
@@ -481,6 +469,18 @@ window.BOARD_GAMES = {
       "weight": 4.38,
       "bestPlayers": "1-2",
       "imageSource": "https://cf.geekdo-images.com/DUO2hz9AlLOH8p9ED-lCWg__original/img/PDDH38Vf9NEB_4ODURxcJKNBfVQ=/0x0/filters:format(jpeg)/pic1083380.jpg"
+    },
+    {
+      "rank": 40,
+      "id": 251247,
+      "name": "Barrage",
+      "year": 2019,
+      "image": "assets/covers/251247.jpg",
+      "description": "In the dystopic 1930s, the industrial revolution pushed the exploitation of fossil-based resources to the limit, and now the only thing powerful enough to quench the thirst for…",
+      "rating": 8.13,
+      "weight": 4.12,
+      "bestPlayers": "4",
+      "imageSource": "https://cf.geekdo-images.com/jEPmWvvYpqkWrKOzqIHFsg__original/img/rkHKwkUqpQC7PAGG7n2gbrcQiUY=/0x0/filters:format(png)/pic4336469.png"
     },
     {
       "rank": 41,
@@ -657,7 +657,7 @@ window.BOARD_GAMES = {
       "year": 2019,
       "image": "assets/covers/253344.jpg",
       "description": "In Cthulhu: Death May Die, inspired by the writings of H. P.",
-      "rating": 8.18,
+      "rating": 8.17,
       "weight": 2.49,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/SPpzri7fwLRgVWMKOocHxw__original/img/4TI0rpw6w0EpkgfvQpusj5Idmpw=/0x0/filters:format(png)/pic9712872.png"
@@ -729,7 +729,7 @@ window.BOARD_GAMES = {
       "year": 2022,
       "image": "assets/covers/240980.jpg",
       "description": "In the sleepy town of Ravenswood Bluff, a demon walks amongst you.",
-      "rating": 8.32,
+      "rating": 8.33,
       "weight": 3.01,
       "bestPlayers": "9-12",
       "imageSource": "https://cf.geekdo-images.com/HINb2nkFn5IiZxAlzQIs4g__original/img/e7izEwSmnBPiErsIF6hlWbgybBE=/0x0/filters:format(jpeg)/pic7009391.jpg"
@@ -772,18 +772,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 65,
-      "id": 251661,
-      "name": "Oathsworn: Into the Deepwood",
-      "year": 2022,
-      "image": "assets/covers/251661.jpg",
-      "description": "Oathsworn is a Twisting Tales Game for 1-4 players where play is focused on narrative choices and rich miniature combat encounters.",
-      "rating": 8.74,
-      "weight": 3.69,
-      "bestPlayers": "2 or 4",
-      "imageSource": "https://cf.geekdo-images.com/dezQ4YjF03lZVxTdI-UJYw__original/img/smV4u2r1moRbzsSTzykECb06Mpo=/0x0/filters:format(jpeg)/pic6863204.jpg"
-    },
-    {
-      "rank": 66,
       "id": 367966,
       "name": "Endeavor: Deep Sea",
       "year": 2024,
@@ -793,6 +781,18 @@ window.BOARD_GAMES = {
       "weight": 2.93,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/wIbevITv9W79ELP8rEZoKA__original/img/41fYEG_IYb9ECcCO24Dk4dZUNT0=/0x0/filters:format(jpeg)/pic6996584.jpg"
+    },
+    {
+      "rank": 66,
+      "id": 251661,
+      "name": "Oathsworn: Into the Deepwood",
+      "year": 2022,
+      "image": "assets/covers/251661.jpg",
+      "description": "Oathsworn is a Twisting Tales Game for 1-4 players where play is focused on narrative choices and rich miniature combat encounters.",
+      "rating": 8.73,
+      "weight": 3.69,
+      "bestPlayers": "2 or 4",
+      "imageSource": "https://cf.geekdo-images.com/dezQ4YjF03lZVxTdI-UJYw__original/img/smV4u2r1moRbzsSTzykECb06Mpo=/0x0/filters:format(jpeg)/pic6863204.jpg"
     },
     {
       "rank": 67,
@@ -813,7 +813,7 @@ window.BOARD_GAMES = {
       "year": 2018,
       "image": "assets/covers/231733.jpg",
       "description": "You are the head of a respected but troubled family estate in mid-19th century Victorian England.",
-      "rating": 8.07,
+      "rating": 8.06,
       "weight": 3.12,
       "bestPlayers": "2",
       "imageSource": "https://cf.geekdo-images.com/sy89BiuZXfbSnG7Cag9tBQ__original/img/uArsqbWyUALa982zGWsy8QQWnjE=/0x0/filters:format(png)/pic5902073.png"
@@ -861,7 +861,7 @@ window.BOARD_GAMES = {
       "year": 2023,
       "image": "assets/covers/371942.jpg",
       "description": "The heron flies over the Himeji sky while the Daimyo, from the top of the castle, watches his servants move.",
-      "rating": 7.97,
+      "rating": 7.98,
       "weight": 3.08,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/qXT1U-nFh9PE8ujfdmI7dA__original/img/jzmifZJ0Sg2Js7hmQjzX7bEHVBY=/0x0/filters:format(jpeg)/pic7754663.jpg"
@@ -874,7 +874,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/380607.jpg",
       "description": "Kia ora, and welcome to Great Western Trail New Zealand! Towards the end of the 19th century, you established yourself as a runholder (owner of a sheep station) on the South…",
       "rating": 8.43,
-      "weight": 4,
+      "weight": 3.99,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/X4KaD6ADLW1ohOznNay7xg__original/img/HhxsLMIsz6Te567qXEbRBen4Sm8=/0x0/filters:format(png)/pic7350809.png"
     },
@@ -899,7 +899,7 @@ window.BOARD_GAMES = {
       "description": "For centuries, the Novarchs, descendants of the royal House of Novarchon, have ruled with an iron fist over the feudalistic galactic empire of humankind, the Domineum.",
       "rating": 8.5,
       "weight": 4.63,
-      "bestPlayers": "1 or 3",
+      "bestPlayers": "1",
       "imageSource": "https://cf.geekdo-images.com/hItZjdDTNuaCZ7fEztwcUQ__original/img/gIhusTrYRr_2JQGEv0zuSgLtuUo=/0x0/filters:format(jpeg)/pic6153324.jpg"
     },
     {
@@ -964,6 +964,18 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 81,
+      "id": 413246,
+      "name": "Bomb Busters",
+      "year": 2024,
+      "image": "assets/covers/413246.jpg",
+      "description": "There is a bomb full of wires and the countdown has started...",
+      "rating": 8.02,
+      "weight": 2.02,
+      "bestPlayers": "4",
+      "imageSource": "https://cf.geekdo-images.com/HpGXIlt5i6T-0jbiQRReOg__original/img/2uApg8IOYjNVSzbUIwJUa-Z8eL8=/0x0/filters:format(png)/pic8303080.png"
+    },
+    {
+      "rank": 82,
       "id": 244521,
       "name": "Quacks",
       "year": 2018,
@@ -973,18 +985,6 @@ window.BOARD_GAMES = {
       "weight": 1.94,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/B1bLRWzTASZ-xx9NoAE79A__original/img/HulJk6gFzp_bxl0wzc2XEMq8NLM=/0x0/filters:format(png)/pic8780293.png"
-    },
-    {
-      "rank": 82,
-      "id": 413246,
-      "name": "Bomb Busters",
-      "year": 2024,
-      "image": "assets/covers/413246.jpg",
-      "description": "There is a bomb full of wires and the countdown has started...",
-      "rating": 8.02,
-      "weight": 2.01,
-      "bestPlayers": "4",
-      "imageSource": "https://cf.geekdo-images.com/HpGXIlt5i6T-0jbiQRReOg__original/img/2uApg8IOYjNVSzbUIwJUa-Z8eL8=/0x0/filters:format(png)/pic8303080.png"
     },
     {
       "rank": 83,
@@ -1006,7 +1006,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/35677.jpg",
       "description": "In Le Havre, a player's turn consists of two parts: First, distribute newly supplied goods onto the offer spaces; then take an action.",
       "rating": 7.83,
-      "weight": 3.71,
+      "weight": 3.7,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/y7Rqd3S6J7vyVhicR1bqTQ__original/img/tQFXv1w2R-J-1cjyaKG9LAS2UOs=/0x0/filters:format(jpeg)/pic6091101.jpg"
     },
