@@ -264,7 +264,8 @@ h1 {
 .avatar.more { background: #ece6da; color: var(--ink); }
 /* hovering a player lifts it above its neighbours, as in Watermelon UI "Avatar 16" */
 .avatar { position: relative; }
-.avatar:hover {
+.avatar:hover,
+.avatar.is-lifted {
   z-index: 1;
   transform: translateY(-4px);
   box-shadow: 0 0 0 2px var(--card), 0 10px 15px -3px rgba(0, 0, 0, .12), 0 4px 6px -4px rgba(0, 0, 0, .1);
@@ -289,6 +290,7 @@ h1 {
   pointer-events: none;
 }
 .players:hover .players-tip,
+.players.is-hovered .players-tip,
 .players:focus .players-tip { opacity: 1; transform: translate(0, -50%); }
 
 .star { width: 28px; height: 28px; fill: url(#starGold); }
@@ -482,6 +484,32 @@ h1 {
   font-size: 17px;
 }
 .empty p { margin: 0; }
+
+/* ---------- demo mode (index.html#demo, see demo.js) ---------- */
+
+.is-demo, .is-demo * { cursor: none !important; }
+.demo-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+.demo-cursor svg {
+  display: block;
+  width: 26px;
+  height: 26px;
+  margin: -3px 0 0 -5px; /* put the arrow's tip on the point */
+  fill: #fff;
+  stroke: #111;
+  stroke-width: 1.4;
+  stroke-linejoin: round;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .3));
+  transform-origin: 20% 10%;
+  transition: transform .12s ease;
+}
+.demo-cursor.is-pressing svg { transform: scale(.82); }
+.demo-cursor.is-grabbing svg { transform: scale(.9); }
 
 /* ---------- small screens ---------- */
 
