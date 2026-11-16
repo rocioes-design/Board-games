@@ -1,6 +1,6 @@
 window.BOARD_GAMES = {
   "source": "boardgamegeek",
-  "updated": "2026-11-09",
+  "updated": "2026-11-16",
   "games": [
     {
       "rank": 1,
@@ -489,7 +489,7 @@ window.BOARD_GAMES = {
       "year": 2023,
       "image": "assets/covers/321608.jpg",
       "description": "Extended edition includes Crisis & Control expansion. The Nation is in disarray and a war is waging between the classes.",
-      "rating": 8.35,
+      "rating": 8.34,
       "weight": 4.26,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/DCLgJlrvB-EqL6A3WgQLMQ__original/img/vGpYcxjDBCOVcI0BcWOevspTQMQ=/0x0/filters:format(jpeg)/pic5715770.jpg"
@@ -502,7 +502,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/284378.jpg",
       "description": "Electric vehicles (EVs) have become more common since 2014 and are the future of the automobile industry.",
       "rating": 8.37,
-      "weight": 4.3,
+      "weight": 4.29,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/L2Wn-zUqkcHgqvwvY212Ig__original/img/Htra4hvxjBlejtNEIUns_B3CNNc=/0x0/filters:format(jpeg)/pic4924232.jpg"
     },
@@ -556,18 +556,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 47,
-      "id": 199792,
-      "name": "Everdell",
-      "year": 2018,
-      "image": "assets/covers/199792.jpg",
-      "description": "Within the charming valley of Everdell, beneath the boughs of towering trees, among meandering streams and mossy hollows, a civilization of forest critters is thriving and…",
-      "rating": 7.97,
-      "weight": 2.84,
-      "bestPlayers": "3",
-      "imageSource": "https://cf.geekdo-images.com/fjE7V5LNq31yVEW_yuqI-Q__original/img/HQ1ti16wT9lqja5_h3gUfHUIcVI=/0x0/filters:format(png)/pic3918905.png"
-    },
-    {
-      "rank": 48,
       "id": 390092,
       "name": "Ticket to Ride Legacy: Legends of the West",
       "year": 2023,
@@ -577,6 +565,18 @@ window.BOARD_GAMES = {
       "weight": 2.56,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/2H0pJddVJA3r6btqRNLG1g__original/img/q8N6sz7FIZkbXe_0d4RiIfM8aNU=/0x0/filters:format(png)/pic7541330.png"
+    },
+    {
+      "rank": 48,
+      "id": 199792,
+      "name": "Everdell",
+      "year": 2018,
+      "image": "assets/covers/199792.jpg",
+      "description": "Within the charming valley of Everdell, beneath the boughs of towering trees, among meandering streams and mossy hollows, a civilization of forest critters is thriving and…",
+      "rating": 7.97,
+      "weight": 2.84,
+      "bestPlayers": "3",
+      "imageSource": "https://cf.geekdo-images.com/fjE7V5LNq31yVEW_yuqI-Q__original/img/HQ1ti16wT9lqja5_h3gUfHUIcVI=/0x0/filters:format(png)/pic3918905.png"
     },
     {
       "rank": 49,
@@ -592,18 +592,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 50,
-      "id": 285774,
-      "name": "Marvel Champions: The Card Game",
-      "year": 2019,
-      "image": "assets/covers/285774.jpg",
-      "description": "\"With great power, there must also come great responsibility.",
-      "rating": 8.11,
-      "weight": 2.97,
-      "bestPlayers": "1-2",
-      "imageSource": "https://cf.geekdo-images.com/kRvUgYiaOq07kC67ZK5UoQ__original/img/cqng0e4S7Cj6j6Sb49-OCggGi-8=/0x0/filters:format(jpeg)/pic4900321.jpg"
-    },
-    {
-      "rank": 51,
       "id": 436217,
       "name": "The Lord of the Rings: Fate of the Fellowship",
       "year": 2025,
@@ -613,6 +601,18 @@ window.BOARD_GAMES = {
       "weight": 3.11,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/scw36iBIad7l-rGzxPGcGg__original/img/JZKAg-ETtE7z3YbgSMPd242rCqE=/0x0/filters:format(png)/pic8662670.png"
+    },
+    {
+      "rank": 51,
+      "id": 285774,
+      "name": "Marvel Champions: The Card Game",
+      "year": 2019,
+      "image": "assets/covers/285774.jpg",
+      "description": "\"With great power, there must also come great responsibility.",
+      "rating": 8.1,
+      "weight": 2.97,
+      "bestPlayers": "1-2",
+      "imageSource": "https://cf.geekdo-images.com/kRvUgYiaOq07kC67ZK5UoQ__original/img/cqng0e4S7Cj6j6Sb49-OCggGi-8=/0x0/filters:format(jpeg)/pic4900321.jpg"
     },
     {
       "rank": 52,
@@ -790,7 +790,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/251661.jpg",
       "description": "Oathsworn is a Twisting Tales Game for 1-4 players where play is focused on narrative choices and rich miniature combat encounters.",
       "rating": 8.73,
-      "weight": 3.69,
+      "weight": 3.7,
       "bestPlayers": "2 or 4",
       "imageSource": "https://cf.geekdo-images.com/dezQ4YjF03lZVxTdI-UJYw__original/img/smV4u2r1moRbzsSTzykECb06Mpo=/0x0/filters:format(jpeg)/pic6863204.jpg"
     },
@@ -808,18 +808,6 @@ window.BOARD_GAMES = {
     },
     {
       "rank": 68,
-      "id": 231733,
-      "name": "Obsession",
-      "year": 2018,
-      "image": "assets/covers/231733.jpg",
-      "description": "You are the head of a respected but troubled family estate in mid-19th century Victorian England.",
-      "rating": 8.06,
-      "weight": 3.12,
-      "bestPlayers": "2",
-      "imageSource": "https://cf.geekdo-images.com/sy89BiuZXfbSnG7Cag9tBQ__original/img/uArsqbWyUALa982zGWsy8QQWnjE=/0x0/filters:format(png)/pic5902073.png"
-    },
-    {
-      "rank": 69,
       "id": 182874,
       "name": "Grand Austria Hotel",
       "year": 2015,
@@ -829,6 +817,18 @@ window.BOARD_GAMES = {
       "weight": 3.19,
       "bestPlayers": "2",
       "imageSource": "https://cf.geekdo-images.com/PJRaImV8iXGAq2L-6rrn-w__original/img/8DrrN_WD5-jXfWj7ZFr0A3eqKPM=/0x0/filters:format(jpeg)/pic2649931.jpg"
+    },
+    {
+      "rank": 69,
+      "id": 231733,
+      "name": "Obsession",
+      "year": 2018,
+      "image": "assets/covers/231733.jpg",
+      "description": "You are the head of a respected but troubled family estate in mid-19th century Victorian England.",
+      "rating": 8.06,
+      "weight": 3.12,
+      "bestPlayers": "2",
+      "imageSource": "https://cf.geekdo-images.com/sy89BiuZXfbSnG7Cag9tBQ__original/img/uArsqbWyUALa982zGWsy8QQWnjE=/0x0/filters:format(png)/pic5902073.png"
     },
     {
       "rank": 70,
@@ -850,7 +850,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/161533.jpg",
       "description": "Lisboa is a game about the reconstruction of Lisboa after the great earthquake of 1755.",
       "rating": 8.16,
-      "weight": 4.57,
+      "weight": 4.56,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/OrHS8_a1CqSGiXeTfCk0Wg__original/img/hVArRkZYHiPTGTfi0DPR58i4o44=/0x0/filters:format(jpeg)/pic3209553.jpg"
     },
@@ -874,7 +874,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/380607.jpg",
       "description": "Kia ora, and welcome to Great Western Trail New Zealand! Towards the end of the 19th century, you established yourself as a runholder (owner of a sheep station) on the South…",
       "rating": 8.43,
-      "weight": 3.99,
+      "weight": 4,
       "bestPlayers": "3",
       "imageSource": "https://cf.geekdo-images.com/X4KaD6ADLW1ohOznNay7xg__original/img/HhxsLMIsz6Te567qXEbRBen4Sm8=/0x0/filters:format(png)/pic7350809.png"
     },
@@ -970,7 +970,7 @@ window.BOARD_GAMES = {
       "image": "assets/covers/413246.jpg",
       "description": "There is a bomb full of wires and the countdown has started...",
       "rating": 8.02,
-      "weight": 2.02,
+      "weight": 2.01,
       "bestPlayers": "4",
       "imageSource": "https://cf.geekdo-images.com/HpGXIlt5i6T-0jbiQRReOg__original/img/2uApg8IOYjNVSzbUIwJUa-Z8eL8=/0x0/filters:format(png)/pic8303080.png"
     },
@@ -1113,7 +1113,7 @@ window.BOARD_GAMES = {
       "year": 2021,
       "image": "assets/covers/277659.jpg",
       "description": "Playing on a famous horror movie trope, Final Girl is a solitaire-only game that puts the player in the shoes of a female protagonist who must kill the slasher if she wants to…",
-      "rating": 8.21,
+      "rating": 8.2,
       "weight": 2.77,
       "bestPlayers": "1",
       "imageSource": "https://cf.geekdo-images.com/TUtzY-F7gKTIKm9y8e1AQw__original/img/vpBmnZOOyLZA4va7N6S8j9NyGPQ=/0x0/filters:format(jpeg)/pic6520382.jpg"
@@ -1179,7 +1179,7 @@ window.BOARD_GAMES = {
       "imageSource": "https://cf.geekdo-images.com/dmo-WD6HZHVUPrbVHunaTw__original/img/PS9HXrThM8Pepbd-cuA1tX8KCYU=/0x0/filters:format(jpeg)/pic2055255.jpg"
     },
     {
-      "rank": 99,
+      "rank": 100,
       "id": 230802,
       "name": "Azul",
       "year": 2017,
